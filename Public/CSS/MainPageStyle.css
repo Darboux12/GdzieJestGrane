@@ -1,0 +1,313 @@
+
+.chatbox-open-button{
+    background-color: #2699fb;
+    color: white;
+    padding: 1em 1.25em;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 1.45rem;
+    left: 1.75rem;
+    width: 17.5em;
+}
+
+.close-chat-button{
+    position: absolute;
+    align-items: end;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 0.5em;
+}
+
+.chat-container{
+    width: 43em;
+    height: 25em;
+    background: white;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 70% 15%;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    bottom: 1.45rem;
+    left: 1.75rem;
+    z-index: 1;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1;
+    background: #2726a6;;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+    padding: 0 0.625em;
+
+}
+
+.search-container > input{
+    color: black;
+    outline: none;
+    font-weight: bold;
+    border-radius: 2px;
+    background-image: url("../Images/searchicon.png");
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px center;
+    text-align: center;
+
+}
+
+.chat-title{
+    grid-area: 1 / 2 / span 1;
+    background: gray;
+    border-radius: 0 10px 0 0 ;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    font-weight: bold;
+    font-size: 2em;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+    text-align: center;
+    padding: 0.2em 0;
+
+}
+
+.coversation-list{
+    grid-area: 2 / 1 ;
+    background: #2726a6;
+
+}
+
+.chat-message-list{
+    grid-area: 2 / 2 ;
+    background: white;
+}
+
+.new-message-container{
+    display: flex;
+    grid-area: 3 / 1 ;
+    background: #2726a6;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    align-items: center;
+    font-size: 2em;
+}
+
+.new-message-container > a{
+    color: white;
+    text-decoration: none;
+    padding: 0.4em;
+}
+
+.chat-form{
+    grid-area: 3 / 2 ;
+    background: gray;
+    border-radius: 0 0 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+
+
+.Wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 5em;
+}
+
+.TopBar{
+    position: sticky;
+    display: grid;
+    grid-area: 1 / 1 / span 1 / span 4;
+    grid-template-columns: 10% 60% 30%;
+    background: #B90808;
+    top: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+.Options {
+    grid-area: 1 / 2 / span 1 / span 1;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    overflow: hidden;
+    text-align: center;
+}
+
+.Options > a{
+    color: white;
+    padding: 2em 0.5em;
+    text-decoration: none;
+    font-size: 1.35em;
+}
+
+.fa-globe {
+    color: green;
+    padding-right: 0.5em;
+    font-size: 1em;
+
+}
+
+.fa-map-marked-alt{
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
+
+}
+
+.fa-calendar-plus{
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
+
+}
+
+.Options > a:hover{
+    background: beige;
+    color: black;
+}
+
+#logo > a > img{
+    width: 4em;
+    padding: 0.3em 0.5em;
+}
+
+#Notification{
+    text-align: center;
+
+}
+
+.fa-user{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.6em 1em;
+}
+
+.fa-heart{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.6em 1em;
+}
+
+.fa-bell{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.6em 1em;
+}
+
+
+
+.SearchNav{
+    display: grid;
+    grid-area: 2 / 1 / span 1 / span 3;
+    background: gray;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1em;
+    padding: 10px;
+}
+
+.MainPageSelect{
+    display: flex;
+    background: DodgerBlue;
+    align-items: center;
+    padding: 0.5em 1em;
+}
+
+/*
+.MainPageSelect > select{
+    width: 100%;
+    height: 100%;
+    background-color: DodgerBlue;
+
+}
+
+.MainPageSelect > select{
+    -webkit-appearance: none;
+    border: 0;
+    position: relative;
+}
+
+.fa-caret-down{
+    font-size: 2em;
+}
+
+.MainPageSelect > select > option{
+    width: 100%;
+
+}
+
+*/
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    background: #3758cb;
+    color: #fefefe;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+    display: none;
+}
+.select select:hover,
+.select select:focus {
+    color: #fae2e2;
+    background: #3817c6;
+}
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.fa-caret-down {
+    position: absolute;
+    font-size: 2em;
+    right: 1em;
+    pointer-events: none;
+    color: white;
+
+}
+.select select:hover ~ .fa-caret-down,
+.select select:focus ~ .fa-caret-down {
+    border-top-color: #fae2e2;
+}
+
+
+
+
+.RightNav{
+    display: grid;
+    grid-area: 2 / 4 / span 3 / span 1;
+    background: gray;
+}
+
+.MainContent{
+    display: grid;
+    grid-area: 3 / 1 / span 2 / span 3;
+    background: gray;
+
+}
+
+
+
+
+
+
+
+
