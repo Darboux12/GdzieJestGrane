@@ -108,6 +108,7 @@
 
 
 
+
 .Wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -197,7 +198,6 @@
 }
 
 
-
 .SearchNav{
     display: grid;
     grid-area: 2 / 1 / span 1 / span 3;
@@ -208,54 +208,19 @@
     padding: 10px;
 }
 
-.MainPageSelect{
+.SearchNavSelect{
     display: flex;
-    background: DodgerBlue;
     align-items: center;
-    padding: 0.5em 1em;
+    width: 100%;
+    background: white;
+    position: relative;
 }
 
-/*
-.MainPageSelect > select{
+.SearchNavSelect > select {
     width: 100%;
     height: 100%;
-    background-color: DodgerBlue;
-
-}
-
-.MainPageSelect > select{
-    -webkit-appearance: none;
-    border: 0;
-    position: relative;
-}
-
-.fa-caret-down{
-    font-size: 2em;
-}
-
-.MainPageSelect > select > option{
-    width: 100%;
-
-}
-
-*/
-
-.select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.select select {
-    font-family: 'Arial';
-    display: inline-block;
-    width: 100%;
+    padding-left: 1em;
     cursor: pointer;
-    padding: 10px 15px;
-    outline: 0;
-    border: 0px solid #000000;
-    border-radius: 0px;
     background: #3758cb;
     color: #fefefe;
     appearance: none;
@@ -263,30 +228,69 @@
     -moz-appearance: none;
 }
 
-.select select::-ms-expand {
-    display: none;
-}
-.select select:hover,
-.select select:focus {
-    color: #fae2e2;
+.SearchNavSelect select:hover,
+.SearchNavSelect select:focus {
+    color: floralwhite;
     background: #3817c6;
 }
-.select select:disabled {
+
+.SearchNavSelect select:disabled {
     opacity: 0.5;
     pointer-events: none;
 }
+
 .fa-caret-down {
     position: absolute;
     font-size: 2em;
     right: 1em;
     pointer-events: none;
     color: white;
+}
+
+.SearchNavSelect select:hover ~ .fa-caret-down,
+.SearchNavSelect select:focus ~ .fa-caret-down {
+    color: floralwhite;
+}
+
+.SearchBar-Searchbox{
+    display: inline-flex;
 
 }
-.select select:hover ~ .fa-caret-down,
-.select select:focus ~ .fa-caret-down {
-    border-top-color: #fae2e2;
+
+.search-box-input {
+    width: 100%;
+    border: 0.3em solid #3758cb;
+    outline: 0;
+    padding-left: 1em;
+
 }
+
+.search-box-input:hover,
+.search-box-input:focus {
+    border-color: #3817c6;
+}
+
+.search-box-button {
+    background-color: #3758cb;
+    border: 0.2em solid #3758cb;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    padding: 0 0.75em;
+}
+
+.search-box-button:hover,
+.search-box-button:focus{
+    border-color: #3817c6;
+    background-color: #3817c6;
+}
+
+
+
+
+
+
+
 
 
 

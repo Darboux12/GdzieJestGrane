@@ -16,9 +16,11 @@
 <button class="chatbox-open-button" onclick="openChat()">Hej</button>
 
 <div id="chat" class="chat-container">
+
     <div class="search-container">
         <input type="text" placeholder="Szukaj" onfocus="this.placeholder = ''">
     </div>
+
     <div class="coversation-list">
     </div>
     <div class="new-message-container">
@@ -58,7 +60,7 @@
 
     <div class="SearchNav">
 
-        <div id="SelectSport" class="select">
+        <div id="SelectSport" class="SearchNavSelect">
             <select>
                 <option value="0">Wybierz dyscyplinę</option>
                 <option value="1">Piłka Nożna</option>
@@ -73,7 +75,7 @@
             <i class="fas fa-caret-down"></i>
         </div>
 
-        <div id="SelectState" class="select">
+        <div id="SelectState" class=SearchNavSelect>
             <select>
                 <option value="0">Wybierz województwo</option>
                 <option value="1">Dolnosląskie</option>
@@ -92,30 +94,19 @@
             </select>
         </div>
 
-        <div id="SelectCity" class="select">
-            <select>
-                <option value="0">Select car:</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">Citroen</option>
-                <option value="4">Ford</option>
-                <option value="5">Honda</option>
-                <option value="6">Jaguar</option>
-                <option value="7">Land Rover</option>
-                <option value="8">Mercedes</option>
-                <option value="9">Mini</option>
-                <option value="10">Nissan</option>
-                <option value="11">Toyota</option>
-                <option value="12">Volvo</option>
-            </select>
+        <div class="SearchBar-Searchbox">
+            <input id="myId" type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
+            <button class="search-box-button"><i class="fas fa-search"></i></button>
+        </div>
+
+
+        <div class="SearchBar-SelectPrice">
+            <input class="SearchBar-SelectPrice" type="number" placeholder="od" min="0" step="any" />
         </div>
 
 
         <div>
-            <input id="SelectPrice" class="MainPageSearchInput" type="number" min="0" step="any" />
-        </div>
-        <div>
-            <input id="SelectNumberOfLeople" class="MainPageSearchInput" type="number" min="0" step="any" />
+            <input id="SelectNumberOfPeople" class="MainPageSearchInput" type="number" min="0" step="any" />
         </div>
 
 
@@ -124,10 +115,8 @@
         </div>
 
 
-
-
-
     </div>
+
 
     <div class="RightNav">RightNav</div>
 
@@ -142,6 +131,19 @@
 <script>
     function openChat() {document.getElementById("chat").style.display = "grid";}
     function closeChat() {document.getElementById("chat").style.display = "none";}
+
+    $(function(){
+
+        $('#myId').data('holder',$('#myId').attr('placeholder'));
+
+        $('#myId').focusin(function(){
+            $(this).attr('placeholder','');
+        });
+        $('#myId').focusout(function(){
+            $(this).attr('placeholder',$(this).data('holder'));
+        });
+    })
+
 </script>
 
 
