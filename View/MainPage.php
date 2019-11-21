@@ -1,17 +1,22 @@
-
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/GeneralStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/MainPageStyle.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <title>Main Page</title>
+
 </head>
 
-<body>
 
+<body>
 
 <button class="chatbox-open-button" onclick="openChat()">Hej</button>
 
@@ -21,17 +26,21 @@
         <input type="text" placeholder="Szukaj" onfocus="this.placeholder = ''">
     </div>
 
-    <div class="coversation-list">
-    </div>
+    <div class="coversation-list"></div>
+
     <div class="new-message-container">
         <a href="#add"><i class="fas fa-plus-circle"></i></a>
     </div>
+
     <div class="chat-title">
         <span>John Doe</span>
         <button class="close-chat-button" onclick="closeChat()">X</button>
     </div>
+
     <div class="chat-message-list">chat-message-list</div>
+
     <div class="chat-form">chat-form</div>
+
 </div>
 
 <div class="Wrapper">
@@ -92,37 +101,111 @@
                 <option value="12">Wielkopolskie</option>
                 <option value="13">Zachodnio-pomorskie</option>
             </select>
+            <i class="fas fa-caret-down"></i>
         </div>
 
         <div class="SearchBar-Searchbox">
-            <input id="myId" type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
+            <input  type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
             <button class="search-box-button"><i class="fas fa-search"></i></button>
         </div>
 
+        <div class="SearchBar-SelectNumber">
 
-        <div class="SearchBar-SelectPrice">
-            <input class="SearchBar-SelectPrice" type="number" placeholder="od" min="0" step="any" />
+            <h>Podaj cenę:</h>
+
+            <div class="SelectInputs">
+                <input id="from" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
+                <input id="to"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
+            </div>
+
         </div>
 
+        <div class="SearchBar-SelectNumber">
 
-        <div>
-            <input id="SelectNumberOfPeople" class="MainPageSearchInput" type="number" min="0" step="any" />
+            <h>Podaj liczbę osób:</h>
+
+            <div class="SelectInputs">
+                <input id="NumebrOfPeopleInput" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'" min="0" step="any" />
+            </div>
+
         </div>
 
+        <div class="SearchBar-CheckBox">
 
-        <div>
-            <input type="radio">
+            <h>Szukam:</h>
+
+            <div class="checkbox-options">
+
+                <div class="checkbox-option-container">
+
+                    <label class="checkbox-option">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <h>Boiska</h>
+                    </label>
+
+                </div>
+
+                <div class="checkbox-option-container">
+
+                    <label class="checkbox-option">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <h>Hali</h>
+                    </label>
+
+                </div>
+
+
+                <div class="checkbox-option-container">
+
+                    <label id="terrain" class="checkbox-option">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <h>Terenu</h>
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+
         </div>
 
 
     </div>
 
-
     <div class="RightNav">RightNav</div>
 
-    <div class="MainContent">MainContent Jek<br> Hej <br> Hej <br> Hej</div>
+    <div class="MainContent">
 
-    <div class="MainContent">MainContent</div>
+        <div class="Publication">
+
+            <div class="EventInformation">
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+                <h id="EventTitlePeopleNumber">4 z 12</h>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
 
 </div>
 
@@ -132,20 +215,9 @@
     function openChat() {document.getElementById("chat").style.display = "grid";}
     function closeChat() {document.getElementById("chat").style.display = "none";}
 
-    $(function(){
 
-        $('#myId').data('holder',$('#myId').attr('placeholder'));
-
-        $('#myId').focusin(function(){
-            $(this).attr('placeholder','');
-        });
-        $('#myId').focusout(function(){
-            $(this).attr('placeholder',$(this).data('holder'));
-        });
-    })
 
 </script>
-
 
 
 

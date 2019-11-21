@@ -32,7 +32,7 @@
     position: fixed;
     bottom: 1.45rem;
     left: 1.75rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .search-container{
@@ -106,13 +106,10 @@
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
 }
 
-
-
-
 .Wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
     grid-gap: 1em;
     padding: 5em;
 }
@@ -123,34 +120,45 @@
     grid-area: 1 / 1 / span 1 / span 4;
     grid-template-columns: 10% 60% 30%;
     background: #B90808;
-    top: 1.5em;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
+    align-items: center;
+    z-index: 1;
+    top: 1em;
 }
 
 .Options {
+    display: flex;
+    align-items: center;
     grid-area: 1 / 2 / span 1 / span 1;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    overflow: hidden;
-    text-align: center;
+
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 3em;
+
+    height: auto;
+
+
+
+
 }
 
 .Options > a{
     color: white;
-    padding: 2em 0.5em;
     text-decoration: none;
     font-size: 1.35em;
+    padding: 0 0.5em;
 }
 
 .fa-globe {
-    color: green;
-    padding-right: 0.5em;
-    font-size: 1em;
 
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
 }
 
 .fa-map-marked-alt{
+
     color: green;
     padding: 0.5em;
     font-size: 1em;
@@ -165,37 +173,42 @@
 }
 
 .Options > a:hover{
-    background: beige;
+    background: floralwhite;
     color: black;
 }
 
 #logo > a > img{
     width: 4em;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 1em;
 }
 
 #Notification{
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-user{
     color: green;
     font-size: 2.2em;
-    padding: 0.6em 1em;
+    padding: 0.5em;
 }
 
 .fa-heart{
     color: green;
     font-size: 2.2em;
-    padding: 0.6em 1em;
+    padding: 0.5em;
 }
 
 .fa-bell{
     color: green;
     font-size: 2.2em;
-    padding: 0.6em 1em;
+    padding: 0.5em;
 }
+
+.fa-user:hover{color: darkgreen;}
+.fa-heart:hover{color: darkgreen;}
+.fa-bell:hover{color: darkgreen;}
 
 
 .SearchNav{
@@ -206,6 +219,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
     padding: 10px;
+
 }
 
 .SearchNavSelect{
@@ -226,6 +240,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    font-weight: bold;
 }
 
 .SearchNavSelect select:hover,
@@ -254,7 +269,6 @@
 
 .SearchBar-Searchbox{
     display: inline-flex;
-
 }
 
 .search-box-input {
@@ -285,13 +299,141 @@
     background-color: #3817c6;
 }
 
+.SearchBar-SelectNumber{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3758cb;
+    padding: 0.2em 0;
+}
+
+.SearchBar-SelectNumber > h{
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
 
 
+}
 
+.SelectInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.1em;
+}
 
+.SelectInputs > input{
+    width: 25%;
+    margin: 0 0.4em;
+    border: 0.3em solid #3758cb;
+    outline: 0;
+    padding-left: 1em;
+}
 
+.SelectInputs > input:hover,
+.SelectInputs > input:focus{
+    border-color: #3817c6;
+}
 
+#NumebrOfPeopleInput{
+    width: 100%;
+}
 
+.SearchBar-CheckBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3758cb;
+    justify-content: center;
+    padding: 0 0.2em;
+}
+
+.SearchBar-CheckBox > h{
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+
+    color: white;
+}
+
+.checkbox-options{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-option-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-option{
+    cursor: pointer;
+   -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.2em;
+    position: relative;
+    margin-right: 1em;
+}
+
+#terrain{
+    margin-right: 0;
+}
+
+.checkbox-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-option >  .checkmark {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background-color: #eee;
+    top: 5%;
+    left: 0;
+}
+
+.checkbox-option > h{
+    padding-left: 1.2em;
+    font-size: 1em;
+    color: white;
+    font-weight: normal;
+}
+
+.checkbox-option:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-option input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-option input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-option .checkmark:after {
+    left: 50%;
+    top: 0.1em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 
 
@@ -309,9 +451,75 @@
 }
 
 
+.Publication{
 
+    background-color: white;
+    height: 22em;
+    border: solid 5px #6dcb1b;
 
+}
 
+.EventInformation{
+    display: flex;
+    flex-direction: column;
+}
 
+#EventTitle{
+    width: 244px;
+    height: 33px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
 
+#EventSport{
+    width: 136px;
+    height: 33px;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
+
+#EventDate{
+    width: 262px;
+    height: 33px;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
+
+#EventAddress{
+    width: 396px;
+    height: 33px;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
 
