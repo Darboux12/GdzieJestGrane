@@ -1,0 +1,97 @@
+
+.CheckBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2em;
+}
+
+.CheckBox > h{
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+
+    color: white;
+}
+
+.Checkbox-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#last-box{
+    margin-right: 0;
+}
+
+.Checkbox-option-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Checkbox-option{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.2em;
+    position: relative;
+    margin-right: 1em;
+}
+
+
+.Checkbox-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.Checkbox-option >  .checkmark {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background-color: #eee;
+    top: 5%;
+    left: 0;
+}
+
+.Checkbox-option > h{
+    padding-left: 1.2em;
+    font-size: 1em;
+    color: white;
+    font-weight: normal;
+}
+
+.Checkbox-option:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.Checkbox-option input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.Checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.Checkbox-option input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.Checkbox-option .checkmark:after {
+    left: 50%;
+    top: 0.1em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

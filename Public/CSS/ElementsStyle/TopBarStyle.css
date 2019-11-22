@@ -1,0 +1,95 @@
+
+.TopBar{
+    position: sticky;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    background: #B90808;
+    align-items: center;
+    z-index: 1;
+    top: 1em;
+}
+
+#logo > a > img{
+    width: 4em;
+    padding: 0.3em 1em;
+}
+
+.Options {
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 2 / span 1 / span 1;
+
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 3em;
+
+    height: auto;
+
+
+
+
+}
+
+.Options > a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.35em;
+    padding: 0 0.5em;
+}
+
+.fa-globe {
+
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.fa-map-marked-alt{
+
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
+
+}
+
+.fa-calendar-plus{
+    color: green;
+    padding: 0.5em;
+    font-size: 1em;
+
+}
+
+.Options > a:hover{
+    background: floralwhite;
+    color: black;
+}
+
+#Notification{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-user{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.5em;
+}
+
+.fa-heart{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.5em;
+}
+
+.fa-bell{
+    color: green;
+    font-size: 2.2em;
+    padding: 0.5em;
+}
+
+.fa-user:hover{color: darkgreen;}
+.fa-heart:hover{color: darkgreen;}
+.fa-bell:hover{color: darkgreen;}

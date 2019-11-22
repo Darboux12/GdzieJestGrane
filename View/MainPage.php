@@ -6,8 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/GeneralStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/MainPageStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/MainPageStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/TopBarStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/ChatBoxStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/CheckBoxStyle.css">
+
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -18,7 +22,7 @@
 
 <body>
 
-<button class="chatbox-open-button" onclick="openChat()">Hej</button>
+<button class="chatbox-open-button" onclick="openChat()">Chat</button>
 
 <div id="chat" class="chat-container">
 
@@ -55,7 +59,7 @@
 
             <a href="#page"><i class="fas fa-globe"></i>Aktualności</a>
             <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="#page"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+            <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
 
         </div>
 
@@ -130,15 +134,15 @@
 
         </div>
 
-        <div class="SearchBar-CheckBox">
+        <div class="CheckBox">
 
             <h>Szukam:</h>
 
-            <div class="checkbox-options">
+            <div class="Checkbox-options">
 
-                <div class="checkbox-option-container">
+                <div class="Checkbox-option-container">
 
-                    <label class="checkbox-option">
+                    <label class="Checkbox-option">
                         <input type="checkbox">
                         <span class="checkmark"></span>
                         <h>Boiska</h>
@@ -146,9 +150,9 @@
 
                 </div>
 
-                <div class="checkbox-option-container">
+                <div class="Checkbox-option-container">
 
-                    <label class="checkbox-option">
+                    <label class="Checkbox-option">
                         <input type="checkbox">
                         <span class="checkmark"></span>
                         <h>Hali</h>
@@ -157,9 +161,9 @@
                 </div>
 
 
-                <div class="checkbox-option-container">
+                <div class="Checkbox-option-container">
 
-                    <label id="terrain" class="checkbox-option">
+                    <label id="last-box" class="Checkbox-option">
                         <input type="checkbox">
                         <span class="checkmark"></span>
                         <h>Terenu</h>
@@ -342,9 +346,6 @@
 <script>
     function openChat() {document.getElementById("chat").style.display = "grid";}
     function closeChat() {document.getElementById("chat").style.display = "none";}
-
-
-
 </script>
 
 

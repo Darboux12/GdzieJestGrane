@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/GeneralStyle.css" />
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/LogInPageStyle.css" />
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css" />
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/LogInPageStyle.css" />
     <title>Log in</title>
 </head>
 <body>
@@ -29,8 +29,6 @@
     </div>
 
 </div>
-
-
 
 </body>
 </html>

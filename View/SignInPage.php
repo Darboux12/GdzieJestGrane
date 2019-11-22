@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/GeneralStyle.css" />
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/SignInPageStyle.css" />
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css" />
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/SignInPageStyle.css" />
     <title>Register on website</title>
 </head>
 

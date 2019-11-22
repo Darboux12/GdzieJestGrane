@@ -1,0 +1,47 @@
+.Wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 1em;
+    padding: 5em;
+}
+
+.TopBar{
+    grid-area: 1 / 1 / span 1 / span 2;
+ }
+
+.CreateEventForm{
+    grid-area: 2 / 1 / span 2 / span 1;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.CreateEventForm > h{
+    font-size: 1.5em;
+
+}
+
+.CreateEventForm > input{
+    padding: 1em 0;
+    width: 50%;
+    margin: 0.5em 0;
+}
+
+#EventDataInput{
+    
+}
+
+
+
+.CreateEventMap{
+    grid-area: 2 / 2 / span 1 / span 1;
+    background: gray;
+}
+
+.CreateEventDescription{
+    grid-area: 3 / 2 / span 1 / span 1;
+    background: gray;
+}

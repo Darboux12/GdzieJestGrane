@@ -1,0 +1,283 @@
+
+
+.Wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1em;
+    padding: 5em;
+}
+
+.TopBar{
+    grid-area: 1 / 1 / span 1 / span 4;
+}
+
+.CheckBox{
+    background: #3758cb;
+}
+
+
+
+
+
+.SearchNav{
+    display: grid;
+    grid-area: 2 / 1 / span 1 / span 3;
+    background: gray;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1em;
+    padding: 10px;
+
+}
+
+.SearchNavSelect{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.SearchNavSelect > select {
+    width: 100%;
+    height: 100%;
+    padding-left: 1em;
+    cursor: pointer;
+    background: #3758cb;
+    color: #fefefe;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-weight: bold;
+}
+
+.SearchNavSelect select:hover,
+.SearchNavSelect select:focus {
+    color: floralwhite;
+    background: #3817c6;
+}
+
+.SearchNavSelect select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.fa-caret-down {
+    position: absolute;
+    font-size: 2em;
+    right: 1em;
+    pointer-events: none;
+    color: white;
+}
+
+.SearchNavSelect select:hover ~ .fa-caret-down,
+.SearchNavSelect select:focus ~ .fa-caret-down {
+    color: floralwhite;
+}
+
+.SearchBar-Searchbox{
+    display: inline-flex;
+}
+
+.search-box-input {
+    width: 100%;
+    border: 0.3em solid #3758cb;
+    outline: 0;
+    padding-left: 1em;
+
+}
+
+.search-box-input:hover,
+.search-box-input:focus {
+    border-color: #3817c6;
+}
+
+.search-box-button {
+    background-color: #3758cb;
+    border: 0.2em solid #3758cb;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    padding: 0 0.75em;
+}
+
+.search-box-button:hover,
+.search-box-button:focus{
+    border-color: #3817c6;
+    background-color: #3817c6;
+}
+
+.SearchBar-SelectNumber{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3758cb;
+    padding: 0.2em 0;
+}
+
+.SearchBar-SelectNumber > h{
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+
+
+}
+
+.SelectInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.1em;
+}
+
+.SelectInputs > input{
+    width: 25%;
+    margin: 0 0.4em;
+    border: 0.3em solid #3758cb;
+    outline: 0;
+    padding-left: 1em;
+}
+
+.SelectInputs > input:hover,
+.SelectInputs > input:focus{
+    border-color: #3817c6;
+}
+
+#NumebrOfPeopleInput{
+    width: 100%;
+}
+
+
+
+
+
+.RightNav{
+    display: grid;
+    grid-area: 2 / 4 / span 3 / span 1;
+    background: gray;
+}
+
+.MainContent{
+    display: grid;
+    grid-area: 3 / 1 / span 2 / span 3;
+    background: gray;
+
+}
+
+
+.Publication{
+    position: relative;
+    background-color: white;
+    height: 22em;
+    border: solid 5px #6dcb1b;
+    margin-bottom: 1.5em;
+
+
+
+}
+
+.EventInformation{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1em;
+    left: 1em;
+    top: 1em;
+
+}
+
+
+#EventTitle{
+    display: flex;
+    font-family: Arial;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+    padding-bottom: 0.5em;
+}
+
+#EventSport{
+    display: flex;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
+
+#EventDate{
+    display: flex;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+}
+
+#EventAddress{
+    display: flex;
+    opacity: 0.3;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.99);
+    padding-bottom: 0.5em;
+}
+
+#EventPeopleNumberElemnt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-users{
+    color: darkgreen;
+    font-size: 1.5em;
+    padding-right: 0.3em;
+}
+
+.Publication > a >img{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 50%;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+}
+
+#SeeDetails{
+    position: absolute;
+    bottom: 0em;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+
+    text-decoration: none ;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+    background-color: rgba(167, 18, 212, 0.92);
+    padding: 1em 5em;
+    color: white;
+    font-weight: bold;
+}
