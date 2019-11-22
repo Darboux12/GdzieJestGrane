@@ -185,12 +185,22 @@
         <div class="Publication">
 
             <div class="EventInformation">
+
                 <h id="EventTitle">Siatkówka dla pań</h>
                 <h id="EventSport">Siatkówka</h>
                 <h id="EventDate">Piątek, 20 lis, 19:00</h>
                 <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="EventTitlePeopleNumber">4 z 12</h>
+
+                <div id="EventPeopleNumberElemnt">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
             </div>
+
+            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
 
 
 
@@ -201,6 +211,124 @@
 
 
         </div>
+        <div class="Publication">
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+
+                <div id="EventPeopleNumberElemnt">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
+            </div>
+
+            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="Publication">
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+
+                <div id="EventPeopleNumberElemnt">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
+            </div>
+
+            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="Publication">
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+
+                <div id="EventPeopleNumberElemnt">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
+            </div>
+
+            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="Publication">
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+
+                <div id="EventPeopleNumberElemnt">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
+            </div>
+
+            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
 
 
 
