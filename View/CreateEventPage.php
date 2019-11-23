@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/CreateEventPageStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/CheckBoxStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/ChatBoxStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/TopBarStyle.css">
-
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/CreateEventPageStyle.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -77,9 +76,9 @@
         <input  type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
 
         <h>Data wydarzenia</h>
-        <div id="EventDataInput">
+        <div class="EventDataInput">
             <input  type="text" placeholder="dd" onfocus="this.placeholder=''" onblur="this.placeholder='dd'">
-            <input  type="text" placeholder="mm" onfocus="this.placeholder=''" onblur="this.placeholder='mmm'">
+            <input  type="text" placeholder="mm" onfocus="this.placeholder=''" onblur="this.placeholder='mm'">
             <input  type="text" placeholder="yyyy" onfocus="this.placeholder=''" onblur="this.placeholder='yyyy'">
         </div>
 
@@ -131,7 +130,7 @@
         </div>
 
         <h>Szukam osób w wieku:</h>
-        <div id="EventDataInput">
+        <div class="EventDataInput">
             <h>od</h>
             <input  type="text" placeholder="lat" onfocus="this.placeholder=''" onblur="this.placeholder='lat'">
             <h>do</h>
@@ -140,10 +139,10 @@
         </div>
 
         <h>Koszt:</h>
-        <div id="EventDataInput">
+        <div class="EventDataInput">
             <input  type="text" placeholder="zł" onfocus="this.placeholder=''" onblur="this.placeholder='zł'">
             <h>zł od osoby za</h>
-            <input  type="text" placeholder="zł" onfocus="this.placeholder=''" onblur="this.placeholder='zł'">
+            <input  type="text" placeholder="godz" onfocus="this.placeholder=''" onblur="this.placeholder='godz'">
             <h>godzin gry</h>
         </div>
 
@@ -159,8 +158,18 @@
     </div>
 
 
-    <div class="CreateEventMap">CreateEventMap</div>
-    <div class="CreateEventDescription">CreateEventDescription</div>
+
+
+    <div class="CreateEventMap">
+        <img src="../Public/Images/Kamienna.png">
+    </div>
+
+
+    <div class="CreateEventDescription">
+
+        <textarea rows="5" cols="50"  placeholder="Dodaj krótki opis wydarzenia..."></textarea>
+
+    </div>
 
 
 
@@ -178,6 +187,7 @@
 
 
 </script>
+
 
 
 </body>

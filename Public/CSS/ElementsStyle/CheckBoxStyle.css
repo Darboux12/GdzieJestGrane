@@ -10,7 +10,6 @@
 .CheckBox > h{
     font-size: 1.2em;
     margin-bottom: 0.3em;
-
     color: white;
 }
 
@@ -74,7 +73,7 @@
     background-color: #2196F3;
 }
 
-.Checkmark:after {
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;

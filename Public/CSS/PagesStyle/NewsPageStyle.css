@@ -1,0 +1,82 @@
+.Wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 1em;
+    padding: 5em;
+}
+
+.TopBar{
+    grid-area: 1 / 1 / span 1 / span 4;
+}
+
+.NewsNav{
+    grid-area: 2 / 1 / span 1 / span 3;
+    background: gray;
+}
+
+.News{
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 3px #707070;
+    padding: 0.5em 0.5em;
+    margin-bottom: 1.5em;
+    box-sizing: border-box;
+
+}
+
+.News > img{
+    width: 6em;
+    height:6em;
+
+    border-radius: 50%;
+    border: solid 3px #2699fb;
+    margin-right:  1.5em;
+    margin-left: 1em;
+}
+
+
+
+.NewsText{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.NewsText > h{
+    font-size: 1.6em;
+    font-family: Arial;
+    color: #2699fb;
+    font-weight: bold;
+
+}
+
+.NewsText > p{
+    font-size: 1.1em;
+    font-family: Arial;
+    color: black;
+    padding-right: 1em;
+}
+
+.NewsText > a{
+    font-size: 1.1em;
+    font-family: Arial;
+    color: rgba(63, 37, 37, 0.82);
+
+}
+
+
+
+
+
+
+
+
+.RightNav{
+    grid-area: 2 / 4 / span 1 / span 1;
+    background: gray;
+}

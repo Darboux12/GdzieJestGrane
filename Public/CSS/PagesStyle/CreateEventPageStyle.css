@@ -1,7 +1,7 @@
 .Wrapper{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr 1fr;
     grid-gap: 1em;
     padding: 5em;
 }
@@ -15,26 +15,45 @@
     background: gray;
     display: flex;
     flex-direction: column;
-
+    font-weight: bold;
+    align-items: center;
 }
-
 
 .CreateEventForm > h{
     font-size: 1.5em;
-
 }
 
 .CreateEventForm > input{
     padding: 1em 0;
     width: 50%;
-    margin: 0.5em 0;
+    margin-bottom: 1em;
+    margin-top: 0.1em;
+    border-radius: 24px;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+    padding-left: 1em;
+    outline: none;
 }
 
-#EventDataInput{
-    
+.EventDataInput{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    margin-top: 0.1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    width: 70%;
 }
 
-
+.EventDataInput > input{
+    width: 30%;
+    border-radius: 24px;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+    padding: 1em 0;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    text-align: center;
+}
 
 .CreateEventMap{
     grid-area: 2 / 2 / span 1 / span 1;
@@ -44,4 +63,30 @@
 .CreateEventDescription{
     grid-area: 3 / 2 / span 1 / span 1;
     background: gray;
+}
+
+.CheckBox{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    background: white;
+    border-radius: 10px;
+    padding: 0.5em;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+}
+
+.CheckBox > h{
+    font-size: 1.5em;
+    color: black;
+}
+
+.Checkbox-option > h{
+    color: black;
+}
+
+.CreateEventDescription > textarea{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 1.5em;
+    box-sizing: border-box;
 }
