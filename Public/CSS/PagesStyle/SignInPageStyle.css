@@ -26,13 +26,18 @@ form{
 
 input{
     border-radius: 1.5em;
-    border: solid 3px rgba(34, 0, 255, 0.92);
+    border: solid 0.3em  rgba(34, 0, 255, 0.92);
     background-color: #ffffff;
     padding-left: 1em;
     margin: 0 1em 1em 1em;
     line-height: 2.5em;
     font-size: 1em;
     text-align: left;
+    outline: none;
+}
+
+input:hover,input:focus{
+    border-color: #3817c6;
 }
 
 p{
@@ -75,15 +80,20 @@ p{
     border: solid 5px rgba(18, 50, 212, 0.92);
 }
 
-@media only screen and (max-width: 1050px){  body {font-size: 14px;}}
-@media only screen and (max-width: 1000px){  body {font-size: 13px;}}
-@media only screen and (max-width: 950px){  body {font-size: 12px;}}
-@media only screen and (max-width: 900px){  body {font-size: 11px;}}
-@media only screen and (max-width: 850px){  body {font-size: 10px;}}
-@media only screen and (max-width: 800px){  body {font-size: 9px;}}
-@media only screen and (max-width: 750px){  body {font-size: 8px;}}
-@media only screen and (max-width: 700px){  body {font-size: 7px;}}
+
+a{
+    text-decoration: none;
+    border-radius: 1.5em;
+    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    background-color: #ffffff;
+    padding-left: 1em;
+    margin: 0 1em 1em 1em;
+    line-height: 2.5em;
+    font-size: 1em;
+    text-align: left;
+    outline: none;
 
 
+}
 
 

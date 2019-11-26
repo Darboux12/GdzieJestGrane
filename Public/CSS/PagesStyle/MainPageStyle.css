@@ -1,5 +1,4 @@
 
-
 .Wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -8,9 +7,11 @@
     padding: 5em;
 }
 
+
 .TopBar{
     grid-area: 1 / 1 / span 1 / span 4;
 }
+
 
 .CheckBox{
     background: #3758cb;
@@ -18,16 +19,15 @@
 
 
 
-
-
 .SearchNav{
     display: grid;
-    grid-area: 2 / 1 / span 1 / span 3;
-    background: gray;
+    grid-area: 2 / 1 / span 1 / span 4;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
     padding: 10px;
+
+
 
 }
 
@@ -85,7 +85,6 @@
     border: 0.3em solid #3758cb;
     outline: 0;
     padding-left: 1em;
-
 }
 
 .search-box-input:hover,
@@ -148,28 +147,17 @@
     width: 100%;
 }
 
-
-
-
-
-.RightNav{
-    display: grid;
-    grid-area: 2 / 4 / span 3 / span 1;
-    background: gray;
-}
-
 .MainContent{
     display: grid;
     grid-area: 3 / 1 / span 2 / span 3;
-    background: gray;
+
 
 }
-
 
 .Publication{
     position: relative;
     background-color: white;
-    height: 22em;
+    height: 24em;
     border: solid 5px #6dcb1b;
     margin-bottom: 1.5em;
 
@@ -183,70 +171,79 @@
     flex-direction: column;
     text-align: left;
     font-size: 1em;
-    left: 1em;
-    top: 1em;
+    left: 3em;
+    top: 5em;
 
 }
 
+.ShortDescription{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 45%;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+    resize: none;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 1em;
+}
 
 #EventTitle{
     display: flex;
     font-family: Arial;
     font-size: 1.5em;
-    font-weight: normal;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.37;
     letter-spacing: normal;
     text-align: center;
-    color: rgba(0, 0, 0, 0.99);
-    padding-bottom: 0.5em;
+    color: indigo;
 }
 
 #EventSport{
     display: flex;
-    opacity: 0.3;
+    opacity: 0.5;
     font-family: Arial;
     font-size: 1.2em;
-    font-weight: normal;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.37;
     letter-spacing: normal;
     text-align: center;
-    color: rgba(0, 0, 0, 0.99);
+    color: green;
 }
 
 #EventDate{
     display: flex;
-    opacity: 0.3;
+    opacity: 0.5;
     font-family: Arial;
     font-size: 1.2em;
-    font-weight: normal;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.37;
     letter-spacing: normal;
     text-align: center;
-    color: rgba(0, 0, 0, 0.99);
+    color: #707070;
 }
 
 #EventAddress{
     display: flex;
-    opacity: 0.3;
+    opacity: 0.5;
     font-family: Arial;
     font-size: 1.2em;
-    font-weight: normal;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.37;
     letter-spacing: normal;
     text-align: center;
-    color: rgba(0, 0, 0, 0.99);
-    padding-bottom: 0.5em;
+    color: #3817c6;
 }
 
-#EventPeopleNumberElemnt{
+#EventPeopleNumberElement{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -254,25 +251,49 @@
 
 .fa-users{
     color: darkgreen;
-    font-size: 1.5em;
+    font-size: 1.7em;
     padding-right: 0.3em;
+}
+
+#EventPeopleNumberElement > h{
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+#Age{
+    display: flex;
+    opacity: 0.5;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: darkmagenta;
+}
+
+.fa-volleyball-ball{
+    font-size: 2.5em;
+    padding: 0.5em;
+    color: #B90808;
+
 }
 
 .Publication > a >img{
     position: absolute;
     top: 1em;
     right: 1em;
-    width: 50%;
+    width: 45%;
     border: solid 3px rgba(63, 37, 37, 0.82);
 }
 
 #SeeDetails{
     position: absolute;
-    bottom: 0em;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-
+    bottom: 1em;
+    left: 1em;
 
     text-decoration: none ;
     border: solid 3px rgba(63, 37, 37, 0.82);
@@ -280,4 +301,17 @@
     padding: 1em 5em;
     color: white;
     font-weight: bold;
+}
+
+
+#SubmitButton{
+    background: #3758cb;;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    color: white;
+}
+
+#SubmitButton:hover{
+    background: #3817c6;
 }

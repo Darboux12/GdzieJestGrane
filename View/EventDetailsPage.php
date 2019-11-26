@@ -10,6 +10,7 @@
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/EventDetailsPageStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/TopBarStyle.css">
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/ChatBoxStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/PopularEventsNav.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -147,9 +148,209 @@
 
     </div>
 
+    <div class="RightNav">
+
+        <h id="NavTitle">Najpopularniejsze wydarzenia w twojej okolicy</h>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
 
 
-    <div class="RightNav">RightNav</div>
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <i class="fas fa-fire"></i>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h>Siatkówka</h>
+                <h>Kraków</h>
+                <h>20.11 19:00</h>
+                <h>Wyświetlenia wydarzenia: 3700</h>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
 
 </div>
 

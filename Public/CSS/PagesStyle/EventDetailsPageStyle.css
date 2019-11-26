@@ -86,9 +86,6 @@
 
 }
 
-
-
-
 .RightNav{
     grid-area: 2 / 4 / span 1 / span 1;
     background: gray;

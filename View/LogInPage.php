@@ -22,9 +22,13 @@
             <input name="Password" type="password" placeholder="Podaj hasło">
         </form>
 
-        <input id="LogInButton" type="button" onclick="" value="Zaloguj się">
+        <input id="LogInButton" type="submit" form="FormAndButtons" value="Zaloguj się">
 
-        <input id="SignInButton" type="submit" form="LogInForm" value="Nie wiesz gdzie jest grane Zarejestruj się!">
+        <a href="SignInPage.php" id="SignInButton">"Nie wiesz gdzie jest grane Zarejestruj się!"</a>
+
+
+
+
 
     </div>
 
@@ -32,3 +36,4 @@
 
 </body>
 </html>
+
