@@ -12,23 +12,21 @@
     grid-area: 1 / 1 / span 1 / span 4;
 }
 
+.TopBarMobile{
+    grid-area: 1 / 1 / span 1 / span 4;
+}
 
 .CheckBox{
     background: #3758cb;
 }
-
-
 
 .SearchNav{
     display: grid;
     grid-area: 2 / 1 / span 1 / span 4;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1em;
-    padding: 10px;
-
-
-
+    grid-gap: 0.6em;
+    padding: 0;
 }
 
 .SearchNavSelect{
@@ -303,7 +301,6 @@
     font-weight: bold;
 }
 
-
 #SubmitButton{
     background: #3758cb;;
     font-size: 1.2em;
@@ -315,3 +312,5 @@
 #SubmitButton:hover{
     background: #3817c6;
 }
+
+

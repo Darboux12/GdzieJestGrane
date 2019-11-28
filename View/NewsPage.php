@@ -49,23 +49,70 @@
 
     <div class="TopBar">
 
-        <div id="logo">
-            <a  href="#Page"><img src="../Public/Images/logo-no-writing.png"></a>
+        <a href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+
+        <a id="News-Link" href="#page"><i class="fas fa-globe"></i>Aktualności</a>
+
+        <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
+
+        <a id="MakeEvent-Link" href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+
+        <div class="UserMenu">
+
+            <i  id="usericon" class="fas fa-user" onclick="ToggleUserMenu()"></i>
+
+            <div id="myBubble" class="bubble">
+
+                <form>
+                    <div class="UserProfile">
+                        <img src="../Public/Images/Person1.jpg">
+
+                        <div class="NameSeeProfile">
+                            <h id="Name">Janek126p</h>
+                            <h id="SeeProfile">Zobacz profil</h>
+                        </div>
+
+                        <i class="fas fa-chevron-circle-right"></i>
+
+                    </div>
+
+                    <div class="ProfileLinks">
+
+                        <div class="ProfileLinks-link">
+                            <a href="#page">Moje wydarzenia</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                        <div class="ProfileLinks-link">
+                            <a href="#page">Oznaczone miejsca</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                        <div class="ProfileLinks-link">
+                            <a href="#page">Znajomi</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                        <div class="ProfileLinks-link">
+                            <a href="#page">Ustawienia</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                        <div class="ProfileLinks-link">
+                            <a href="#page">Wyloguj</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
         </div>
 
-        <div class="Options">
+        <i class="fas fa-heart"></i>
 
-            <a href="#page"><i class="fas fa-globe"></i>Aktualności</a>
-            <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
-
-        </div>
-
-        <div id="Notification">
-            <a href="#page"><i class="fas fa-user"></i></a>
-            <a href="#page"><i class="fas fa-heart"></i></a>
-            <a href="#page"><i class="fas fa-bell"></i></a>
-        </div>
+        <i class="fas fa-bell"></i>
 
     </div>
 

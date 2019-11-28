@@ -1,38 +1,27 @@
 
 .TopBar{
     position: sticky;
-    display: grid;
-    grid-template-columns: 10% 60% 30%;
+    display: flex;
     background: #B90808;
     align-items: center;
     z-index: 1;
     top: 1em;
+    height: 5em;
 }
 
-#logo > a > img{
-    width: 4em;
-    padding: 0.3em 1em;
+#Ball-Image{
+    width: 3em;
 }
 
-.Options {
-    display: flex;
-    align-items: center;
-    grid-area: 1 / 2 / span 1 / span 1;
-
-
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 3em;
-
-    height: auto;
-
-
-
-
+#News-Link{
+    margin-left: 10%;
 }
 
-.Options > a{
+#MakeEvent-Link{
+    margin-right: 10%;
+}
+
+.TopBar> a{
     color: white;
     text-decoration: none;
     font-size: 1.35em;
@@ -42,55 +31,182 @@
 .fa-globe {
 
     color: green;
-    padding: 0.5em;
-    font-size: 1em;
+    font-size: 1.4em;
+    padding-right: 0.2em;
 }
 
 .fa-map-marked-alt{
 
     color: green;
-    padding: 0.5em;
-    font-size: 1em;
+    font-size: 1.4em;
+    padding-right: 0.2em;
 
 }
 
 .fa-calendar-plus{
     color: green;
-    padding: 0.5em;
-    font-size: 1em;
+    font-size: 1.4em;
+    padding-right: 0.2em;
 
 }
 
-.Options > a:hover{
+.TopBar > a:hover{
     background: floralwhite;
     color: black;
-}
-
-#Notification{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .fa-user{
     color: green;
     font-size: 2.2em;
-    padding: 0.5em;
+    cursor: pointer;
 }
 
 .fa-heart{
     color: green;
     font-size: 2.2em;
-    padding: 0.5em;
+    cursor: pointer;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 .fa-bell{
     color: green;
     font-size: 2.2em;
-    padding: 0.5em;
+    cursor: pointer;
+    margin-right: 0.5em;
+}
+
+.fa-bars{
+    color: green;
+    font-size: 2.2em;
+    cursor: pointer;
 }
 
 .fa-user:hover{color: darkgreen;}
 .fa-heart:hover{color: darkgreen;}
 .fa-bell:hover{color: darkgreen;}
+
+
+.bubble > form{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    position: absolute;
+    width: 275px;
+    height: 280px;
+    padding: 6px;
+    background: #FFFFFF;
+    -webkit-border-radius: 29px;
+    -moz-border-radius: 29px;
+    border-radius: 29px;
+    top: 180%;
+    z-index: 2;
+    display: none;
+}
+
+.bubble:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 19px 33px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: 100%;
+    left: 124px;
+}
+
+.UserMenu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show{
+    display: flex}
+
+.UserProfile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.UserProfile > img{
+    width: 5em;
+    height:5em;
+    border-radius: 50%;
+    border: solid 3px #2699fb;
+}
+
+.NameSeeProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2em;
+    padding-left: 0.5em;
+}
+
+.NameSeeProfile > #Name{
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.NameSeeProfile > #SeeProfile{
+
+    font-size: 1em;
+}
+
+.fa-chevron-circle-right{
+    font-size: 2em;
+}
+
+.NameSeeProfile > a{
+    text-decoration: none;
+    color: #3817c6;
+}
+
+.ProfileLinks{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.ProfileLinks-link{
+    text-align: center;
+    border-top: solid 3px rgba(63, 37, 37, 0.82);
+    text-decoration: none;
+    padding: 0.2em 0;
+
+}
+
+.ProfileLinks-link > a{
+    text-decoration: none;
+}
+.fa-chevron-right{
+    position: absolute;
+    right: 15%;
+}
+
+
+
+@media only screen and (max-width : 1000px){  body{font-size: 12px;}}
+@media only screen and (max-width : 950px){  body{font-size: 11px;}}
+@media only screen and (max-width : 900px){  body{font-size: 10px;}}
+@media only screen and (max-width : 850px){  body{font-size: 9px;}}
+
+
 
