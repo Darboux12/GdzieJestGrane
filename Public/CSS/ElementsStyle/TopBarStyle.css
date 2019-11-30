@@ -4,140 +4,72 @@
     display: flex;
     background: #B90808;
     align-items: center;
+    justify-content: center;
     z-index: 1;
-    top: 1em;
+    top: 0;
     height: 5em;
-}
-
-#Ball-Image{
-    width: 3em;
-}
-
-#News-Link{
-    margin-left: 10%;
-}
-
-#MakeEvent-Link{
-    margin-right: 10%;
 }
 
 .TopBar> a{
     color: white;
     text-decoration: none;
     font-size: 1.35em;
-    padding: 0 0.5em;
+    padding: 0.5em 0.5em;
+    margin: 0 1em;
 }
 
-.fa-globe {
-
-    color: green;
-    font-size: 1.4em;
-    padding-right: 0.2em;
-}
-
-.fa-map-marked-alt{
-
-    color: green;
-    font-size: 1.4em;
-    padding-right: 0.2em;
-
-}
-
-.fa-calendar-plus{
-    color: green;
-    font-size: 1.4em;
-    padding-right: 0.2em;
-
-}
-
-.TopBar > a:hover{
+.TopBar > a:hover:not(.Ball-link){
     background: floralwhite;
     color: black;
 }
 
-.fa-user{
+#Ball-Image{
+    width: 3em;
+}
+
+.TopBar > .Ball-link{
+    display: flex;
+    align-items: center;
+    margin: 0 4em;
+
+}
+
+.Ball-link > h{
+    color: #3817c6;
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+.fa-globe, .fa-map-marked-alt, .fa-calendar-plus,
+.fa-user, .fa-heart, .fa-bell, .fa-bars,.fa-map,
+.fa-user-friends,.fa-user-friends,.fa-cog,
+.fa-sign-out-alt,.fa-calendar-alt,.fa-search{
     color: green;
     font-size: 2.2em;
     cursor: pointer;
+    margin-right: 0.5em;
 }
 
 .fa-heart{
-    color: green;
-    font-size: 2.2em;
-    cursor: pointer;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
+    margin-left: 1em;
 }
 
-.fa-bell{
-    color: green;
-    font-size: 2.2em;
-    cursor: pointer;
-    margin-right: 0.5em;
-}
-
-.fa-bars{
-    color: green;
-    font-size: 2.2em;
-    cursor: pointer;
+.fa-search{
+    margin-right: 1em;
 }
 
 .fa-user:hover{color: darkgreen;}
 .fa-heart:hover{color: darkgreen;}
 .fa-bell:hover{color: darkgreen;}
 
-
-.bubble > form{
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.bubble {
-    position: absolute;
-    width: 275px;
-    height: 280px;
-    padding: 6px;
-    background: #FFFFFF;
-    -webkit-border-radius: 29px;
-    -moz-border-radius: 29px;
-    border-radius: 29px;
-    top: 180%;
-    z-index: 2;
-    display: none;
-}
-
-.bubble:after
-{
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 0 19px 33px;
-    border-color: #FFFFFF transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
-    bottom: 100%;
-    left: 124px;
-}
-
-.UserMenu{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.show{
-    display: flex}
-
 .UserProfile{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-left: 0.5em;
     margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .UserProfile > img{
@@ -146,6 +78,22 @@
     border-radius: 50%;
     border: solid 3px #2699fb;
 }
+
+.UserProfile > a{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 20%;
+    text-decoration: none;
+}
+
+.UserProfile > a > h{
+    margin-right: 0.5em;
+}
+
+
+
+
 
 .NameSeeProfile{
     display: flex;
@@ -163,7 +111,6 @@
 }
 
 .NameSeeProfile > #SeeProfile{
-
     font-size: 1em;
 }
 
@@ -176,37 +123,89 @@
     color: #3817c6;
 }
 
+
 .ProfileLinks{
     display: flex;
     flex-direction: column;
-    text-align: center;
     font-weight: bold;
-    margin-top: 0.5em;
     width: 100%;
+    border-bottom: solid 3px rgba(63, 37, 37, 0.82);
+    border-right: solid 3px rgba(63, 37, 37, 0.82);
 }
 
-.ProfileLinks-link{
-    text-align: center;
+.ProfileLinks > a{
+    display: flex;
+    align-items: center;
     border-top: solid 3px rgba(63, 37, 37, 0.82);
     text-decoration: none;
-    padding: 0.2em 0;
-
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    justify-content: left;
+    padding-left: 2em;
 }
 
-.ProfileLinks-link > a{
-    text-decoration: none;
-}
-.fa-chevron-right{
+.ProfileLinks > a > h{
     position: absolute;
-    right: 15%;
+    left: 25%;
+}
+
+.ProfileLinks > a:hover{
+    background: black;
+    color: #eeeeee;
+}
+
+.Mobile-Drop-Menu-Bar{
+
+    display: none;
+    left: 0;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    width: 50%;
+    padding-top: 0;
+}
+
+.Mobile-Drop-Menu-User{
+    display: none;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    width: 50%;
+    padding-top: 0;
+
+
+}
+
+.Mobile-Drop-Menu-Search{
+
+    position: absolute;
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+
 }
 
 
-
-@media only screen and (max-width : 1000px){  body{font-size: 12px;}}
-@media only screen and (max-width : 950px){  body{font-size: 11px;}}
-@media only screen and (max-width : 900px){  body{font-size: 10px;}}
-@media only screen and (max-width : 850px){  body{font-size: 9px;}}
+.show{
+    display: flex}
 
 
+
+
+
+
+
+@media only screen and (max-width : 600px){  body{font-size: 12px;}}
+@media only screen and (max-width : 550px){  body{font-size: 11px;}}
+@media only screen and (max-width : 500px){  body{font-size: 10px;}}
+@media only screen and (max-width : 450px){  body{font-size: 9px;}}
+@media only screen and (max-width : 400px){  body{font-size: 8px;}}
+@media only screen and (max-width : 350px){  body{font-size: 7px;}}
+@media only screen and (max-width : 300px){  body{font-size: 6px;}}
+@media only screen and (max-width : 300px){  body{font-size: 5px;}}
 

@@ -4,7 +4,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto;
     grid-gap: 1em;
-    padding: 5em;
 }
 
 
@@ -12,9 +11,7 @@
     grid-area: 1 / 1 / span 1 / span 4;
 }
 
-.TopBarMobile{
-    grid-area: 1 / 1 / span 1 / span 4;
-}
+
 
 .CheckBox{
     background: #3758cb;
