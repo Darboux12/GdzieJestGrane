@@ -2,74 +2,130 @@
 .TopBar{
     position: sticky;
     display: flex;
-    background: #B90808;
     align-items: center;
     justify-content: center;
+    background: #B90808;
     z-index: 1;
-    top: 0;
+    top: 1em;
     height: 5em;
 }
 
-.TopBar> a{
+.TopBarLinks{
+   margin-right: 5em;
+}
+
+.TopBarLinks> a{
     color: white;
     text-decoration: none;
     font-size: 1.35em;
     padding: 0.5em 0.5em;
-    margin: 0 1em;
 }
 
-.TopBar > a:hover:not(.Ball-link){
-    background: floralwhite;
-    color: black;
+.Ball-link{
+    margin-left: 1em;
+    position: absolute;
+    left: 0;
 }
 
 #Ball-Image{
     width: 3em;
 }
 
-.TopBar > .Ball-link{
+.TopBarIcons{
+    position: absolute;
+    right: 0;
     display: flex;
-    align-items: center;
-    margin: 0 4em;
-
+    flex-direction: row;
 }
 
-.Ball-link > h{
-    color: #3817c6;
-    font-weight: bold;
-    padding-left: 10%;
+.fa-globe,
+.fa-map-marked-alt,
+.fa-calendar-plus{
+    color: green;
+    font-size: 1.4em;
+    padding-right: 0.2em;
 }
 
-.fa-globe, .fa-map-marked-alt, .fa-calendar-plus,
-.fa-user, .fa-heart, .fa-bell, .fa-bars,.fa-map,
-.fa-user-friends,.fa-user-friends,.fa-cog,
-.fa-sign-out-alt,.fa-calendar-alt,.fa-search{
+
+.fa-heart,
+.fa-bell,
+.fa-bars{
     color: green;
     font-size: 2.2em;
     cursor: pointer;
-    margin-right: 0.5em;
+    margin-right: 1em;
+}
+
+.fa-user{
+    color: green;
+    font-size: 2.2em;
+    cursor: pointer;
 }
 
 .fa-heart{
     margin-left: 1em;
 }
 
-.fa-search{
-    margin-right: 1em;
-}
 
+.TopBarLinks > a:hover{
+    background: floralwhite;
+    color: black;
+}
 .fa-user:hover{color: darkgreen;}
 .fa-heart:hover{color: darkgreen;}
 .fa-bell:hover{color: darkgreen;}
+
+.UserMenu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble > form{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    display: none;
+    position: absolute;
+    width: 17em;
+    height:17.5em;
+    padding: 0.5em;
+    background: #FFFFFF;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    top: 180%;
+    z-index: 2;
+
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 1em 2em;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: 100%;
+    left: 7.75em
+}
+
+.show{
+    display: flex}
 
 .UserProfile{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     margin-left: 0.5em;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
 }
 
 .UserProfile > img{
@@ -78,22 +134,6 @@
     border-radius: 50%;
     border: solid 3px #2699fb;
 }
-
-.UserProfile > a{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    right: 20%;
-    text-decoration: none;
-}
-
-.UserProfile > a > h{
-    margin-right: 0.5em;
-}
-
-
-
-
 
 .NameSeeProfile{
     display: flex;
@@ -123,30 +163,27 @@
     color: #3817c6;
 }
 
-
 .ProfileLinks{
     display: flex;
     flex-direction: column;
     font-weight: bold;
     width: 100%;
-    border-bottom: solid 3px rgba(63, 37, 37, 0.82);
-    border-right: solid 3px rgba(63, 37, 37, 0.82);
 }
 
 .ProfileLinks > a{
+
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     border-top: solid 3px rgba(63, 37, 37, 0.82);
     text-decoration: none;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    justify-content: left;
-    padding-left: 2em;
+    padding: 0.2em 0;
 }
 
-.ProfileLinks > a > h{
+.fa-chevron-right{
     position: absolute;
-    left: 25%;
+    right: 15%;
 }
 
 .ProfileLinks > a:hover{
@@ -154,58 +191,142 @@
     color: #eeeeee;
 }
 
-.Mobile-Drop-Menu-Bar{
 
-    display: none;
-    left: 0;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 100%;
-    width: 50%;
-    padding-top: 0;
+
+
+@media only screen and (max-width : 1050px){  body{font-size: 15px;}}
+@media only screen and (max-width : 1000px){  body{font-size: 14px;}}
+@media only screen and (max-width : 950px){  body{font-size: 13px;} .ShortDescription,.Publication > a > img{font-size: 12px}}
+@media only screen and (max-width : 900px){  body{font-size: 12px;}}
+@media only screen and (max-width : 850px){  body{font-size: 11px;}}
+@media only screen and (max-width : 800px){  body{font-size: 10px;}}
+@media only screen and (max-width : 750px){  body{font-size: 9px;}}
+@media only screen and (max-width : 700px){  body{font-size: 8px;}}
+@media only screen and (max-width : 650px){  body{font-size: 7px;}}
+@media only screen and (max-width : 600px){  body{font-size: 6px;}}
+@media only screen and (max-width : 550px){  body{font-size: 5px;}}
+@media only screen and (max-width : 500px){  body{font-size: 4px;}}
+@media only screen and (max-width : 450px){
+
+    .Wrapper{display: none}
+    .Wrapper-Mobile{display: flex;}
+    .TopBar{top: 0;}
+    .TopBar > .Ball-link{
+        position: static;
+        display: flex;
+        align-items: center;
+        margin: 0 4em;
+    }
+    .Ball-link > h{
+        color: #3817c6;
+        font-weight: bold;
+        padding-left: 10%;
+    }
+    .fa-globe, .fa-map-marked-alt, .fa-calendar-plus,
+    .fa-user, .fa-heart, .fa-bell, .fa-bars,.fa-map,
+    .fa-user-friends,.fa-user-friends,.fa-cog,
+    .fa-sign-out-alt,.fa-calendar-alt,.fa-search{
+        color: green;
+        font-size: 2.2em;
+        cursor: pointer;
+        margin-right: 0.5em;
+    }
+    .fa-heart{
+        margin-left: 1em;
+    }
+    .fa-search{
+        margin-right: 1em;
+    }
+    .UserProfile{
+        justify-content: left;
+        margin-bottom: 0.5em;
+    }
+    .ProfileLinks{
+        border-bottom: solid 3px rgba(63, 37, 37, 0.82);
+
+    }
+    .ProfileLinks > a{
+        justify-content: left;
+        padding-left: 2em;
+    }
+    .UserProfile > a{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 20%;
+        text-decoration: none;
+    }
+    .UserProfile > a > h{
+        margin-right: 0.5em;
+    }
+    .ProfileLinks > a > h{
+        position: absolute;
+        left: 25%;
+    }
+    .Mobile-Drop-Menu-Bar{
+
+        display: none;
+        left: 0;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        width: 50%;
+        padding-top: 0;
+    }
+    .Mobile-Drop-Menu-User{
+        display: none;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        width: 50%;
+        padding-top: 0;
+
+
+    }
+    .Mobile-Drop-Menu-Search{
+
+        position: absolute;
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+
+    }
+    .show{
+        display: flex}
+    body{font-size: 10px;}
 }
 
-.Mobile-Drop-Menu-User{
-    display: none;
-    right: 0;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 100%;
-    width: 50%;
-    padding-top: 0;
-
-
-}
-
-.Mobile-Drop-Menu-Search{
-
-    position: absolute;
-    top: 100%;
-    display: none;
-    flex-direction: column;
-    background: white;
-    width: 100%;
-
-}
-
-
-.show{
-    display: flex}
 
 
 
 
-
-
-
-@media only screen and (max-width : 600px){  body{font-size: 12px;}}
-@media only screen and (max-width : 550px){  body{font-size: 11px;}}
-@media only screen and (max-width : 500px){  body{font-size: 10px;}}
-@media only screen and (max-width : 450px){  body{font-size: 9px;}}
-@media only screen and (max-width : 400px){  body{font-size: 8px;}}
-@media only screen and (max-width : 350px){  body{font-size: 7px;}}
+@media only screen and (max-width : 400px){  body{font-size: 9px;}}
+@media only screen and (max-width : 350px){  body{font-size: 8px;}}
+@media only screen and (max-width : 300px){  body{font-size: 7px;}}
 @media only screen and (max-width : 300px){  body{font-size: 6px;}}
-@media only screen and (max-width : 300px){  body{font-size: 5px;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
