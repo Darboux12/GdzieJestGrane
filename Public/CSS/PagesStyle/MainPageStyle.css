@@ -11,8 +11,6 @@
     grid-area: 1 / 1 / span 1 / span 4;
 }
 
-
-
 .CheckBox{
     background: #3758cb;
 }
@@ -45,6 +43,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .SearchNavSelect select:hover,
@@ -142,9 +142,12 @@
     width: 100%;
 }
 
+
+
+
 .MainContent{
     display: grid;
-    grid-area: 3 / 1 / span 2 / span 3;
+    grid-area: 3 / 1 / span 2 / span 4;
 
 
 }
@@ -152,31 +155,42 @@
 .Publication{
     position: relative;
     background-color: white;
-    height: 24em;
-    border: solid 5px #6dcb1b;
-    margin-bottom: 1.5em;
-
-
-
+    width: 100%;
+    margin-bottom: 2.5em;
+    border-top: solid 5px #6dcb1b;
+    border-bottom: solid 5px #6dcb1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.EventInformation{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-size: 1em;
-    left: 3em;
-    top: 5em;
+.Information{
 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+}
+
+#InfoLeft{
+    margin-right: 10em;
+}
+
+
+
+.EventInformation{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5em;
 }
 
 .ShortDescription{
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-    width: 45%;
+
+    width: 100%;
     border: solid 3px rgba(63, 37, 37, 0.82);
+
     resize: none;
     font-family: Arial;
     text-align: center;
@@ -196,9 +210,30 @@
     color: indigo;
 }
 
+.EventSportLabel{
+    position: absolute;
+    left: 5em;
+    width: 25%;
+    top: -2em;
+
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    border: solid 5px #6dcb1b;
+
+
+
+
+
+
+
+
+}
+
 #EventSport{
     display: flex;
-    opacity: 0.5;
     font-family: Arial;
     font-size: 1.2em;
     font-weight: bold;
@@ -207,7 +242,14 @@
     line-height: 1.37;
     letter-spacing: normal;
     text-align: center;
-    color: green;
+    color: white;
+
+    padding: 1em;
+
+
+
+
+
 }
 
 #EventDate{
@@ -271,24 +313,33 @@
 }
 
 .fa-volleyball-ball{
+    position: absolute;
+    top: 0;
+    right: 1em;
     font-size: 2.5em;
     padding: 0.5em;
     color: #B90808;
 
+
+
 }
 
 .Publication > a >img{
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    width: 45%;
-    border: solid 3px rgba(63, 37, 37, 0.82);
+    width: 100%;
+
+}
+
+
+
+.Publication > a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 #SeeDetails{
-    position: absolute;
-    bottom: 1em;
-    left: 1em;
 
     text-decoration: none ;
     border: solid 3px rgba(63, 37, 37, 0.82);
@@ -296,6 +347,8 @@
     padding: 1em 5em;
     color: white;
     font-weight: bold;
+    width: 40%;
+    margin: 1em 0;
 }
 
 #SubmitButton{
@@ -310,4 +363,57 @@
     background: #3817c6;
 }
 
+.SearchNav{
+    display: none;
+}
 
+.RightNav{
+    display: none;
+}
+
+
+.MobileShowEvents{
+    display: flex;
+    grid-area: 2 / 1 / span 1 / span 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.MobileShowEvents > h{
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    margin-bottom: 0.2em;
+
+}
+
+.MobileShowEvents-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.MobileShowEvents-input > input{
+    width: 40%;
+    border-radius: 1em;
+    border: solid 3px #2699fb;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    text-align: center;
+    outline: none;
+}
+
+
+
+#button1{
+    background: white;
+}
+
+#button2{
+    background: transparent;
+}
