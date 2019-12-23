@@ -1,4 +1,4 @@
-#LogInMainContainer{
+.MainContainer{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -127,7 +127,7 @@ a{
 @media only screen and (max-width : 900px){  body{font-size: 13px;}}
 @media only screen and (max-width : 800px) {
     body {font-size: 12px}
-    #LogInMainContainer {flex-direction: column;}
+    .MainContainer {flex-direction: column;}
     .Logo{margin-right: 0}
 }
 

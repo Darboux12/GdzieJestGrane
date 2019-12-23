@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div id="LogInMainContainer">
+<div class="MainContainer">
 
         <div class="Logo">
 
@@ -31,9 +31,9 @@
             <input name="Password" type="password" placeholder="Podaj hasło..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj hasło...'">
         </form>
 
-        <input id="LogInButton" type="submit" form="FormAndButtons" value="Zaloguj się">
+        <input id="LogInButton" type="submit" form="FormAndButtons" value="Zaloguj się!">
 
-        <a href="SignInPage.php" id="SignInButton">"Nie wiesz gdzie jest grane Zarejestruj się!"</a>
+        <a href="SignInPage.php" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
 
 
 
