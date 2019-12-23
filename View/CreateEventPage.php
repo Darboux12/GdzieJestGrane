@@ -50,22 +50,61 @@
 
     <div class="TopBar">
 
-        <div id="logo">
-            <a  href="MainPage.php"><img src="../Public/Images/logo-no-writing.png"></a>
-        </div>
+        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
 
-        <div class="Options">
 
-            <a href="#page"><i class="fas fa-globe"></i>Aktualności</a>
+        <div class="TopBarLinks">
+            <a href="#page"><i class="fas fa-globe"></i> Aktualności</a>
             <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="#page"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
-
+            <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         </div>
 
-        <div id="Notification">
-            <a href="#page"><i class="fas fa-user"></i></a>
-            <a href="#page"><i class="fas fa-heart"></i></a>
-            <a href="#page"><i class="fas fa-bell"></i></a>
+
+        <div class="TopBarIcons">
+            <div class="UserMenu">
+
+                <i  id="usericon" class="fas fa-user" onclick="ToggleUserMenu()"></i>
+
+                <div id="myBubble" class="bubble">
+
+                    <form>
+
+                        <div class="UserProfile">
+
+                            <img src="../Public/Images/Person1.jpg">
+
+                            <div class="NameSeeProfile">
+                                <h id="Name">Janek126p</h>
+                                <h id="SeeProfile">Zobacz profil</h>
+                            </div>
+
+                            <i class="fas fa-chevron-circle-right"></i>
+
+                        </div>
+
+                        <div class="ProfileLinks">
+
+                            <a href="#page">Moje wydarzenia<i class="fas fa-chevron-right"></i></a>
+
+                            <a href="#page">Oznaczone miejsca<i class="fas fa-chevron-right"></i></a>
+
+                            <a href="#page">Znajomi<i class="fas fa-chevron-right"></i></a>
+
+                            <a href="#page">Znajomi<i class="fas fa-chevron-right"></i></a>
+
+                            <a href="#page">Ustawienia<i class="fas fa-chevron-right"></i></a>
+
+                            <a href="#page">Wyloguj<i class="fas fa-chevron-right"></i></a>
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-bell"></i>
         </div>
 
     </div>
@@ -159,11 +198,9 @@
 
 
 
-
     <div class="CreateEventMap">
         <img src="../Public/Images/Kamienna.png">
     </div>
-
 
     <div class="CreateEventDescription">
 
@@ -178,15 +215,40 @@
 
 
 
+    <script>
 
-
-<script>
     function openChat() {document.getElementById("chat").style.display = "grid";}
     function closeChat() {document.getElementById("chat").style.display = "none";}
+
+    function ToggleUserMenu() {
+
+        var bubble = document.getElementById('myBubble');
+
+        bubble.classList.toggle("show");
+    }
+
+    window.addEventListener('click',function (event) {
+
+        var bubble = document.getElementById('myBubble');
+        var userIcon = document.getElementById('usericon');
+
+        if(event.target != bubble && event.target != userIcon){
+
+            if(bubble.classList.contains('show')){
+                bubble.classList.remove('show');
+            }
+        }
+    })
+
+
 
 
 
 </script>
+
+
+
+
 
 
 

@@ -5,12 +5,13 @@
     grid-template-rows: auto auto auto auto;
     grid-gap: 1em;
     padding: 5em;
-
-
 }
 
 .Wrapper-Mobile{
     display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1em;
 }
 
 .TopBar{
@@ -293,7 +294,6 @@
     position: absolute;
     bottom: 1em;
     left: 1em;
-
     text-decoration: none ;
     border: solid 3px rgba(63, 37, 37, 0.82);
     background-color: rgba(167, 18, 212, 0.92);
@@ -314,4 +314,48 @@
     background: #3817c6;
 }
 
+.MobileShowEvents{
+    display: flex;
+    grid-area: 2 / 1 / span 1 / span 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.MobileShowEvents > h{
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    margin-bottom: 0.2em;
+
+}
+
+.MobileShowEvents-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.MobileShowEvents-input > input{
+    width: 40%;
+    border-radius: 1em;
+    border: solid 3px #2699fb;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    text-align: center;
+    outline: none;
+    font-size: 1.2em;
+}
+
+#button1{
+    background: white;
+}
+
+#button2{
+    background: transparent;
+}
 

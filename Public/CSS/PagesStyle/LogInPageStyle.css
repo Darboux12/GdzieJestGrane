@@ -1,20 +1,18 @@
 #LogInMainContainer{
     position: fixed;
-    height: inherit;
-    width: inherit;
-    align-items: center;
+    height: 100%;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 #FormAndButtons{
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    right: 5%;
-    bottom: 10%;
-    top: 10%;
-    width: 40%;
+    align-items: center;
 }
 
 form{
@@ -28,12 +26,12 @@ input{
     border-radius: 1.5em;
     border: solid 0.3em  rgba(34, 0, 255, 0.92);
     background-color: #ffffff;
-    padding-left: 1em;
-    margin: 0 1em 1em 1em;
     line-height: 2.5em;
     font-size: 1em;
     text-align: left;
     outline: none;
+    margin: 0.5em 0;
+    padding-left: 1em;
 }
 
 input:hover,input:focus{
@@ -54,6 +52,8 @@ p{
     font-weight: bold;
     text-align: center;
     color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #LogInButton{
@@ -62,20 +62,49 @@ p{
     text-align: center;
     color: #ffffff;
     border: solid 3px rgba(243, 115, 53, 0.92);
+    width: 100%;
 }
 
-#logo{
-    position: fixed;
-    width: 25em;
-    left: 0;
-    top: 0;
+.Logo{
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3em;
+}
+
+.LogoHeaders{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center;
+
+}
+
+.LogoHeader1{
+    color: #3817c6;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 1.5em;
+
+}
+
+.LogoHeader2{
+    color: black;
+    font-family: cursive;
+    font-size: 1em;
+
+
+}
+
+.Logo > img{
+    width: 5em;
+
 }
 
 #ball{
-    position: fixed;
-    width: 30em;
-    top: 30%;
-    left: 6.25em;
+    width: 80%;
     border: solid 5px rgba(18, 50, 212, 0.92);
 }
 
@@ -84,11 +113,33 @@ a{
     border-radius: 1.5em;
     border: solid 0.3em  rgba(34, 0, 255, 0.92);
     background-color: #ffffff;
-    padding-left: 1em;
-    margin: 0 1em 1em 1em;
     line-height: 2.5em;
     font-size: 1em;
     text-align: left;
     outline: none;
     text-decoration: none;
 }
+
+
+
+
+@media only screen and (max-width : 1000px){  body{font-size: 14px;}}
+@media only screen and (max-width : 900px){  body{font-size: 13px;}}
+@media only screen and (max-width : 800px) {
+    body {font-size: 12px}
+    #LogInMainContainer {flex-direction: column;}
+    .Logo{margin-right: 0}
+}
+
+
+@media only screen and (max-width : 450px){  body{font-size: 12px;}}
+@media only screen and (max-width : 400px){  body{font-size: 10px;}}
+@media only screen and (max-width : 350px){  body{font-size: 9px;}}
+@media only screen and (max-width : 300px){  body{font-size: 8px;}}
+@media only screen and (max-width : 250px){  body{font-size: 7px;}}
+
+
+
+
+
+
