@@ -10,9 +10,12 @@
     grid-area: 1 / 1 / span 1 / span 4;
 }
 
+#TopBarMobile{
+    display: none;
+}
+
 .NewsNav{
     grid-area: 2 / 1 / span 1 / span 3;
-    background: gray;
 }
 
 .News{
@@ -21,7 +24,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 3px #707070;
+    border: solid 5px #6dcb1b;
     padding: 0.5em 0.5em;
     margin-bottom: 1.5em;
     box-sizing: border-box;
@@ -37,8 +40,6 @@
     margin-right:  1.5em;
     margin-left: 1em;
 }
-
-
 
 .NewsText{
     display: flex;
@@ -69,14 +70,54 @@
 
 }
 
-
-
-
-
-
-
-
 .RightNav{
     grid-area: 2 / 4 / span 1 / span 1;
-    background: gray;
+    justify-content: center;
+
+
+
 }
+
+.PopularEvent > img{
+    width: 4em;
+    height: 4em;
+    padding: 0 0.3em;
+
+}
+
+.NewsText > h{
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.NewsText > a{
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+
+
+@media only screen and (max-width : 450px) {
+
+    .Wrapper {
+        padding: 0;
+    }
+
+
+    #TopBarMobile {
+        display: flex;
+    }
+
+    #TopBarStandard {
+        display: none;
+    }
+
+    .RightNav{
+        display: none;
+    }
+
+    .NewsNav{
+        grid-area: 2 / 1 / span 1 / span 4;
+    }
+}
+

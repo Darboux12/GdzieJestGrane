@@ -1,7 +1,7 @@
 .RightNav{
     background: white;
-    height: 65em;
     border: solid 5px #6dcb1b;
+    height: max-content;
 }
 
 #NavTitle{
@@ -10,6 +10,7 @@
     font-size: 1.4em;
     text-align: center;
     align-items: center;
+    justify-content: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     color: #2726a6;
@@ -30,7 +31,6 @@
     flex-direction: column;
     font-size: 1em;
 }
-
 .fa-fire{
     font-size: 2em;
     color: #B90808;
@@ -47,6 +47,7 @@
     padding-left: 1em;
 
 }
+
 
 .PopularEventInfo > a{
     font-weight: bold;
