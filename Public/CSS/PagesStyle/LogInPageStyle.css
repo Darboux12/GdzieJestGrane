@@ -22,21 +22,7 @@ form{
     justify-content: center;
 }
 
-input{
-    border-radius: 1.5em;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
-    background-color: #ffffff;
-    line-height: 2.5em;
-    font-size: 1em;
-    text-align: left;
-    outline: none;
-    margin: 0.5em 0;
-    padding-left: 1em;
-}
-
-input:hover,input:focus{
-    border-color: #3817c6;
-}
+input{margin: 0.5em 0;}
 
 p{
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -120,9 +106,6 @@ a{
     text-decoration: none;
 }
 
-
-
-
 @media only screen and (max-width : 1000px){  body{font-size: 14px;}}
 @media only screen and (max-width : 900px){  body{font-size: 13px;}}
 @media only screen and (max-width : 800px) {
@@ -130,8 +113,6 @@ a{
     .MainContainer {flex-direction: column;}
     .Logo{margin-right: 0}
 }
-
-
 @media only screen and (max-width : 450px){  body{font-size: 12px;}}
 @media only screen and (max-width : 400px){  body{font-size: 10px;}}
 @media only screen and (max-width : 350px){  body{font-size: 9px;}}

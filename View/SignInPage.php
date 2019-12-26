@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -7,6 +8,7 @@
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/LogInPageStyle.css" />
     <title>Log in</title>
 </head>
+
 <body>
 
 <div class="MainContainer">
@@ -37,14 +39,11 @@
 
         <a href="SignInPage.php" id="SignInButton">Wiesz gdzie jest grane? Zaloguj się!</a>
 
-
-
-
-
     </div>
 
 </div>
 
 </body>
+
 </html>
 

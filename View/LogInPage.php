@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -7,11 +8,12 @@
     <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/LogInPageStyle.css" />
     <title>Log in</title>
 </head>
+
 <body>
 
 <div class="MainContainer">
 
-        <div class="Logo">
+    <div class="Logo">
 
              <img class="LogoImage" src="../Public/Images/logo-no-writing.png">
 
@@ -34,10 +36,6 @@
         <input id="LogInButton" type="submit" form="FormAndButtons" value="Zaloguj się!">
 
         <a href="SignInPage.php" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
-
-
-
-
 
     </div>
 

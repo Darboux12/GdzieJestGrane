@@ -46,7 +46,6 @@
     padding-right: 0.2em;
 }
 
-
 .fa-heart,
 .fa-bell,
 .fa-bars{
@@ -65,7 +64,6 @@
 .fa-heart{
     margin-left: 1em;
 }
-
 
 .TopBarLinks > a:hover{
     background: floralwhite;
@@ -192,8 +190,6 @@
 }
 
 
-
-
 @media only screen and (max-width : 1050px){  body{font-size: 15px;}}
 @media only screen and (max-width : 1000px){  body{font-size: 14px;}}
 @media only screen and (max-width : 950px){  body{font-size: 13px;} .ShortDescription,.Publication > a > img{font-size: 12px}}
@@ -208,9 +204,6 @@
 @media only screen and (max-width : 500px){  body{font-size: 4px;}}
 @media only screen and (max-width : 450px){
 
-    .Wrapper{display: none}
-    .Wrapper-Mobile{display: grid;}
-    .MainContent{grid-area: 3 / 1 / span 2 / span 4;}
     .TopBar{top: 0;}
     .TopBar > .Ball-link{
         position: static;
@@ -299,61 +292,6 @@
     }
     .show{
         display: flex}
-    .Publication{
-        display: flex;
-        flex-direction: column;
-        height: 50em;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .Publication > a >img{
-        position: static;
-        background: #B90808;
-        width: 100%;
-        box-sizing: border-box;
-        border: none;
-
-    }
-
-    .ShortDescription{
-        position: static;
-        width: 100%;
-        box-sizing: border-box;
-        border: none;
-    }
-
-    #SeeDetails{
-        position: static;
-        margin-bottom: 1em;
-    }
-
-    .EventSportLabel{
-        position: absolute;
-        top:-2em;
-        background: #B90808;
-        border-radius: 1em;
-        padding: 1em;
-    }
-
-    .EventInformation{
-        position: static;
-        margin-top: 2em;
-        padding-top: 0;
-
-    }
-
-    .chat-container{
-        right: 0;
-        bottom: 0;
-    }
-
-
-
-
-
-
     body{font-size: 10px;}
 }
 

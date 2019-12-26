@@ -10,13 +10,24 @@ body {
     rgba(255,212,66,0.918) 0%, rgba(243,115,53,0.918) 0%,
     rgba(245,132,52,0.918) 0%, rgba(253,200,48,0.918) 34.03%,
     rgba(255,250,4,0.945) 59.96%, rgba(255,255,0,0.949) 100%) fixed;
-
-
 }
 
-form > input::placeholder{
+ input::placeholder{
     color: #2699fb;
     opacity: 0.5;
 }
 
+input{
+    border-radius: 1.5em;
+    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    background-color: #ffffff;
+    line-height: 2.5em;
+    font-size: 1em;
+    text-align: left;
+    outline: none;
+    padding-left: 1em;
+}
 
+input:hover,input:focus{
+    border-color: #2196F3;
+}
