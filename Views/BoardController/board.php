@@ -5,12 +5,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/MainPageStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/TopBarStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/ChatBoxStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/CheckBoxStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/PopularEventsNav.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/GeneralStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/MainPageStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/TopBarStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/ChatBoxStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/CheckBoxStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/PopularEventsNav.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Main Page</title>
 
@@ -24,13 +24,13 @@
 
     <div class="TopBar">
 
-        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
 
         <div class="TopBarLinks">
             <a href="#page"><i class="fas fa-globe"></i> Aktualności</a>
             <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+            <a href="../../Views/CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         </div>
 
 
@@ -45,7 +45,7 @@
 
                         <div class="UserProfile">
 
-                            <img src="../Public/Images/Person1.jpg">
+                            <img src="../../Public/Images/Person1.jpg">
 
                             <div class="NameSeeProfile">
                                 <h id="Name">Janek126p</h>
@@ -227,7 +227,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -245,7 +245,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -263,7 +263,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -281,7 +281,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -299,7 +299,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -316,25 +316,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -352,7 +334,25 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <h>Dołącz<br>teraz!</h>
+            </div>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h id="discipline">Siatkówka</h>
+                <h id="city">Kraków</h>
+                <h id="date">20.11 19:00</h>
+                <h id="views">Wyświetlenia: 3700</h>
+            </div>
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <div class="JoinNow">
+                <a href="../EventDetailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -390,7 +390,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -420,7 +420,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -450,7 +450,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -478,7 +478,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -506,37 +506,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -566,7 +536,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -596,7 +566,37 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
+
+            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
+                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
+
+            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+
+
+        </div>
+
+        <div class="Publication">
+
+            <i class="fas fa-volleyball-ball"></i>
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">Siatkówka dla pań</h>
+                <h id="EventSport">Siatkówka</h>
+                <h id="EventDate">Piątek, 20 lis, 19:00</h>
+                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
+                <h id="Age">Wiek: 18 - 30 lat</h>
+
+                <div id="EventPeopleNumberElement">
+                    <i class="fas fa-users"></i>
+                    <h>4 z 12</h>
+                </div>
+
+            </div>
+
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
@@ -621,7 +621,7 @@
 
         <i class="fas fa-heart"></i>
 
-        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
         <div id="Mobile-Drop-Menu-Bar" class="Mobile-Drop-Menu-Bar">
 
@@ -631,7 +631,7 @@
 
                 <a href="#page"><i class="fas fa-map"></i><h>Oznaczone miejsca</h></a>
 
-                <a id="CreateEvent" href="CreateEventPage.php"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
+                <a id="CreateEvent" href="../CreateEventPage.php"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
 
                 <a href="#page"><i class="fas fa-map-marked-alt"></i><h>Oznacz miejsce</h></a>
 
@@ -651,7 +651,7 @@
 
             <div class="UserProfile">
 
-                <img src="../Public/Images/Person1.jpg">
+                <img src="../../Public/Images/Person1.jpg">
 
                 <div class="NameSeeProfile">
                     <h id="Name">Janek126p</h>
@@ -855,7 +855,7 @@
 
             </div>
 
-            <a href="#page"> <img src="../Public/Images/Kamienna.png"> </a>
+            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
             <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
                 Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>

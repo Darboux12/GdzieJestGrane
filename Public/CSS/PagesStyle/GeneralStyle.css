@@ -31,3 +31,10 @@ input{
 input:hover,input:focus{
     border-color: #2196F3;
 }
+
+.messages {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}

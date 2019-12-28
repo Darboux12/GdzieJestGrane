@@ -28,7 +28,7 @@
 
         <p>Zaloguj się i nie przegap żadnego meczu!</p>
 
-        <form id="LogInForm">
+        <form id="LogInForm" action="?page=login" method="POST">
             <input name="Login" type="text" placeholder="Podaj login..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj login...'">
             <input name="Email" type="email" placeholder="Podaj email..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj email...'">
             <input name="Password" type="password" placeholder="Podaj hasło..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj hasło...'">
