@@ -1,7 +1,9 @@
 <?php
 
-require_once "Controllers/BoardController.php";
+require_once "Controllers/MainPageController.php";
 require_once "Controllers/SecurityController.php";
+require_once "Controllers/NewsPageController.php";
+
 
 
 class Routing {
@@ -22,10 +24,16 @@ class Routing {
                 'action' => 'logout'
             ],
 
-            'board' => [
-                'controller' => 'BoardController',
+            'mainpage' => [
+                'controller' => 'MainPageController',
                 'action' => 'getLatestPhotos'
+            ],
+
+            'newspage' => [
+                'controller' => 'NewsPageController',
+                'action' => 'getNews'
             ]
+
 
 
         ];

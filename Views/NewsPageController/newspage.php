@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/GeneralStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/TopBarStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/PopularEventsNav.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/ElementsStyle/ChatBoxStyle.css">
-    <link rel="Stylesheet" type="text/css" href="../Public/CSS/PagesStyle/NewsPageStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/GeneralStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/TopBarStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/PopularEventsNav.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/ChatBoxStyle.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/NewsPageStyle.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -27,13 +27,13 @@
 
     <div id="TopBarStandard" class="TopBar">
 
-        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
 
         <div class="TopBarLinks">
-            <a href="#page"><i class="fas fa-globe"></i> Aktualności</a>
+            <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>
             <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+            <a href="?page=login"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         </div>
 
 
@@ -48,7 +48,7 @@
 
                         <div class="UserProfile">
 
-                            <img src="../Public/Images/Person1.jpg">
+                            <img src="../../Public/Images/Person1.jpg">
 
                             <div class="NameSeeProfile">
                                 <h id="Name">Janek126p</h>
@@ -92,7 +92,7 @@
 
         <i class="fas fa-heart"></i>
 
-        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+        <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
         <div id="Mobile-Drop-Menu-Bar" class="Mobile-Drop-Menu-Bar">
 
@@ -102,7 +102,7 @@
 
                 <a href="#page"><i class="fas fa-map"></i><h>Oznaczone miejsca</h></a>
 
-                <a id="CreateEvent" href="CreateEventPage.php"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
+                <a id="CreateEvent" href="../CreateEventPage.php"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
 
                 <a href="#page"><i class="fas fa-map-marked-alt"></i><h>Oznacz miejsce</h></a>
 
@@ -122,7 +122,7 @@
 
             <div class="UserProfile">
 
-                <img src="../Public/Images/Person1.jpg">
+                <img src="../../Public/Images/Person1.jpg">
 
                 <div class="NameSeeProfile">
                     <h id="Name">Janek126p</h>
@@ -284,228 +284,46 @@
 
     <div class="NewsNav">
 
-        <div class="News">
+        <?php foreach($allNewses as $news): ?>
 
-            <img alt="Person" src="../Public/Images/award.jpg ">
+            <div class="News">
 
-            <div class="NewsText">
+                <div class="Image">
+                    <?= '<img src="data:image/jpeg;base64,'.base64_encode($news->getImage()) .'" />' ?>
+                </div>
 
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
+                <div class="NewsText">
 
-                <p>Z radością pragniemy poinformować, że nasza aplikacja została wyróżniona na corocznym
-                    konkursie InnovativeApp2019. Z całego serca dziękujemy wam za używanie naszej aplikacji.</p>
+                    <h><?= $news->getTitle()?></h>
 
-                <a href="#page">Dowiedz się więcej o InnovativeApp2019...</a>
+                    <p><?= $news->getDescription()?></p>
 
+                    <a href="#page"><?= $news->getLink()?></a>
+
+                </div>
             </div>
 
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/Person1.jpg ">
-
-            <div class="NewsText">
-
-                <h>Witamy Wojtka w naszym zespole</h>
-
-                <p>Z radością pragniemy poinformować, że do naszego zespołu dołączył Wojtek.
-                    Będzie on odpowiedzialny za projektowanie szaty graficznej naszej aplikacji.
-                    Mamy nadzieję, że poczujesz się u nas jak w rodzinie.</p>
-
-                <a href="#page">Dowiedz się więcej o Wojtku...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/meeting.jpg">
-
-            <div class="NewsText">
-
-                <h>Zaproszenie na spotkanie</h>
-
-                <p>Z przyjemnością zapraszamy wszystkich na spotkanie z naszym zespołem projektowym.
-                    W czasie spotkania opowiemy wamy o projektowaniu aplikacji internetowych oraz
-                    odpowiemy na wasze pytania.
-                </p>
-
-                <a href="#page">Dowiedz się więcej o szczegółach spotkania...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/team.jpg">
-
-            <div class="NewsText">
-
-                <h>GdzieJestGrane ma już 10.000 użytkowników</h>
-
-                <p>Z radością pragniemy poinformować, że nasza aplikacja ma już 10 000 tysięcy aktywnych użytkowników.
-                    Dziękujemy, że jesteście z nami!
-                </p>
-
-                <a href="#page">Dołącz do społeczności GdzieJestGrane na facebooku...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/award.jpg ">
-
-            <div class="NewsText">
-
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
-
-                <p>Z radością pragniemy poinformować, że nasza aplikacja została wyróżniona na corocznym
-                    konkursie InnovativeApp2019. Z całego serca dziękujemy wam za używanie naszej aplikacji.</p>
-
-                <a href="#page">Dowiedz się więcej o InnovativeApp2019...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/Person1.jpg ">
-
-            <div class="NewsText">
-
-                <h>Witamy Wojtka w naszym zespole</h>
-
-                <p>Z radością pragniemy poinformować, że do naszego zespołu dołączył Wojtek.
-                    Będzie on odpowiedzialny za projektowanie szaty graficznej naszej aplikacji.
-                    Mamy nadzieję, że poczujesz się u nas jak w rodzinie.</p>
-
-                <a href="#page">Dowiedz się więcej o Wojtku...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/meeting.jpg">
-
-            <div class="NewsText">
-
-                <h>Zaproszenie na spotkanie</h>
-
-                <p>Z przyjemnością zapraszamy wszystkich na spotkanie z naszym zespołem projektowym.
-                    W czasie spotkania opowiemy wamy o projektowaniu aplikacji internetowych oraz
-                    odpowiemy na wasze pytania.
-                </p>
-
-                <a href="#page">Dowiedz się więcej o szczegółach spotkania...</a>
-
-            </div>
-
-        </div>
-
-        <div class="News">
-
-            <img alt="Person" src="../Public/Images/team.jpg">
-
-            <div class="NewsText">
-
-                <h>GdzieJestGrane ma już 10.000 użytkowników</h>
-
-                <p>Z radością pragniemy poinformować, że nasza aplikacja ma już 10 000 tysięcy aktywnych użytkowników.
-                    Dziękujemy, że jesteście z nami!
-                </p>
-
-                <a href="#page">Dołącz do społeczności GdzieJestGrane na facebooku...</a>
-
-            </div>
-
-        </div>
-
-
+        <?php endforeach ?>
     </div>
 
     <div class="RightNav">
 
         <h id="NavTitle">Ostatnio dodane aktualności</h>
 
-        <div class="PopularEvent">
-
-            <img alt="Person" src="../Public/Images/award.jpg ">
-
-            <div class="NewsText">
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
-                <a href="#page">Dowiedz się więcej...</a>
-            </div>
-
-
-
-
-        </div>
+        <?php foreach($latestNewses as $news): ?>
 
         <div class="PopularEvent">
 
-            <img alt="Person" src="../Public/Images/award.jpg ">
+            <img alt="Person" src="../../Public/Images/award.jpg ">
 
             <div class="NewsText">
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
+                <h><?= $news->getTitle()?></h>
                 <a href="#page">Dowiedz się więcej...</a>
             </div>
 
-
-
-
         </div>
 
-        <div class="PopularEvent">
-
-            <img alt="Person" src="../Public/Images/award.jpg ">
-
-            <div class="NewsText">
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
-                <a href="#page">Dowiedz się więcej...</a>
-            </div>
-
-
-
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <img alt="Person" src="../Public/Images/award.jpg ">
-
-            <div class="NewsText">
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
-                <a href="#page">Dowiedz się więcej...</a>
-            </div>
-
-
-
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <img alt="Person" src="../Public/Images/award.jpg ">
-
-            <div class="NewsText">
-                <h>GdzieJestGrane laureatem InnovativeApp2019</h>
-                <a href="#page">Dowiedz się więcej...</a>
-            </div>
-
-
-
-
-        </div>
-
-
+        <?php endforeach ?>
 
     </div>
 
@@ -535,12 +353,6 @@
     <div class="chat-form">chat-form</div>
 
 </div>
-
-
-
-
-
-
 
 <script>
 
@@ -606,16 +418,6 @@
             btn1.style.background = 'white';
             isButtonOneSet = true;
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 

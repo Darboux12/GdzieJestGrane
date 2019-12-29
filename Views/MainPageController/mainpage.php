@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
+    die('You are not logged in!');
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,9 +36,9 @@
 
 
         <div class="TopBarLinks">
-            <a href="#page"><i class="fas fa-globe"></i> Aktualności</a>
+            <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>
             <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-            <a href="../../Views/CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+            <a href="?page=login" ><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         </div>
 
 

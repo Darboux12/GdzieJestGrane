@@ -31,7 +31,7 @@ class SecurityController extends AppController {
             $_SESSION["role"] = $user->getRole();
 
             $url = "http://$_SERVER[HTTP_HOST]/";
-            header("Location: {$url}?page=board");
+            header("Location: {$url}?page=mainpage");
             return;
         }
 

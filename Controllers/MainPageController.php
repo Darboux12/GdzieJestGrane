@@ -3,7 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../Database.php';
 
-class BoardController extends AppController {
+class MainPageController extends AppController {
 
     public function getLatestPhotos()
     {
@@ -12,7 +12,6 @@ class BoardController extends AppController {
 
 
 
-
-        $this->render('board');
+        $this->render('mainpage');
     }
 }

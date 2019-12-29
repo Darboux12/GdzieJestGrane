@@ -6,14 +6,13 @@ class User {
     private $login;
     private $email;
     private $password;
-    private $country;
     private $province;
     private $street;
     private $number;
     private $age;
 
     public function __construct(int $id,string $login, string $email, string $password,
-                                int $age,string $role,string $country, string $province, string $street,
+                                int $age,string $role,string $province, string $street,
                                 int $number) {
 
         $this->id = $id;
@@ -21,7 +20,6 @@ class User {
         $this->login = $login;
         $this->email = $email;
         $this->password = $password;
-        $this->country = $country;
         $this->province = $province;
         $this->street = $street;
         $this->number = $number;

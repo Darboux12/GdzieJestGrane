@@ -31,7 +31,7 @@
 
 }
 
-.News > img{
+.Image > img{
     width: 6em;
     height:6em;
 
@@ -50,7 +50,6 @@
 
 .NewsText > h{
     font-size: 1.6em;
-    font-family: Arial;
     color: #2699fb;
     font-weight: bold;
 
@@ -73,24 +72,25 @@
 .RightNav{
     grid-area: 2 / 4 / span 1 / span 1;
     justify-content: center;
-
-
-
+    position: sticky;
+    top: 7em;
 }
 
-.PopularEvent > img{
+.RightNav > .PopularEvent > img{
     width: 4em;
     height: 4em;
     padding: 0 0.3em;
 
+
 }
 
-.NewsText > h{
+
+.PopularEvent > .NewsText > h{
     font-size: 0.9em;
     font-weight: normal;
 }
 
-.NewsText > a{
+.PopularEvent > .NewsText > a{
     font-size: 0.8em;
     font-weight: normal;
 }
