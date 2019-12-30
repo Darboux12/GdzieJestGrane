@@ -35,10 +35,22 @@ class Routing {
                 'action' => 'getNews'
             ],
 
+
+
             'adminpanel' => [
+            'controller' => 'AdminController',
+            'action' => 'control'
+            ],
+
+            'admin_users' => [
                 'controller' => 'AdminController',
-                'action' => 'control'
+                'action' => 'users'
             ]
+
+
+
+
+
 
 
 
