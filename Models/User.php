@@ -10,10 +10,11 @@ class User {
     private $street;
     private $number;
     private $age;
+    private $creation_date;
 
     public function __construct(int $id,string $login, string $email, string $password,
                                 int $age,string $role,string $province, string $street,
-                                int $number) {
+                                int $number,string $creation_date) {
 
         $this->id = $id;
         $this->role = $role;
@@ -24,6 +25,7 @@ class User {
         $this->street = $street;
         $this->number = $number;
         $this->age = $age;
+        $this->creation_date = $creation_date;
     }
 
     public function getId(): int{
@@ -69,4 +71,10 @@ class User {
     public function getAge(): int{
         return $this->age;
     }
+
+    public function getCreationDate(): string{
+        return $this->creation_date;
+    }
+
+
 }

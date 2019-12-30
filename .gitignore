@@ -31,3 +31,4 @@ fabric.properties
 target/
 out/
 *.class
+config.php

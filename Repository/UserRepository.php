@@ -27,7 +27,8 @@ class UserRepository extends Repository {
             $user['role'],
             $user['province'],
             $user['street'],
-            $user['number']
+            $user['number'],
+            $user['creation_date']
         );
     }
 
@@ -49,7 +50,8 @@ class UserRepository extends Repository {
                 $user['role'],
                 $user['province'],
                 $user['street'],
-                $user['number']
+                $user['number'],
+                $user['creation_date']
             );
         }
 

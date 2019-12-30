@@ -3,6 +3,7 @@
 require_once "Controllers/MainPageController.php";
 require_once "Controllers/SecurityController.php";
 require_once "Controllers/NewsPageController.php";
+require_once "Controllers/AdminController.php";
 
 
 
@@ -32,6 +33,11 @@ class Routing {
             'newspage' => [
                 'controller' => 'NewsPageController',
                 'action' => 'getNews'
+            ],
+
+            'adminpanel' => [
+                'controller' => 'AdminController',
+                'action' => 'control'
             ]
 
 

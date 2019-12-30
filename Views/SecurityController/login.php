@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/GeneralStyle.css" />
-    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/LogInPageStyle.css" />
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css" />
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/logIn.css" />
     <title>Log in</title>
 </head>
 
@@ -44,7 +44,7 @@
             <input id="LogInButton" type="submit"  value="Zaloguj się!">
         </form>
 
-        <a href="../SignInPage.php" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
+        <a href="../SignInPageController/SignInPage.php" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
 
     </div>
 
