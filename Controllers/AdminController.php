@@ -9,25 +9,32 @@ class AdminController extends AppController {
 
     public function control(){
 
-
-
         $this->render('adminpanel');
 
     }
 
-    public function users(){
+    public function getUsers(){
 
         $user = new UserMapper();
 
         header('Content-type: application/json');
         http_response_code(200);
 
-
-
         echo $user->getUsers() ? json_encode($user->getUsers()) : '';
 
-
-
     }
+
+    public function deleteUser(): void{
+
+        if (!isset($_POST['id'])) {
+            http_response_code(404);
+            return;
+        }
+
+        $user = new UserMapper();
+        $user->delete((int)$_POST['id']);
+        http_response_code(200);
+    }
+
 
 }

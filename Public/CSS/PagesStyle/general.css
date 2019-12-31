@@ -12,7 +12,7 @@ body {
     rgba(255,250,4,0.945) 59.96%, rgba(255,255,0,0.949) 100%) fixed;
 }
 
- input::placeholder{
+input::placeholder{
     color: #2699fb;
     opacity: 0.5;
 }

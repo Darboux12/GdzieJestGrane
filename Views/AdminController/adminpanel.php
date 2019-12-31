@@ -20,6 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 
+    <script type="text/javascript" src="../../Public/JS/adminPanel.js"></script>
+
 
 
     <title>Main Page</title>
@@ -36,6 +38,11 @@
 
     <div class="UserTable">
 
+        <div class="SearchBar-Searchbox">
+            <input  type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
+            <button class="search-box-button"><i class="fas fa-search"></i></button>
+        </div>
+
         <table>
             <thead>
             <tr>
@@ -43,6 +50,7 @@
                 <th>Email</th>
                 <th>Role</th>
                 <th>Creation Date</th>
+                <th>Action</th>
             </tr>
             </thead>
 
@@ -59,6 +67,8 @@
 
         <button type="button" onclick="getUsers()">Get All Users</button>
 
+
+
     </div>
 
 
@@ -72,32 +82,6 @@
 
 <?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
 
-<script>
-
-    function getUsers() {
-
-        const apiUrl = "http://localhost";
-        const $list = $('.users-list');
-        $.ajax({
-            url : apiUrl + '/?page=admin_users',
-            dataType : 'json'
-        })
-            .done((res) => {
-                $list.empty();
-                //robimy pętlę po zwróconej kolekcji
-                //dołączając do tabeli kolejne wiersze
-                res.forEach(el => {
-                    $list.append(`<tr>
- <td>${el.login}</td>
- <td>${el.email}</td>
- <td>${el.role}</td>
- <td>${el.creation_date}</td>
- </tr>`);
-                })
-            });
-    }
-
-</script>
 
 
 </body>
