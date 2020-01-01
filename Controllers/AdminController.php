@@ -18,6 +18,7 @@ class AdminController extends AppController {
         $user = new UserMapper();
 
         header('Content-type: application/json');
+
         http_response_code(200);
 
         echo $user->getUsers() ? json_encode($user->getUsers()) : '';
@@ -34,6 +35,26 @@ class AdminController extends AppController {
         $user = new UserMapper();
         $user->delete((int)$_POST['id']);
         http_response_code(200);
+    }
+
+    public function findUser() {
+
+
+        if (!isset($_POST['login'])) {
+            http_response_code(404);
+            return;
+        }
+
+        $login = (string)$_POST['login'];
+
+        $user = new UserMapper();
+
+        header('Content-type: application/json');
+
+        http_response_code(200);
+
+        echo $user->findUsers($login) ? json_encode($user->findUsers($login)) : '';
+
     }
 
 

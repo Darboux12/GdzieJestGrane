@@ -20,7 +20,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="../../Public/JS/adminPanel.js"></script>
+
+
 
 
 
@@ -38,10 +43,10 @@
 
     <div class="UserTable">
 
-        <div class="SearchBar-Searchbox">
-            <input  type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
-            <button class="search-box-button"><i class="fas fa-search"></i></button>
-        </div>
+        <form id="findform" class="SearchBar-Searchbox"  method="post" >
+            <input id="DataInput"  type="text" name="find" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="search-box-input">
+            <input type="submit" value="Submit Comment" name="subbmit">
+        </form>
 
         <table>
             <thead>
@@ -81,6 +86,12 @@
 
 
 <?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
+
+
+
+
+
+
 
 
 

@@ -19,7 +19,6 @@ WHERE email != :email;');
         }
     }
 
-
     public function delete(int $id): void{
 
         try {
@@ -42,6 +41,19 @@ WHERE id_user = :id;');
 
     }
 
+    public function findUsers(string $login){
 
+        try {
+            $stmt = $this->database->connect()->prepare('SELECT * FROM user_view
+WHERE login = :email;');
+            $stmt->bindParam(':email', $login, PDO::PARAM_STR);
+            $stmt->execute();
+            $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $user;
+        }
+        catch(PDOException $e) {
+            die();
+        }
+    }
 
 }

@@ -49,7 +49,14 @@ class Routing {
             'admin_delete_user' => [
                 'controller' => 'AdminController',
                 'action' => 'deleteUser'
+            ],
+
+            'admin_find_user' => [
+                'controller' => 'AdminController',
+                'action' => 'findUser'
             ]
+
+
 
 
 
