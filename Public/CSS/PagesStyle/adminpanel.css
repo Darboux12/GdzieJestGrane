@@ -15,7 +15,7 @@
 }
 
 .UserTable{
-    grid-area: 3 / 1 / span 2 / span 3;
+    grid-area: 2 / 1 / span 2 / span 3;
 }
 
 .UserTable > table{
@@ -25,9 +25,9 @@
 
 .UserTable > table  td, .UserTable > table  th{
     border: 1px solid #ddd;
-    padding: 0.5em;
     text-align: center;
-
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .UserTable > table tr:nth-child(even){background-color: #f2f2f2;}
@@ -39,22 +39,13 @@
 .UserTable > table th {
     padding-top: 1em;
     padding-bottom: 1em;
-
     background-color: #4CAF50;
     color: white;
 }
 
-.UserTable > table input{
-    border-radius: 0;
-    border: solid 0.1em  black;
-    width: 5px;
-    height: 5px;
-
-
-}
-
 .SearchBar-Searchbox{
     display: inline-flex;
+    width: 100%;
 }
 
 .search-box-input {
@@ -86,20 +77,36 @@
     background-color: #3817c6;
 }
 
-
-
-
-
-
-
-
-
-
-
 .ActionNav{
     grid-area: 2 / 4 / span 2 / span 1;
+    align-items: center;
 
 }
+
+.ActionNav > #GetAllButton{
+    width: 100%;
+    border: solid  #6dcb1b;
+    background: #6dcb1b;
+    color: #eeeeee;
+    margin-top: 1em;
+    padding: 0.3em;
+    font-size: 1.2em;
+    text-align: center;
+    outline: none;
+}
+
+.ActionNav > #GetAllButton > .fa-users{
+    padding-right: 0.2em;
+}
+
+.ActionNav > #GetAllButton:hover{
+    background: #4CAF50;
+    border: solid  #4CAF50;
+}
+
+
+
+
 
 
 @media only screen and (max-width : 450px) {

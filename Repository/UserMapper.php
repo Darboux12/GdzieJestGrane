@@ -27,11 +27,6 @@ WHERE id_user = :id;');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 
-            $stmt = $this->database->connect()->prepare('DELETE FROM user_details 
-    WHERE user_details.id_user_details in (SELECT user.id_user_details FROM user where user.id_user = :id);');
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-            $stmt->execute();
-
 
         }
         catch(PDOException $e) {
@@ -41,12 +36,12 @@ WHERE id_user = :id;');
 
     }
 
-    public function findUsers(string $login){
+    public function findUsers(string $input){
 
         try {
             $stmt = $this->database->connect()->prepare('SELECT * FROM user_view
-WHERE login = :email;');
-            $stmt->bindParam(':email', $login, PDO::PARAM_STR);
+WHERE login = :data OR role = :data OR email = :data OR creation_date = :data ;');
+            $stmt->bindParam(':data', $input );
             $stmt->execute();
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $user;
