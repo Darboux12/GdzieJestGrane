@@ -5,7 +5,7 @@
     <div class="TopBarLinks">
         <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>
         <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-        <a href="?page=showCreateEvent"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+        <a href="?page=createAd"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         <a href="?page=adminpanel"><i class="fas fa-users-cog"></i>Panel admina</a>
     </div>
 

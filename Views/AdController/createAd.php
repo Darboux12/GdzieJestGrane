@@ -30,23 +30,33 @@
 
     <div class="CreateEventForm">
 
-        <form id="EventForm" action="?page=createEvent" method="POST">
+        <div class="messages">
+            <?php
+            if(isset($messages)){
+                foreach($messages as $message) {
+                    echo $message;
+                }
+            }
+            ?>
+        </div>
+
+        <form id="EventForm" action="?page=createAd" method="POST">
 
             <h>Nazwa wydarzenia</h>
-            <input  type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
+            <input  name="title" type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
 
             <h>Data wydarzenia</h>
-            <input  type="date">
+            <input  name="date" type="date">
 
             <h>Lokalizacja</h>
-            <input  type="text" placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...">
-            <input  type="text" placeholder="Kod pocztowy..." onfocus="this.placeholder=''" onblur="this.placeholder='Kod pocztowy...'">
-            <input  type="text" placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...">
-            <input  type="number" placeholder="Numer..." onfocus="this.placeholder=''" onblur="this.placeholder='Numer...'">
+            <input  name="city" type="text" placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...">
+            <input  name="postal" type="text" placeholder="Kod pocztowy..." onfocus="this.placeholder=''" onblur="this.placeholder='Kod pocztowy...'">
+            <input  name="street" type="text" placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...">
+            <input  name="number" type="number" placeholder="Numer..." onfocus="this.placeholder=''" onblur="this.placeholder='Numer...'">
 
             <h>Dyscyplina</h>
             <div id="SelectSport" class="SearchNavSelect">
-                <select>
+                <select name="discipline">
                     <option value="0">Wybierz dyscyplinę</option>
                     <option value="1">Piłka Nożna</option>
                     <option value="2">Siatkówka</option>
@@ -61,7 +71,7 @@
             </div>
 
             <h>Szukana liczba osób</h>
-            <input  type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'">
+            <input name="pplnumber" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'">
 
             <div class="CheckBox">
 
@@ -72,7 +82,7 @@
                     <div class="Checkbox-option-container">
 
                         <label class="Checkbox-option">
-                            <input type="checkbox">
+                            <input form="EventForm" name="gender" type="checkbox" value="male">
                             <span class="checkmark"></span>
                             <h>Mężczyzn</h>
                         </label>
@@ -82,7 +92,7 @@
                     <div class="Checkbox-option-container">
 
                         <label class="Checkbox-option">
-                            <input type="checkbox">
+                            <input name="gender" type="checkbox" value="female">
                             <span class="checkmark"></span>
                             <h>Kobiet</h>
                         </label>
@@ -93,7 +103,7 @@
                     <div class="Checkbox-option-container">
 
                         <label id="last-box" class="Checkbox-option">
-                            <input type="checkbox">
+                            <input name="gender" type="checkbox" value="all">
                             <span class="checkmark"></span>
                             <h>Dowolnie</h>
                         </label>
@@ -106,15 +116,15 @@
 
             <h>Szukam osób w wieku:</h>
             <div class="EventDataInput">
-                <input  type="number" placeholder='od x lat' onfocus="this.placeholder=''" onblur="this.placeholder='od x lat'">
-                <input  type="number" placeholder='do y lat' onfocus="this.placeholder=''" onblur="this.placeholder='do y lat'">
+                <input name="min_age" type="number" placeholder='od x lat' onfocus="this.placeholder=''" onblur="this.placeholder='od x lat'">
+                <input name="max_age" type="number" placeholder='do y lat' onfocus="this.placeholder=''" onblur="this.placeholder='do y lat'">
             </div>
 
             <h>Koszt:</h>
             <div class="EventDataInput">
-                <input  type="number" placeholder='zł. od osoby' onfocus="this.placeholder=''" onblur="this.placeholder='zł. od osoby'">
+                <input  name="min_price" type="number" placeholder='zł. od osoby' onfocus="this.placeholder=''" onblur="this.placeholder='zł. od osoby'">
                 <h>za</h>
-                <input  type="number" placeholder='godz. gry' onfocus="this.placeholder=''" onblur="this.placeholder='godz. gry'">
+                <input  name="max_price" type="number" placeholder='godz. gry' onfocus="this.placeholder=''" onblur="this.placeholder='godz. gry'">
             </div>
 
         </form>
@@ -130,7 +140,7 @@
             <label for="file-input">
                 <img src="http://goo.gl/pB9rpQ"/>
             </label>
-            <input id="file-input" form="EventForm" type="file" onchange="readURL(this);" />
+            <input name="image" id="file-input" form="EventForm" type="file" onchange="readURL(this);" />
         </div>
 
         <img id="blah" src="../../Public/Images/Blank.png" alt="your image" />
@@ -139,7 +149,7 @@
 
     <div class="CreateEventDescription">
 
-        <textarea rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
+        <textarea name="description" rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
 
     </div>
 

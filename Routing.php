@@ -4,7 +4,7 @@ require_once "Controllers/MainPageController.php";
 require_once "Controllers/SecurityController.php";
 require_once "Controllers/NewsPageController.php";
 require_once "Controllers/AdminController.php";
-require_once "Controllers/CreateEventPageController.php";
+require_once "Controllers/AdController.php";
 
 
 
@@ -56,14 +56,9 @@ class Routing {
                 'action' => 'findUser'
             ],
 
-            'showCreateEvent' => [
-                'controller' => 'CreateEventPageController',
-                'action' => 'showPage'
-            ],
-
-            'createEvent' => [
-                'controller' => 'CreateEventPageController',
-                'action' => 'createEvent'
+            'createAd' => [
+                'controller' => 'AdController',
+                'action' => 'ad'
             ]
 
 

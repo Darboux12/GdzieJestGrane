@@ -14,8 +14,10 @@
     display: none;
 }
 
+
 .CreateEventForm{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     grid-area: 2 / 1 / span 2 / span 1;

@@ -6,6 +6,9 @@ class Ad{
     private $title;
     private $description;
     private $image;
+    private $discipline;
+    private $min_price;
+    private $max_price;
     private $min_age;
     private $max_age;
     private $num_people;
@@ -20,9 +23,9 @@ class Ad{
 
 
     public function __construct(int $id, int $id_user, string $title, string $description, string $image,
-                                int $min_age, int $max_age, int $num_people, int $involved_people,string $gender,
-                                string $date, int $views, string $city, string $postal_code, string $street,
-                                int $number){
+                                string $discipline,int $min_price, int $max_price, int $min_age, int $max_age, int $num_people, int $involved_people,
+                                string $gender, string $date, int $views, string $city, string $postal_code,
+                                string $street, int $number){
 
         $this->id = $id;
         $this->id_user = $id_user;
@@ -40,6 +43,11 @@ class Ad{
         $this->street = $street;
         $this->number = $number;
         $this->gender = $gender;
+        $this->discipline = $discipline;
+        $this->max_price = $max_price;
+        $this->min_price = $min_price;
+
+
     }
 
 
@@ -105,6 +113,18 @@ class Ad{
 
     public function getGender(): string{
         return $this->gender;
+    }
+
+    public function getDiscipline(): string{
+        return $this->discipline;
+    }
+
+    public function getMinPrice(): int{
+        return $this->min_price;
+    }
+
+    public function getMaxPrice(): int{
+        return $this->max_price;
     }
 
 }
