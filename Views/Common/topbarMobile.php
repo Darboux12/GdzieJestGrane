@@ -14,13 +14,13 @@
 
             <a href="#page"><i class="fas fa-map"></i><h>Oznaczone miejsca</h></a>
 
-            <a id="CreateEvent" href="../CreateEventPageController/CreateEventPage.php"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
+            <a id="CreateEvent" href="?page=createEvent"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
 
-            <a href="#page"><i class="fas fa-map-marked-alt"></i><h>Oznacz miejsce</h></a>
+            <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i><h>Oznacz miejsce</h></a>
 
             <a href="#page"><i class="fas fa-bell"></i><h>Powiadomienia</h></a>
 
-            <a href="#page"><i class="fas fa-globe"></i><h>Aktualności</h></a>
+            <a href="?page=newspage"><i class="fas fa-globe"></i><h>Aktualności</h></a>
 
         </div>
 

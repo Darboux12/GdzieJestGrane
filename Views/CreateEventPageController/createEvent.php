@@ -11,6 +11,11 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/createEvent.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
     <title>Create Event</title>
 
 </head>
@@ -25,17 +30,19 @@
 
     <div class="CreateEventForm">
 
-        <form>
+        <form id="EventForm" action="?page=createEvent" method="POST">
 
             <h>Nazwa wydarzenia</h>
             <input  type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
 
             <h>Data wydarzenia</h>
-            <div class="EventDataInput">
-                <input  type="text" placeholder="dd" onfocus="this.placeholder=''" onblur="this.placeholder='dd'">
-                <input  type="text" placeholder="mm" onfocus="this.placeholder=''" onblur="this.placeholder='mm'">
-                <input  type="text" placeholder="yyyy" onfocus="this.placeholder=''" onblur="this.placeholder='yyyy'">
-            </div>
+            <input  type="date">
+
+            <h>Lokalizacja</h>
+            <input  type="text" placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...">
+            <input  type="text" placeholder="Kod pocztowy..." onfocus="this.placeholder=''" onblur="this.placeholder='Kod pocztowy...'">
+            <input  type="text" placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...">
+            <input  type="number" placeholder="Numer..." onfocus="this.placeholder=''" onblur="this.placeholder='Numer...'">
 
             <h>Dyscyplina</h>
             <div id="SelectSport" class="SearchNavSelect">
@@ -53,7 +60,7 @@
                 <i class="fas fa-caret-down"></i>
             </div>
 
-            <h>Liczba osób</h>
+            <h>Szukana liczba osób</h>
             <input  type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'">
 
             <div class="CheckBox">
@@ -99,15 +106,15 @@
 
             <h>Szukam osób w wieku:</h>
             <div class="EventDataInput">
-                <input  type="text" placeholder='od x lat' onfocus="this.placeholder=''" onblur="this.placeholder='od x lat'">
-                <input  type="text" placeholder='do y lat' onfocus="this.placeholder=''" onblur="this.placeholder='do y lat'">
+                <input  type="number" placeholder='od x lat' onfocus="this.placeholder=''" onblur="this.placeholder='od x lat'">
+                <input  type="number" placeholder='do y lat' onfocus="this.placeholder=''" onblur="this.placeholder='do y lat'">
             </div>
 
             <h>Koszt:</h>
             <div class="EventDataInput">
-                <input  type="text" placeholder='zł. od osoby' onfocus="this.placeholder=''" onblur="this.placeholder='zł. od osoby'">
+                <input  type="number" placeholder='zł. od osoby' onfocus="this.placeholder=''" onblur="this.placeholder='zł. od osoby'">
                 <h>za</h>
-                <input  type="text" placeholder='godz. gry' onfocus="this.placeholder=''" onblur="this.placeholder='godz. gry'">
+                <input  type="number" placeholder='godz. gry' onfocus="this.placeholder=''" onblur="this.placeholder='godz. gry'">
             </div>
 
         </form>
@@ -115,15 +122,30 @@
     </div>
 
     <div class="CreateEventMap">
-        <img src="../../Public/Images/Kamienna.png">
-        <input  type="text" placeholder="Wybierz miejsce wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz miejsce wydarzenia...'">
+
+        <div id="upload" class="image-upload">
+
+            <h>Dodaj zdjęcie...</h>
+
+            <label for="file-input">
+                <img src="http://goo.gl/pB9rpQ"/>
+            </label>
+            <input id="file-input" form="EventForm" type="file" onchange="readURL(this);" />
+        </div>
+
+        <img id="blah" src="../../Public/Images/Blank.png" alt="your image" />
+
     </div>
 
     <div class="CreateEventDescription">
 
-        <textarea rows="5" cols="50"  placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
+        <textarea rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
 
     </div>
+
+    <input type="submit" form="EventForm">
+
+
 
 </div>
 
@@ -155,90 +177,32 @@
 
 
 
-
-
-
-
-
 <script>
 
-    function openChat() {document.getElementById("chat").style.display = "grid";}
-    function closeChat() {document.getElementById("chat").style.display = "none";}
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-    function ToggleUserMenu() {
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
 
-        var bubble = document.getElementById('myBubble');
+            };
 
-        bubble.classList.toggle("show");
-    }
-
-    window.addEventListener('click',function (event) {
-
-        var bubble = document.getElementById('myBubble');
-        var userIcon = document.getElementById('usericon');
-
-        if(event.target != bubble && event.target != userIcon){
-
-            if(bubble.classList.contains('show')){
-                bubble.classList.remove('show');
-            }
-        }
-    })
-
-
-    function ToggleMobileMenuBar() {
-
-        var bubble = document.getElementById('Mobile-Drop-Menu-Bar');
-
-        bubble.classList.toggle("show");
-    }
-
-    function ToggleMobileMenuUser() {
-
-        var bubble = document.getElementById('Mobile-Drop-Menu-User');
-
-        bubble.classList.toggle("show");
-    }
-
-    function ToggleMobileMenuSearch() {
-
-        var bubble = document.getElementById('Mobile-Drop-Menu-Search');
-
-        bubble.classList.toggle("show");
-    }
-
-
-    var isButtonOneSet = true;
-
-    function MobileChooseEvent() {
-
-        btn1 = document.getElementById('button1');
-        btn2 = document.getElementById('button2');
-
-        if(isButtonOneSet){
-            btn1.style.background = 'transparent';
-            btn2.style.background = 'white';
-            isButtonOneSet = false;
-        } else {
-            btn2.style.background = 'transparent';
-            btn1.style.background = 'white';
-            isButtonOneSet = true;
+            reader.readAsDataURL(input.files[0]);
         }
 
+        document.getElementById('upload').style.display = 'none';
 
 
-
-
-
-
-
+        document.getElementById('blah').style.display = 'flex';
 
 
 
     }
-
 
 </script>
+
 
 
 

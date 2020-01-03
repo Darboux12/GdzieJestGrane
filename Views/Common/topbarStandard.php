@@ -1,11 +1,11 @@
 <div id="TopBarStandard" class="TopBar">
 
-    <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../Public/Images/logo-no-writing.png"></a>
+    <a class="Ball-link" href="#?page=mainapage"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
     <div class="TopBarLinks">
-        <a href="#page"><i class="fas fa-globe"></i> Aktualności</a>
-        <a href="#page"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-        <a href="CreateEventPage.php"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
+        <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>
+        <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
+        <a href="?page=showCreateEvent"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
         <a href="?page=adminpanel"><i class="fas fa-users-cog"></i>Panel admina</a>
     </div>
 

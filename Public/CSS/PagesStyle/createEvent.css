@@ -8,7 +8,7 @@
 
 .TopBar{
     grid-area: 1 / 1 / span 1 / span 2;
- }
+}
 
 #TopBarMobile{
     display: none;
@@ -20,7 +20,7 @@
     justify-content: center;
     grid-area: 2 / 1 / span 2 / span 1;
     border: solid 0.3em  rgba(34, 0, 255, 0.92);
-    background: bisque;
+    background: white;
     padding-bottom: 1em;
 }
 
@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    width: 70%;
 }
 
 .CreateEventForm > form > h{
@@ -39,6 +40,8 @@
 
 input{
     margin-top: 0.3em;
+    width: 100%;
+    text-align: center;
 }
 
 .EventDataInput{
@@ -62,15 +65,41 @@ input{
     font-size: 1.2em;
 }
 
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    background: none;
+    color: #3817c6;
+    margin-right: 2em;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator:hover {
+    color: #2699fb;
+}
+
 .CreateEventMap{
     position: relative;
     grid-area: 2 / 2 / span 1 / span 1;
     border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+
+
 }
 
 .CreateEventMap > img{
     height: 100%;
     width: 100%;
+}
+
+#blah{
+    display: none;
 }
 
 .CreateEventMap > input{
@@ -84,6 +113,38 @@ input{
 .CreateEventMap > input:hover, input:focus{
     opacity: 100%;
 }
+
+.image-upload{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-upload > h{
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.image-upload > input {
+    display: none;
+}
+
+.image-upload img
+{
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
 
 .CreateEventDescription{
     grid-area: 3 / 2 / span 1 / span 1;
@@ -131,7 +192,7 @@ input{
     position: relative;
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100%;
 }
 
 .SearchNavSelect > select {

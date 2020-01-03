@@ -8,7 +8,7 @@ class NewsRepository extends Repository {
     public function getNews(int $id_news){
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM news WHERE id_news = :id
+            SELECT * FROM news_view WHERE id_news = :id
         ');
         $stmt->bindParam(':id', $id_news, PDO::PARAM_INT);
         $stmt->execute();
