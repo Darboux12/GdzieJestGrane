@@ -7,30 +7,14 @@ require_once __DIR__.'/../Repository/AdRepository.php';
 class AdController extends AppController
 {
 
-    public function ad()
-    {
+    public function createAd(){
 
         $adRepository = new AdRepository();
 
         if ($this->isPost()) {
 
-            if (empty($_POST['title'])) {
+       /*    if (empty($_POST['title'])) {
                 $this->render('createAd', ['messages' => ['You must choose title! ']]);
-                return;
-            }
-
-            if (empty($_POST['discipline'])) {
-                $this->render('createAd', ['messages' => ['You must choose discipline! ']]);
-                return;
-            }
-
-            if (empty($_POST['pplnumber'])) {
-                $this->render('createAd', ['messages' => ['You must choose number of people! ']]);
-                return;
-            }
-
-            if (empty($_POST['date'])) {
-                $this->render('createAd', ['messages' => ['You must choose date!']]);
                 return;
             }
 
@@ -56,6 +40,16 @@ class AdController extends AppController
 
             if (empty($_POST['number'])) {
                 $this->render('createAd', ['messages' => ['You must choose locality number!']]);
+                return;
+            }
+
+            if (empty($_POST['discipline'])) {
+                $this->render('createAd', ['messages' => ['You must choose discipline! ']]);
+                return;
+            }
+
+            if (empty($_POST['pplnumber'])) {
+                $this->render('createAd', ['messages' => ['You must choose number of people! ']]);
                 return;
             }
 
@@ -89,11 +83,24 @@ class AdController extends AppController
                 return;
             }
 
+            if (empty($_POST['image'])) {
+                $this->render('createAd', ['messages' => ['You must choose image!']]);
+                return;
+            }
 
-            $this->render('createAd');
+            if (empty($_POST['description'])) {
+                $this->render('createAd', ['messages' => ['You must choose description!']]);
+                return;
+            }
 
+            if (empty($_SESSION['id'])) {
+                $this->render('createAd', ['messages' => ['You are not logged in!']]);
+                return;
+            } */
 
+            $adRepository->createAd();
         }
 
+        $this->render('createAd');
     }
 }

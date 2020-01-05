@@ -58,12 +58,8 @@ class Routing {
 
             'createAd' => [
                 'controller' => 'AdController',
-                'action' => 'ad'
+                'action' => 'createAd'
             ]
-
-
-
-
 
 
 

@@ -49,9 +49,9 @@
             <input  name="date" type="date">
 
             <h>Lokalizacja</h>
-            <input  name="city" type="text" placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...">
+            <input  name="city" type="text"  placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...'">
             <input  name="postal" type="text" placeholder="Kod pocztowy..." onfocus="this.placeholder=''" onblur="this.placeholder='Kod pocztowy...'">
-            <input  name="street" type="text" placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...">
+            <input  name="street" type="text"  placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...'">
             <input  name="number" type="number" placeholder="Numer..." onfocus="this.placeholder=''" onblur="this.placeholder='Numer...'">
 
             <h>Dyscyplina</h>
@@ -149,7 +149,7 @@
 
     <div class="CreateEventDescription">
 
-        <textarea name="description" rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
+        <textarea id="description" name="description" rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
 
     </div>
 
