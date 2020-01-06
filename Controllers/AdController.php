@@ -9,11 +9,12 @@ class AdController extends AppController
 
     public function createAd(){
 
+
         $adRepository = new AdRepository();
 
         if ($this->isPost()) {
 
-       /*    if (empty($_POST['title'])) {
+         if (empty($_POST['title'])) {
                 $this->render('createAd', ['messages' => ['You must choose title! ']]);
                 return;
             }
@@ -83,11 +84,6 @@ class AdController extends AppController
                 return;
             }
 
-            if (empty($_POST['image'])) {
-                $this->render('createAd', ['messages' => ['You must choose image!']]);
-                return;
-            }
-
             if (empty($_POST['description'])) {
                 $this->render('createAd', ['messages' => ['You must choose description!']]);
                 return;
@@ -96,9 +92,25 @@ class AdController extends AppController
             if (empty($_SESSION['id'])) {
                 $this->render('createAd', ['messages' => ['You are not logged in!']]);
                 return;
-            } */
+            }
 
-            $adRepository->createAd();
+            $image = $_FILES['image']['name'];
+
+            $imageData= file_get_contents($_FILES['image']['tmp_name']);
+
+            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
+
+            $extensions_arr = array("jpg","jpeg","png","gif");
+
+            if(!in_array($imageFileType,$extensions_arr) ) {
+                $this->render('createAd', ['messages' => ['Choosen file is not an image!']]);
+                return;
+            }
+
+            $adRepository->createAd($_POST['city'],$_POST['postal'],$_POST['street'],$_POST['number'],
+                $_POST['discipline'],$_POST['min_price'],$_POST['max_price'], $_POST['min_age'],$_POST['max_age'],
+                $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
+                $_POST['title'],$_POST['description'],$imageData);
         }
 
         $this->render('createAd');

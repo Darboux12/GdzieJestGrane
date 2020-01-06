@@ -40,7 +40,7 @@
             ?>
         </div>
 
-        <form id="EventForm" action="?page=createAd" method="POST">
+        <form id="EventForm" action="?page=createAd" method="POST" enctype="multipart/form-data">
 
             <h>Nazwa wydarzenia</h>
             <input  name="title" type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
@@ -58,14 +58,14 @@
             <div id="SelectSport" class="SearchNavSelect">
                 <select name="discipline">
                     <option value="0">Wybierz dyscyplinę</option>
-                    <option value="1">Piłka Nożna</option>
-                    <option value="2">Siatkówka</option>
-                    <option value="3">Koszykówka</option>
-                    <option value="4">Pływanie</option>
-                    <option value="5">Kajakarstwo</option>
-                    <option value="6">Golf</option>
-                    <option value="7">Bieganie</option>
-                    <option value="8">Inne</option>
+                    <option value="football">Piłka Nożna</option>
+                    <option value="volleyball">Siatkówka</option>
+                    <option value="basketball">Koszykówka</option>
+                    <option value="swimming">Pływanie</option>
+                    <option value="canoeing ">Kajakarstwo</option>
+                    <option value="golf">Golf</option>
+                    <option value="running">Bieganie</option>
+                    <option value="other">Inne</option>
                 </select>
                 <i class="fas fa-caret-down"></i>
             </div>
@@ -137,10 +137,10 @@
 
             <h>Dodaj zdjęcie...</h>
 
-            <label for="file-input">
+            <label for="image">
                 <img src="http://goo.gl/pB9rpQ"/>
             </label>
-            <input name="image" id="file-input" form="EventForm" type="file" onchange="readURL(this);" />
+            <input name="image" id="image" form="EventForm" type="file" onchange="readURL(this);" />
         </div>
 
         <img id="blah" src="../../Public/Images/Blank.png" alt="your image" />
