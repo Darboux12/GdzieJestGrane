@@ -112,7 +112,8 @@ class AdController extends AppController
                 $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
                 $_POST['title'],$_POST['description'],$imageData);
         }
-
+        echo ("Hej");
         $this->render('createAd');
     }
 }
+
