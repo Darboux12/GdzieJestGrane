@@ -5,13 +5,21 @@ require_once 'AppController.php';
 
 class MainPageController extends AppController {
 
-    public function getLatestPhotos()
+    public function page()
     {
+
+        $adRepository = new AdRepository();
+
+        $allAds = $adRepository->getAllAds();
+
+        $this->render('mainpage',["allAds" => $allAds]);
+
+
        // $database = new Database();
       //  $database->connect();
 
 
 
-        $this->render('mainpage');
+
     }
 }

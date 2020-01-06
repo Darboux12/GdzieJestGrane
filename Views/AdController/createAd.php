@@ -12,9 +12,7 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/createEvent.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../Public/JS/createAd.js"></script>
 
     <title>Create Event</title>
 
@@ -187,31 +185,6 @@
 
 
 
-<script>
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-
-        document.getElementById('upload').style.display = 'none';
-
-
-        document.getElementById('blah').style.display = 'flex';
-
-
-
-    }
-
-</script>
 
 
 

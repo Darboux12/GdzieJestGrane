@@ -28,7 +28,7 @@ class Routing {
 
             'mainpage' => [
                 'controller' => 'MainPageController',
-                'action' => 'getLatestPhotos'
+                'action' => 'page'
             ],
 
             'newspage' => [

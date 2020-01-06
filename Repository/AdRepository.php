@@ -41,34 +41,12 @@ class AdRepository extends Repository{
         );
     }
 
-    public function getAllNewses(): array{
-        $result = [];
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM news ORDER BY news.id_news DESC 
-        ');
-        $stmt->execute();
-        $newses = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($newses as $news) {
-            $result[] = new News(
-                $news['id_news'],
-                $news['title'],
-                $news['description'],
-                $news['image'],
-                $news['link']
-            );
-        }
-
-        return $result;
-    }
-
-    public function getAds(): array
-    {
+    public function getAllAds(): array{
 
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM ad_view ORDER BY ad.id_ad DESC 
+            SELECT * FROM ad_view ORDER BY id_ad DESC 
         ');
         $stmt->execute();
         $ads = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -77,7 +55,7 @@ class AdRepository extends Repository{
             $result[] = new Ad(
                 $ad['id_ad'],
                 $ad['id_user'],
-                $ad['title	'],
+                $ad['title'],
                 $ad['description'],
                 $ad['image'],
                 $ad['discipline'],
@@ -171,7 +149,4 @@ class AdRepository extends Repository{
         $stmt->execute();
 
     }
-
-
-
 }

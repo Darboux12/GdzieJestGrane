@@ -311,35 +311,7 @@
 
     <div class="MainContent">
 
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
+        <?php foreach($allAds as $ad): ?>
 
         <div class="Publication">
 
@@ -347,205 +319,53 @@
 
             <div class="EventInformation">
 
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
+                <h id="EventTitle"><?= $ad->getTitle()?></h>
+                <h id="EventSport"><?= $ad->getDiscipline()?></h>
+                <h id="EventDate"><?= $ad->getDate()?></h>
+                <h id="EventAddress">
+                    <?= $ad->getStreet() . " "
+                    . $ad->getNumber() . ", "
+                    . $ad->getPostalCode() . " "
+                    . $ad->getCity()
+                    ?>
+                </h>
+                <h id="Age"><?='Wiek: ' . ' '
+                    . $ad->getMinAge() . ' - '
+                    . $ad->getMaxAge()
+                    ?>
+                </h>
 
                 <div id="EventPeopleNumberElement">
                     <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
+                    <h><?=$ad->getInvolvedPeople()  . ' z ' . $ad->getNumPeople()?></h>
                 </div>
+
+                <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
 
             </div>
 
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
+            <div class="ImageAndDescription">
 
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
+                <?= '<img src="data:image/jpeg;base64,'.base64_encode($ad->getImage()) .'" />' ?>
 
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+                <textarea class="ShortDescription" readonly rows="20"><?= $ad->getDescription()?></textarea>
+
+
+
+            </div>
+
+
+
+
 
 
 
         </div>
 
-        <div class="Publication">
 
-            <i class="fas fa-volleyball-ball"></i>
+        <?php endforeach ?>
 
-            <div class="EventInformation">
 
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
-
-        <div class="Publication">
-
-            <i class="fas fa-volleyball-ball"></i>
-
-            <div class="EventInformation">
-
-                <h id="EventTitle">Siatkówka dla pań</h>
-                <h id="EventSport">Siatkówka</h>
-                <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-                <h id="Age">Wiek: 18 - 30 lat</h>
-
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h>4 z 12</h>
-                </div>
-
-            </div>
-
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
-
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-        </div>
 
 
 
