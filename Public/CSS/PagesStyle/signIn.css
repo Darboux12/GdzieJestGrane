@@ -13,13 +13,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
+
+}
+
+#RightColumn{
+    padding-left: 1em;
+
+}
+
+
+.Column{
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+
 }
 
 input{margin: 0.5em 0;}

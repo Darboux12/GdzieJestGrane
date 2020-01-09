@@ -39,12 +39,12 @@
         </div>
 
         <form id="LogInForm" action="?page=login" method="POST" >
-            <input name="email" type="email" placeholder="Podaj email..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj email...'">
+            <input name="email" type="text" placeholder="Podaj email..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj email...'">
             <input name="password" type="password" placeholder="Podaj hasło..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj hasło...'">
             <input id="LogInButton" type="submit"  value="Zaloguj się!">
         </form>
 
-        <a href="../SignInPageController/SignInPage.php" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
+        <a href="?page=signin" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
 
     </div>
 

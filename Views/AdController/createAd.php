@@ -10,6 +10,7 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/topbar.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/createEvent.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/SelectField.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script type="text/javascript" src="../../Public/JS/createAd.js"></script>
@@ -151,7 +152,7 @@
 
     </div>
 
-    <input type="submit" form="EventForm">
+    <input id="FormSubmit" type="submit" form="EventForm" value="Stwórz wydarzenie">
 
 
 

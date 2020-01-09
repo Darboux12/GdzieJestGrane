@@ -48,34 +48,6 @@
     width: 100%;
 }
 
-.search-box-input {
-    border-radius: 0;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
-    border-right: none;
-    background-color: #ffffff;
-    line-height: 2.5em;
-    font-size: 1em;
-    text-align: left;
-    outline: none;
-    padding-left: 1em;
-    width: 100%;
-    outline: 0;
-}
-
-.search-box-button {
-    background-color: #3758cb;
-    border: 0.2em solid #3758cb;
-    color: white;
-    cursor: pointer;
-    outline: 0;
-    padding: 0 0.75em;
-}
-
-.search-box-button:hover,
-.search-box-button:focus{
-    border-color: #3817c6;
-    background-color: #3817c6;
-}
 
 .ActionNav{
     grid-area: 2 / 4 / span 2 / span 1;
@@ -83,7 +55,7 @@
 
 }
 
-.ActionNav > #GetAllButton{
+.ActionNav > button{
     width: 100%;
     border: solid  #6dcb1b;
     background: #6dcb1b;
@@ -99,13 +71,14 @@
     padding-right: 0.2em;
 }
 
-.ActionNav > #GetAllButton:hover{
+.ActionNav > #AddUser > .fa-user-plus{
+    padding-right: 0.2em;
+}
+
+.ActionNav > button:hover{
     background: #4CAF50;
     border: solid  #4CAF50;
 }
-
-
-
 
 
 

@@ -18,10 +18,6 @@
     grid-area: 1 / 1 / span 1 / span 4;
 }
 
-.CheckBox{
-    background: #3758cb;
-}
-
 .SearchNav{
     display: grid;
     grid-area: 2 / 1 / span 1 / span 4;
@@ -31,89 +27,11 @@
     padding: 0;
 }
 
-.SearchNavSelect{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background: white;
-    position: relative;
-}
-
-.SearchNavSelect > select {
-    width: 100%;
-    height: 100%;
-    padding-left: 1em;
-    cursor: pointer;
-    background: #3758cb;
-    color: #fefefe;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    font-weight: bold;
-}
-
-.SearchNavSelect select:hover,
-.SearchNavSelect select:focus {
-    color: floralwhite;
-    background: #3817c6;
-}
-
-.SearchNavSelect select:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.fa-caret-down {
-    position: absolute;
-    font-size: 2em;
-    right: 1em;
-    pointer-events: none;
-    color: white;
-}
-
-.SearchNavSelect select:hover ~ .fa-caret-down,
-.SearchNavSelect select:focus ~ .fa-caret-down {
-    color: floralwhite;
-}
-
-.SearchBar-Searchbox{
-    display: inline-flex;
-}
-
-.search-box-input {
-    border-radius: 0;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
-    border-right: none;
-    background-color: #ffffff;
-    line-height: 2.5em;
-    font-size: 1em;
-    text-align: left;
-    outline: none;
-    padding-left: 1em;
-    width: 100%;
-    outline: 0;
-}
-
-.search-box-button {
-    background-color: #3758cb;
-    border: 0.2em solid #3758cb;
-    color: white;
-    cursor: pointer;
-    outline: 0;
-    padding: 0 0.75em;
-}
-
-.search-box-button:hover,
-.search-box-button:focus{
-    border-color: #3817c6;
-    background-color: #3817c6;
-}
-
 .SearchBar-SelectNumber{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #3758cb;
+    background-color: #4CAF50;
     padding: 0.2em 0;
 }
 
@@ -121,8 +39,6 @@
     font-weight: bold;
     font-size: 1em;
     color: white;
-
-
 }
 
 .SelectInputs{
@@ -135,14 +51,14 @@
 .SelectInputs > input{
     width: 25%;
     margin: 0 0.4em;
-    border: 0.3em solid #3758cb;
+    border: 0.3em solid #4CAF50;
     outline: 0;
     padding-left: 1em;
 }
 
 .SelectInputs > input:hover,
 .SelectInputs > input:focus{
-    border-color: #3817c6;
+    border-color: #4CAF50;
 }
 
 #NumebrOfPeopleInput{
@@ -152,8 +68,6 @@
 .MainContent{
     display: grid;
     grid-area: 3 / 1 / span 2 / span 3;
-
-
 }
 
 .Publication{
@@ -161,12 +75,8 @@
     height: 24em;
     border: solid 5px #6dcb1b;
     margin-bottom: 1.5em;
-
     display: flex;
     flex-direction: row;
-
-
-
 }
 
 .EventInformation{
@@ -176,27 +86,22 @@
     font-size: 1em;
     left: 3em;
     top: 5em;
-
-
-
     margin-top: 5em;
-
 }
 
 .ShortDescription{
     width: 100%;
     border: solid 3px rgba(63, 37, 37, 0.82);
     resize: none;
-    font-family: Arial;
+    font-family: Arial, serif;
     text-align: center;
     padding-top: 1em;
     box-sizing: border-box;
-
 }
 
 #EventTitle{
     display: flex;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 1.5em;
     font-weight: bold;
     font-stretch: normal;
@@ -210,7 +115,7 @@
 #EventSport{
     display: flex;
     opacity: 0.5;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 1.2em;
     font-weight: bold;
     font-stretch: normal;
@@ -224,7 +129,7 @@
 #EventDate{
     display: flex;
     opacity: 0.5;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 1.2em;
     font-weight: bold;
     font-stretch: normal;
@@ -238,7 +143,7 @@
 #EventAddress{
     display: flex;
     opacity: 0.5;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 1.2em;
     font-weight: bold;
     font-stretch: normal;
@@ -270,7 +175,7 @@
 #Age{
     display: flex;
     opacity: 0.5;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 1.2em;
     font-weight: bold;
     font-stretch: normal;
@@ -285,32 +190,24 @@
     font-size: 2.5em;
     padding: 0.5em;
     color: #B90808;
-
 }
-
 
 .ImageAndDescription{
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 1em 0;
     align-items: center;
     justify-content: center;
-    margin-left: 5em;
+    margin: 1em 0 1em 5em;
 }
 
 .ImageAndDescription > img{
     width: 100%;
     height: 10em;
-
     margin-bottom: 2em;
     border: solid 3px rgba(63, 37, 37, 0.82);
     box-sizing: border-box;
 }
-
-
-
-
 
 #SeeDetails{
     text-decoration: none ;
@@ -323,15 +220,14 @@
 }
 
 #SubmitButton{
-    background: #3758cb;;
+    background: #4CAF50;
     font-size: 1.2em;
     font-weight: bold;
-
     color: white;
 }
 
 #SubmitButton:hover{
-    background: #3817c6;
+    background: green;
 }
 
 .MobileShowEvents{
@@ -362,7 +258,7 @@
 .MobileShowEvents-input > input{
     width: 40%;
     border-radius: 1em;
-    border: solid 3px #2699fb;
+    border: solid 3px #4CAF50;
     font-weight: bold;
     padding: 0.5em 1em;
     margin: 0 0.5em;

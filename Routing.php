@@ -26,6 +26,11 @@ class Routing {
                 'action' => 'logout'
             ],
 
+            'signin' => [
+                'controller' => 'SecurityController',
+                'action' => 'signin'
+            ],
+
             'mainpage' => [
                 'controller' => 'MainPageController',
                 'action' => 'page'

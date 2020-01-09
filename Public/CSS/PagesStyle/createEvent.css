@@ -14,14 +14,13 @@
     display: none;
 }
 
-
 .CreateEventForm{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     grid-area: 2 / 1 / span 2 / span 1;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    border: solid 0.3em  #4CAF50;
     background: white;
     padding-bottom: 1em;
 }
@@ -86,7 +85,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 .CreateEventMap{
     position: relative;
     grid-area: 2 / 2 / span 1 / span 1;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    border: solid 0.3em  #4CAF50;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,14 +142,9 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 
 
 
-
-
-
-
-
 .CreateEventDescription{
     grid-area: 3 / 2 / span 1 / span 1;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    border: solid 0.3em  #4CAF50;
 }
 
 .CheckBox{
@@ -158,12 +152,12 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     background: white;
     padding: 0.5em;
     border-radius: 1.5em;
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
+    border: solid 0.3em  #6dcb1b;
 }
 
 .CheckBox > h{
     font-size: 1.5em;
-    color: #2699fb;
+    color: black;
 }
 
 .Checkbox-option > h{
@@ -198,7 +192,6 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .SearchNavSelect > select {
-    border: solid 0.3em  rgba(34, 0, 255, 0.92);
     width: 100%;
     cursor: pointer;
     background: white;
@@ -208,17 +201,6 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     font-weight: bold;
     padding: 1em 0;
     padding-left: 1em;
-}
-
-.SearchNavSelect select:hover,
-.SearchNavSelect select:focus {
-    color: floralwhite;
-    background: #2196F3;
-}
-
-.SearchNavSelect select:disabled {
-    opacity: 0.5;
-    pointer-events: none;
 }
 
 .fa-caret-down {
@@ -234,8 +216,6 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     color: floralwhite;
 }
 
-
-
 .CreateEventMobile{
     grid-area: 2 / 1 / span 1 / span 2;
     background: white;
@@ -248,8 +228,17 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 
 }
 
+#FormSubmit{
 
+    font-weight: bold;
 
+}
+
+.CreateEventMap:hover,
+.CreateEventDescription:hover,
+.CreateEventForm:hover{
+    border-color: green;
+}
 
 
 

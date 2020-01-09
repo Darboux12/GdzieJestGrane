@@ -2,7 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../Models/User.php';
-require_once __DIR__.'/../Repository/UserMapper.php';
+require_once __DIR__.'/../Repository/UserRepository.php';
 
 
 class AdminController extends AppController {
@@ -15,7 +15,7 @@ class AdminController extends AppController {
 
     public function getUsers(){
 
-        $user = new UserMapper();
+        $user = new UserRepository();
 
         header('Content-type: application/json');
 
@@ -32,8 +32,8 @@ class AdminController extends AppController {
             return;
         }
 
-        $user = new UserMapper();
-        $user->delete((int)$_POST['id']);
+        $user = new UserRepository();
+        $user->deleteUser((int)$_POST['id']);
         http_response_code(200);
     }
 
@@ -47,7 +47,7 @@ class AdminController extends AppController {
 
         $login = (string)$_POST['login'];
 
-        $user = new UserMapper();
+        $user = new UserRepository();
 
         header('Content-type: application/json');
 

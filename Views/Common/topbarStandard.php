@@ -1,6 +1,6 @@
 <div id="TopBarStandard" class="TopBar">
 
-    <a class="Ball-link" href="#?page=mainapage"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
+    <a class="Ball-link" href="?page=mainpage"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
     <div class="TopBarLinks">
         <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>

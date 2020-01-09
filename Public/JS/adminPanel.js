@@ -19,7 +19,7 @@ function getUsers() {
                                  <td>${el.email}</td>
                                  <td>${el.role}</td>
                                  <td>${el.creation_date}</td>
-                                 <td><button style="background: red; color: white" type="button" onclick="deleteUser(${el.id_user})">
+                                 <td><button style="background: red; color: white" type="button" onclick="deleteUser(${el.email})">
                                      <i class="fas fa-user-minus"></i>
                                  </button></td>
                                  </tr>`
@@ -49,6 +49,13 @@ function deleteUser(id) {
         }
     });
 }
+
+function addUser(){
+
+    alert("Hej");
+}
+
+
 
 $(document).ready(function () {
 
@@ -100,4 +107,5 @@ $(document).ready(function () {
     });
 
 })
+
 

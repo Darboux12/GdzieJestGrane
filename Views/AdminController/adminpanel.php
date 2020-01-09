@@ -11,15 +11,18 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/adminpanel.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/topbar.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/chatbox.css">
+    <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/SearchField.css">
 
-    <script type="text/javascript" src="../../Public/JS/chatbox.js"></script>
-    <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script type="text/javascript" src="../../Public/JS/adminPanel.js"></script>
+    <script src="../../Public/JS/chatbox.js"></script>
+    <script src="../../Public/JS/topbar.js"></script>
+    <script src="../../Public/JS/adminPanel.js"></script>
 
-    <title>Main Page</title>
+    <title>Admin Panel</title>
 
 </head>
 
@@ -59,12 +62,29 @@
         </form>
 
         <button id="GetAllButton" type="button" onclick="getUsers()"><i class="fas fa-users"></i>Get All Users</button>
+        <button id="SortUser" type="button" onclick="addUser()"><i class="fas fa-user-plus"></i>Add User</button>
+
 
     </div>
 
 </div>
 
 <?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
+
+
+<script>
+
+
+
+
+
+
+</script>
+
+
+
+
+
 
 </body>
 

@@ -48,14 +48,6 @@ class User {
         return $this->password;
     }
 
-    public function getLanguage(): string{
-        return $this->language;
-    }
-
-    public function getCountry(): string{
-        return $this->country;
-    }
-
     public function getProvince(): string{
         return $this->province;
     }
