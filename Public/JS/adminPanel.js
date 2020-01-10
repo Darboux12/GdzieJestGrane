@@ -19,8 +19,10 @@ function getUsers() {
                                  <td>${el.email}</td>
                                  <td>${el.role}</td>
                                  <td>${el.creation_date}</td>
-                                 <td><button style="background: red; color: white" type="button" onclick="deleteUser(${el.email})">
+                                 <td><button style="background: red; color: white" type="button" onclick="deleteUser(${el.id_user})">
                                      <i class="fas fa-user-minus"></i>
+                                     <button style="background: green; color: white" type="button" onclick="givePower(${el.id_user})">
+                                     <i class="fas fa-user-shield"></i>
                                  </button></td>
                                  </tr>`
                 );
@@ -55,7 +57,9 @@ function addUser(){
     alert("Hej");
 }
 
-
+function givePower(id){
+    alert(id);
+}
 
 $(document).ready(function () {
 
@@ -78,7 +82,7 @@ $(document).ready(function () {
             method : "POST",
             dataType : "json",
             data : {
-                login : $input.val()
+                login : $input.val(),
             }, success: function() {}
         })
 
@@ -94,7 +98,9 @@ $(document).ready(function () {
                                  <td>${el.creation_date}</td>
                                  <td><button style="background: red; color: white" type="button" onclick="deleteUser(${el.id_user})">
                                      <i class="fas fa-user-minus"></i>
-                                 </button></td>
+                                 </button>
+                                 <button style="background: green; color: white" type="button" onclick="givePower(${el.id_user})">
+                                     <i class="fas fa-user-shield"></i></td>
                                  </tr>
                             `);
                 })

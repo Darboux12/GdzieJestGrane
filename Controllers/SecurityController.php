@@ -99,7 +99,6 @@ class SecurityController extends AppController {
             }
 
 
-
             $userRepository = new UserRepository();
 
             $user = $userRepository->getUser($_POST['email']);
