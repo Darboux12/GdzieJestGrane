@@ -36,7 +36,7 @@
 
     <div class="UserTable">
 
-        <table>
+        <table id="myTable">
             <thead>
             <tr>
                 <th>Login</th>
@@ -62,7 +62,7 @@
         </form>
 
         <button id="GetAllButton" type="button" onclick="getUsers()"><i class="fas fa-users"></i>Get All Users</button>
-        <button id="SortUser" type="button" onclick="addUser()"><i class="fas fa-sort-alpha-up"></i>Sort Users</button>
+        <button id="SortUser" type="button" onclick="sortTable()"><i class="fas fa-sort-alpha-up"></i>Sort Users</button>
 
 
     </div>

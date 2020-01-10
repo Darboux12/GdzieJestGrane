@@ -75,6 +75,10 @@
     padding-right: 0.2em;
 }
 
+.ActionNav > #AddUser > .fafa-sort-alpha-up{
+    padding-right: 0.2em;
+}
+
 .ActionNav > button:hover{
     background: #4CAF50;
     border: solid  #4CAF50;

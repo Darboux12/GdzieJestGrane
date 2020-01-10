@@ -98,29 +98,50 @@ class SecurityController extends AppController {
                 return;
             }
 
-
             $userRepository = new UserRepository();
 
-            $user = $userRepository->getUser($_POST['email']);
-
-            if ($user) {
+            if ($userRepository->getUser($_POST['email'])) {
                 $this->render('signin', ['messages' => ['User with this email already exists!']]);
                 return;
             }
 
+            if ($userRepository->getUserByLogin($_POST['login'])) {
+                $this->render('signin', ['messages' => ['User with this login already exists!']]);
+                return;
+            }
 
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                 $this->render('signin', ['messages' => ['Given email address is invalid!']]);
 
             }
 
-            if (!is_numeric($_POST['age'])) {
-                $this->render('signin', ['messages' => ['Age must be number']]);
+            if (!ctype_digit($_POST['age'])) {
+                $this->render('signin', ['messages' => ['Age must be number!']]);
                 return;
             }
 
+            if($_POST['password'] !== $_POST['repeatpassword']){
+                $this->render('signin', ['messages' => ['Password and repeated password are different!']]);
+                return;
+            }
 
+            if (ctype_digit($_POST['province'])) {
+                $this->render('signin', ['messages' => ['Province cannot be number!']]);
+                return;
+            }
 
+            if (ctype_digit($_POST['street'])) {
+                $this->render('signin', ['messages' => ['Street cannot be number!']]);
+                return;
+            }
+
+            if (!ctype_digit($_POST['number'])) {
+                $this->render('signin', ['messages' => ['Local number must be number!']]);
+                return;
+            }
+
+            $userRepository->addUser($_POST['login'],$_POST['email'],$_POST['password'],$_POST['age'],
+                'subscriber',$_POST['province'],$_POST['province'],$_POST['number']);
 
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Refresh:5; url={$url}?page=login");
