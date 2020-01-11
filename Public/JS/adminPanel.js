@@ -46,8 +46,8 @@ function deleteUser(id) {
             id : id
         },
         success: function() {
-            getUsers();
             alert('Selected user successfully deleted from database!');
+            getUsers();
         }
     });
 }
@@ -58,7 +58,25 @@ function addUser(){
 }
 
 function givePower(id){
-    alert(id);
+
+    const apiUrl = "http://localhost";
+    const $list = $('.users-list');
+
+    if (!confirm('Do you want to make this user moderator?')) {
+        return;
+    }
+
+    $.ajax({
+        url : apiUrl + '/?page=admin_power_user',
+        method : "POST",
+        data : {
+            id : id
+        },
+        success: function() {
+            getUsers();
+            alert('Selected user successfully deleted from database!');
+        }
+    });
 }
 
 function sortTable(){

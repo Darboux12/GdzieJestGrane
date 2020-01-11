@@ -58,5 +58,20 @@ class AdminController extends AppController {
 
     }
 
+    public function powerUser(){
+
+        if (!isset($_POST['id'])) {
+            http_response_code(404);
+            return;
+        }
+
+        $user = new UserRepository();
+        $user->powerUser((int)$_POST['id']);
+        http_response_code(200);
+        return;
+
+
+    }
+
 
 }

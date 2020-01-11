@@ -1,0 +1,45 @@
+
+.SearchNavSelect{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.SearchNavSelect > select {
+    width: 100%;
+    height: 100%;
+    padding-left: 1em;
+    cursor: pointer;
+    background: #4CAF50;
+    color: #fefefe;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-weight: bold;
+}
+
+.SearchNavSelect select:hover,
+.SearchNavSelect select:focus {
+    color: floralwhite;
+    background: green;
+}
+
+.SearchNavSelect select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.fa-caret-down {
+    position: absolute;
+    font-size: 2em;
+    right: 1em;
+    pointer-events: none;
+    color: white;
+}
+
+.SearchNavSelect select:hover ~ .fa-caret-down,
+.SearchNavSelect select:focus ~ .fa-caret-down {
+    color: floralwhite;
+}
