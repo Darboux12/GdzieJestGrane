@@ -73,8 +73,8 @@ function givePower(id){
             id : id
         },
         success: function() {
+            alert('Selected user successfully made from moderator!');
             getUsers();
-            alert('Selected user successfully deleted from database!');
         }
     });
 }
