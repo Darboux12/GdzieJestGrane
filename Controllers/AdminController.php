@@ -73,5 +73,19 @@ class AdminController extends AppController {
 
     }
 
+    public function degradeUser(){
+
+        if (!isset($_POST['id'])) {
+            http_response_code(404);
+            return;
+        }
+
+        $user = new UserRepository();
+        $user->degradeUser((int)$_POST['id']);
+        http_response_code(200);
+        return;
+
+    }
+
 
 }

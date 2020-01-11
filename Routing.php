@@ -61,6 +61,11 @@ class Routing {
                 'action' => 'powerUser'
             ],
 
+            'admin_degrade_user' => [
+                'controller' => 'AdminController',
+                'action' => 'degradeUser'
+            ],
+
             'admin_find_user' => [
                 'controller' => 'AdminController',
                 'action' => 'findUser'

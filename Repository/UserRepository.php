@@ -277,6 +277,21 @@ WHERE (login = :data OR role = :data OR email = :data OR creation_date = :data) 
 
     }
 
+    public function degradeUser(int $id){
+
+        try {
+            $stmt = $this->database->connect()->prepare('UPDATE user
+            SET id_role = 1 WHERE id_user = :id;');
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+        }
+        catch(PDOException $e) {
+            die();
+        }
+
+    }
+
     private function isAddressInBase(string $province,string $street,int $number) : bool {
 
         try {

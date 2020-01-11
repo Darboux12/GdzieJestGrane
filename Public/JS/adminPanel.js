@@ -23,6 +23,8 @@ function getUsers() {
                                      <i class="fas fa-user-minus"></i>
                                      <button style="background: green; color: white" type="button" onclick="givePower(${el.id_user})">
                                      <i class="fas fa-user-shield"></i>
+                                     <button style="background: darkorange; color: white" type="button" onclick="takePower(${el.id_user})">
+                                     <i class="fas fa-user-shield"></i>
                                  </button></td>
                                  </tr>`
                 );
@@ -74,6 +76,28 @@ function givePower(id){
         },
         success: function() {
             alert('Selected user successfully made from moderator!');
+            getUsers();
+        }
+    });
+}
+
+function takePower(id){
+
+    const apiUrl = "http://localhost";
+    const $list = $('.users-list');
+
+    if (!confirm('Do you want to degrade this moderator?')) {
+        return;
+    }
+
+    $.ajax({
+        url : apiUrl + '/?page=admin_degrade_user',
+        method : "POST",
+        data : {
+            id : id
+        },
+        success: function() {
+            alert('Selected user successfully degraded!');
             getUsers();
         }
     });
@@ -157,6 +181,8 @@ $(document).ready(function () {
                                      <i class="fas fa-user-minus"></i>
                                  </button>
                                  <button style="background: green; color: white" type="button" onclick="givePower(${el.id_user})">
+                                     <i class="fas fa-user-shield"></i>
+                                     <button style="background: darkorange; color: white" type="button" onclick="takePower(${el.id_user})">
                                      <i class="fas fa-user-shield"></i></td>
                                  </tr>
                             `);
