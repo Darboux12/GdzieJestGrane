@@ -25,7 +25,7 @@ class AdminController extends AppController {
 
     }
 
-    public function deleteUser(): void{
+    public function deleteUser(){
 
         if (!isset($_POST['id'])) {
             http_response_code(404);
@@ -35,6 +35,7 @@ class AdminController extends AppController {
         $user = new UserRepository();
         $user->deleteUser((int)$_POST['id']);
         http_response_code(200);
+        return;
     }
 
     public function findUser() {

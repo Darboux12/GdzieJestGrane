@@ -46,8 +46,8 @@ function deleteUser(id) {
             id : id
         },
         success: function() {
-            alert('Selected user successfully deleted from database!');
             getUsers();
+            alert('Selected user successfully deleted from database!');
         }
     });
 }

@@ -27,7 +27,7 @@ class SecurityController extends AppController {
                 return;
             }
 
-            if ($user->getPassword() !== $password) {
+            if (!password_verify($password,$user->getPassword())) {
                 $this->render('login', ['messages' => ['Wrong password!']]);
                 return;
             }
@@ -140,8 +140,14 @@ class SecurityController extends AppController {
                 return;
             }
 
-            $userRepository->addUser($_POST['login'],$_POST['email'],$_POST['password'],$_POST['age'],
-                'subscriber',$_POST['province'],$_POST['province'],$_POST['number']);
+
+            $today = getdate();
+            $date = $today['year'] . '-' . $today['mon'] . '-' . $today['mday'];
+
+            $hash = password_hash($_POST['password'],PASSWORD_DEFAULT);
+
+            $userRepository->addUser($_POST['login'],$_POST['email'],$hash,$_POST['age'],
+                'subscriber',$_POST['province'],$_POST['province'],$_POST['number'],$date);
 
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Refresh:5; url={$url}?page=login");
