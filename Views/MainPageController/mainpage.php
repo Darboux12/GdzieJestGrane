@@ -15,7 +15,9 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/checkbox.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/popularEventsNav.css">
 
-
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="text/javascript" src="../../Public/JS/chatbox.js"></script>
     <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
@@ -34,8 +36,8 @@
     <form id="SearchForm" class="SearchNav">
 
         <div class="SearchBar-Searchbox">
-                <input  name="eventTitle" type="text" placeholder="Wybierz tytuł wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz tytuł wydarzenia...'" class="search-box-input">
-            </div>
+                <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Wybierz tytuł wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz tytuł wydarzenia...'" class="search-box-input">
+        </div>
 
         <div class="SearchBar-Searchbox">
                 <input name="eventLocalization" type="text" placeholder="Wybierz lokalizację..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz lokalizację...'" class="search-box-input">
@@ -139,9 +141,9 @@
 
         </div>
 
-        <button id="SubmitButton" type="submit">Wyszukaj</button>
+        <button id="SubmitButton" type="submit" form="SearchForm">Wyszukaj</button>
 
-        </form>
+    </form>
 
     <div class="RightNav">
 

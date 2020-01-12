@@ -36,6 +36,11 @@ class Routing {
                 'action' => 'page'
             ],
 
+            'main_page_search' => [
+                'controller' => 'MainPageController',
+                'action' => 'search'
+            ],
+
             'newspage' => [
                 'controller' => 'NewsPageController',
                 'action' => 'getNews'
