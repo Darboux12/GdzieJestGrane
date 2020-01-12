@@ -82,7 +82,7 @@ class AdRepository extends Repository{
     public function createAd(string $city, string $postal_code, string $street, int $number,
                              string $discipline, int $min_price, int $max_price, int $min_age,
                              int $max_age, int $num_people, string $gender,
-                             string $date, int $id_user,string $title, string $description, string $image){
+                             string $date, string $email,string $title, string $description, string $image){
 
           $stmt = $this->database->connect()->prepare('
                INSERT INTO localization(city,postal_code,street,number) VALUES (:city,:postal,:street,:number)
@@ -113,36 +113,43 @@ class AdRepository extends Repository{
            $stmt->execute();
 
         $stmt = $this->database->connect()->prepare('
-          SELECT id_localization FROM localization ORDER BY id_localization DESC LIMIT 1
-        ');
-        $stmt->execute();
-        $id_localization = $stmt->fetch(PDO::FETCH_ASSOC)['id_localization'];
-
-
-        $stmt = $this->database->connect()->prepare('
-          SELECT id_ad_details FROM ad_details ORDER BY id_ad_details DESC LIMIT 1
-        ');
-        $stmt->execute();
-        $id_details = $stmt->fetch(PDO::FETCH_ASSOC)['id_ad_details'];
-
-        $stmt = $this->database->connect()->prepare('
             INSERT INTO ad(id_user,id_localization,
                         id_ad_details,title,description,image) 
                                    
-                                   VALUES (
-                                           (SELECT  id_user FROM user WHERE id_user = :id_user),
-                                           (SELECT  id_localization FROM localization WHERE id_localization = :id_localization),
-                                           (SELECT  id_ad_details FROM ad_details WHERE id_ad_details = :id_ad_details),
-                                           :title,:description,:image)
-                                           
-                                           
-                                           
+            VALUES (
+                    (SELECT  id_user FROM user WHERE email = :email),
+                    (SELECT  id_localization FROM localization WHERE 
+                        city = :city AND postal_code = :postal AND street = :street AND number = :number),
+                    (SELECT  id_ad_details FROM ad_details WHERE 
+                                                  discipline = :discipline AND 
+                                                  min_age = :min_age AND 
+                                                  max_age = :max_age AND 
+                                                  num_people = :num_people AND 
+                                                  gender =  :gender AND 
+                                                  min_age = :min_age AND 
+                                                  date = :date AND 
+                                                  min_price = :min_price AND 
+                                                  max_price = :max_price),  
+                    
+                    :title,:description,:image)                     
                                   
-        ');
+        ;');
 
-        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
-        $stmt->bindParam(':id_localization', $id_localization, PDO::PARAM_INT);
-        $stmt->bindParam(':id_ad_details', $id_details, PDO::PARAM_INT);
+        $stmt->bindParam(':discipline', $discipline, PDO::PARAM_STR);
+        $stmt->bindParam(':min_age', $min_age, PDO::PARAM_INT);
+        $stmt->bindParam(':max_age', $max_age, PDO::PARAM_INT);
+        $stmt->bindParam(':num_people', $num_people, PDO::PARAM_INT);
+        $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
+        $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':min_price', $min_price, PDO::PARAM_INT);
+        $stmt->bindParam(':max_price', $max_price, PDO::PARAM_INT);
+
+        $stmt->bindParam(':city', $city, PDO::PARAM_STR);
+        $stmt->bindParam(':postal', $postal_code, PDO::PARAM_STR);
+        $stmt->bindParam(':street', $street, PDO::PARAM_STR);
+        $stmt->bindParam(':number', $number, PDO::PARAM_INT);
+
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':description', $description, PDO::PARAM_STR);
         $stmt->bindParam(':image', $image, PDO::PARAM_STR);

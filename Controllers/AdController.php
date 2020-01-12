@@ -111,9 +111,11 @@ class AdController extends AppController
                 $_POST['discipline'],$_POST['min_price'],$_POST['max_price'], $_POST['min_age'],$_POST['max_age'],
                 $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
                 $_POST['title'],$_POST['description'],$imageData);
+
+            $this->render('createAd',['messages' => ['Ad was successfully created!']]);
+
+
         }
-
-
 
 
        $this->render('createAd');

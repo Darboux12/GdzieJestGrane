@@ -12,6 +12,7 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/createEvent.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/SelectField.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="../../Public/JS/createAd.js"></script>
 

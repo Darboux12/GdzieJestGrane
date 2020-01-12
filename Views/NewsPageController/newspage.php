@@ -55,7 +55,7 @@
 
         <div class="PopularEvent">
 
-            <img alt="Person" src="../../Public/Images/award.jpg ">
+            <?= '<img src="data:image/jpeg;base64,'.base64_encode($news->getImage()) .'" />' ?>
 
             <div class="NewsText">
                 <h><?= $news->getTitle()?></h>

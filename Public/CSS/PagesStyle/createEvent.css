@@ -165,7 +165,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .CheckBox:hover,.CheckBox:focus{
-    border-color: #2196F3;
+    border-color: green;
 }
 
 .Checkbox-option > h:hover{
