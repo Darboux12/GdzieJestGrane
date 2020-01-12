@@ -58,14 +58,14 @@
             <div id="SelectSport" class="SearchNavSelect">
                 <select name="discipline">
                     <option value="0">Wybierz dyscyplinę</option>
-                    <option value="football">Piłka Nożna</option>
-                    <option value="volleyball">Siatkówka</option>
-                    <option value="basketball">Koszykówka</option>
-                    <option value="swimming">Pływanie</option>
-                    <option value="canoeing ">Kajakarstwo</option>
-                    <option value="golf">Golf</option>
-                    <option value="running">Bieganie</option>
-                    <option value="other">Inne</option>
+                    <option value="Piłka Nożna">Piłka Nożna</option>
+                    <option value="Siatkówka">Siatkówka</option>
+                    <option value="Basketball">Koszykówka</option>
+                    <option value="Koszykówka">Pływanie</option>
+                    <option value="Kajakarstwo ">Kajakarstwo</option>
+                    <option value="Kajakarstwo">Golf</option>
+                    <option value="Bieganie">Bieganie</option>
+                    <option value="Inne">Inne</option>
                 </select>
                 <i class="fas fa-caret-down"></i>
             </div>

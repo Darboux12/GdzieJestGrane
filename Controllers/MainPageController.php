@@ -15,8 +15,7 @@ class MainPageController extends AppController {
         $this->render('mainpage',["allAds" => $allAds]);
 
 
-       // $database = new Database();
-      //  $database->connect();
+      
 
 
 

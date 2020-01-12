@@ -41,6 +41,12 @@
     color: white;
 }
 
+.search-box-input{
+    border-right: solid 0.3em  #4CAF50;
+    width: 100%;
+
+}
+
 .SelectInputs{
     display: flex;
     flex-direction: row;
@@ -102,7 +108,7 @@
 #EventTitle{
     display: flex;
     font-family: Arial, serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
