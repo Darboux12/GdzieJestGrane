@@ -40,11 +40,11 @@
         </div>
 
         <div class="SearchBar-Searchbox">
-                <input name="eventLocalization" type="text" placeholder="Wybierz lokalizację..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz lokalizację...'" class="search-box-input">
+                <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Wybierz lokalizację..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz lokalizację...'" class="search-box-input">
             </div>
 
         <div id="SelectSport" class="SearchNavSelect">
-            <select name="eventDiscipline" class="SearchNavSelect">
+            <select id="eventDiscipline" name="eventDiscipline" class="SearchNavSelect">
                 <option value="0">Wybierz dyscyplinę</option>
                 <option value="Piłka Nożna">Piłka Nożna</option>
                 <option value="Siatkówka">Siatkówka</option>
@@ -63,7 +63,7 @@
             <h>Podaj datę wydarzenia:</h>
 
             <div class="SelectInputs">
-                <input name="eventDate" id="NumebrOfPeopleInput" type="date"/>
+                <input name="eventDate" id="eventDate" type="date"/>
             </div>
 
         </div>
@@ -73,8 +73,8 @@
             <h>Podaj liczbę osób:</h>
 
             <div class="SelectInputs">
-                <input name="eventPeopleNumber" id="NumebrOfPeopleInput" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'" min="0" step="any" />
-            </div>
+                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'" min="0" step="any" />
+        </div>
 
         </div>
 
@@ -87,7 +87,7 @@
                 <div class="Checkbox-option-container">
 
                     <label class="Checkbox-option">
-                        <input form="SearchForm" name="gender" type="checkbox" value="male">
+                        <input id="gender-male" class="gender" form="SearchForm" name="gender" type="checkbox" value="male">
                         <span class="checkmark"></span>
                         <h>Mężczyzn</h>
                     </label>
@@ -97,7 +97,7 @@
                 <div class="Checkbox-option-container">
 
                     <label class="Checkbox-option">
-                        <input form="SearchForm" name="gender" type="checkbox" value="female">
+                        <input id="gender-female" class="gender" form="SearchForm" name="gender" type="checkbox" value="female">
                         <span class="checkmark"></span>
                         <h>Kobiet</h>
                     </label>
@@ -108,7 +108,7 @@
                 <div class="Checkbox-option-container">
 
                     <label id="last-box" class="Checkbox-option">
-                        <input form="SearchForm" name="gender" type="checkbox" value="all">
+                        <input id="gender-all" class="gender" form="SearchForm" name="gender" type="checkbox" value="all">
                         <span class="checkmark"></span>
                         <h>Dowolnie</h>
                     </label>

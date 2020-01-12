@@ -35,10 +35,28 @@ $(document).ready(function () {
     const apiUrl = "http://localhost";
 
     const $form = $('#SearchForm');
-    const $input = $('#eventTitle');
+
+    const $eventTitle = $('#eventTitle');
+    const $eventLocalization = $('#eventLocalization');
+    const $eventDiscipline = $('#eventDiscipline');
+    const $eventDate = $('#eventDate');
+    const $eventPeopleNumber = $('#eventPeopleNumber');
+
     const $submitBtn = $form.find(":submit");
 
     $form.on("submit", function(e) {
+
+        var gender = [];
+
+        $('.gender').each(function () {
+
+                if($(this).is(":checked")){
+                    gender.push($(this).val())
+                    return false;
+                }
+        });
+
+        gender = gender.toString();
 
         e.preventDefault();
 
@@ -49,15 +67,19 @@ $(document).ready(function () {
             url: apiUrl + '/?page=main_page_search',
             method : "POST",
             data : {
-                input: $input.val()
-            }, success: function() {alert("Succes");}
+                eventTitle : $eventTitle.val(),
+                eventLocalization : $eventLocalization.val(),
+                eventDiscipline : $eventDiscipline.val(),
+                eventDate : $eventDate.val(),
+                eventPeopleNumber : $eventPeopleNumber.val(),
+                gender : gender
+
+            }, success: function() {alert("Success");}
         })
 
-            .done((res) => {
-               alert("Done");
-            })
+            .done((res) => {})
 
-            .fail((res) => {alert("Fail");})
+            .fail((res) => {})
 
             .always(function() {
                 $submitBtn.removeClass('loading');
