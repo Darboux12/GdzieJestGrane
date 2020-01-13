@@ -41,6 +41,10 @@ $(document).ready(function () {
     const $eventDiscipline = $('#eventDiscipline');
     const $eventDate = $('#eventDate');
     const $eventPeopleNumber = $('#eventPeopleNumber');
+    const $eventAgeFrom = $('#AgeFrom');
+    const $eventAgeTo= $('#AgeTo');
+    const $eventPriceFrom = $('#PriceFrom');
+    const $eventPriceTo= $('#PriceTo');
 
     const $submitBtn = $form.find(":submit");
 
@@ -72,7 +76,7 @@ $(document).ready(function () {
                 eventDiscipline : $eventDiscipline.val(),
                 eventDate : $eventDate.val(),
                 eventPeopleNumber : $eventPeopleNumber.val(),
-                gender : gender
+                eventgender : gender
 
             }, success: function() {alert("Success");}
         })

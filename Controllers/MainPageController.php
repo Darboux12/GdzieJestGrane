@@ -16,12 +16,17 @@ class MainPageController extends AppController {
 
     public function search(){
 
-       // if(isset($_POST['eventTitle'])){
-       //     $this->render('newspage');
-      //  }
+        $adRepository = new AdRepository();
 
-        http_response_code(200);
-        return;
+       // $searchedAds = $adRepository->searchAd()
+
+
+                $this->render('mainpage', ['messages' => ["You must choose " .  '!']]);
+                return;
+
+
+
+
 
 
 

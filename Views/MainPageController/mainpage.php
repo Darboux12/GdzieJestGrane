@@ -124,8 +124,8 @@
             <h>Podaj wiek:</h>
 
             <div class="SelectInputs">
-                <input name="eventAgeFrom" id="from" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
-                <input name="eventAgeTo" id="to"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
+                <input name="eventAgeFrom" id="AgeFrom" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
+                <input name="eventAgeTo" id="AgeTo"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
             </div>
 
         </div>
@@ -135,8 +135,8 @@
             <h>Podaj cenę:</h>
 
             <div class="SelectInputs">
-                <input name="eventPriceFrom" id="from" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
-                <input name="eventPriceTo" id="to"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
+                <input name="eventPriceFrom" id="PriceFrom" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
+                <input name="eventPriceTo" id="PriceTo"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
             </div>
 
         </div>
