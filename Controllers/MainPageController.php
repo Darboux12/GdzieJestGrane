@@ -1,7 +1,7 @@
 <?php
 
 require_once 'AppController.php';
-// require_once __DIR__.'/../Database.php';
+require_once __DIR__.'/../Repository/AdRepository.php';
 
 class MainPageController extends AppController {
 
@@ -18,15 +18,24 @@ class MainPageController extends AppController {
 
         $adRepository = new AdRepository();
 
-       // $searchedAds = $adRepository->searchAd()
+        header('Content-type: application/json');
 
+        http_response_code(200);
 
-                $this->render('mainpage', ['messages' => ["You must choose " .  '!']]);
-                return;
+      $searchedAd = $adRepository->searchAd(
+           $_POST['eventLocalization'],
+           $_POST['eventDiscipline'],
+          (int)$_POST['eventPriceFrom'],
+          (int)$_POST['eventPriceTo'],
+          (int)$_POST['eventAgeFrom'],
+          (int)$_POST['eventAgeTo'],
+          (int)$_POST['eventPeopleNumber'],
+           $_POST['eventGender'],
+           $_POST['eventDate'],
+           $_POST['eventTitle']
+            );
 
-
-
-
+       echo $searchedAd ? json_encode($searchedAd) : '';
 
 
 

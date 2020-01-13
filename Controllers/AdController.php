@@ -26,9 +26,9 @@ class AdController extends AppController{
             $image = $_FILES['image']['name'];
             $imageData= file_get_contents($_FILES['image']['tmp_name']);
             $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
-            $extensions_arr = array("jpg","jpeg","png","gif");
+            $extensionsArray = array("jpg","jpeg","png","gif");
 
-            if(!in_array($imageFileType,$extensions_arr) ) {
+            if(!in_array($imageFileType,$extensionsArray) ) {
                 $this->render('createAd', ['messages' => ['Choosen file is not an image!']]);
                 return;
             }

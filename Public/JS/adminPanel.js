@@ -10,6 +10,8 @@ function getUsers() {
     })
         .done((res) => {
 
+
+
             $list.empty();
 
             res.forEach(el => {

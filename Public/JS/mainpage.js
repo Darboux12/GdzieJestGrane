@@ -46,6 +46,9 @@ $(document).ready(function () {
     const $eventPriceFrom = $('#PriceFrom');
     const $eventPriceTo= $('#PriceTo');
 
+
+    $maincontent = $('.MainContent');
+
     const $submitBtn = $form.find(":submit");
 
     $form.on("submit", function(e) {
@@ -69,6 +72,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: apiUrl + '/?page=main_page_search',
+            dataType : 'json',
             method : "POST",
             data : {
                 eventTitle : $eventTitle.val(),
@@ -76,12 +80,24 @@ $(document).ready(function () {
                 eventDiscipline : $eventDiscipline.val(),
                 eventDate : $eventDate.val(),
                 eventPeopleNumber : $eventPeopleNumber.val(),
-                eventgender : gender
+                eventGender : gender,
+                eventAgeFrom : $eventAgeFrom.val(),
+                eventAgeTo : $eventAgeTo.val(),
+                eventPriceFrom : $eventPriceFrom.val(),
+                eventPriceTo : $eventPriceTo.val()
 
-            }, success: function() {alert("Success");}
+            }, success: function() {alert("Success"); }
         })
 
-            .done((res) => {})
+            .done((res) => {
+
+             //  $maincontent.empty()
+
+
+
+
+
+            })
 
             .fail((res) => {})
 

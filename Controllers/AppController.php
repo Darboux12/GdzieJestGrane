@@ -34,20 +34,4 @@ class AppController {
         print $output;
     }
 
-    public function  fileValidation(){
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
 }
