@@ -165,7 +165,7 @@ class AdRepository extends Repository{
         $argNames = ['city', 'discipline', 'min_price', 'max_price', 'min_age','max_age', 'num_people', 'gender', "date", "title"];
         $arguments = func_get_args();
 
-        $query = "SELECT id_ad FROM ad_view WHERE";
+        $query = "SELECT * FROM ad_view WHERE";
 
         $bindsValues = [];
         $bindsNames = [];
@@ -215,6 +215,16 @@ class AdRepository extends Repository{
 
         $stmt->execute();
         $ads = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $rows = $stmt->rowCount();
+
+
+
+
+            for($i = 0; $i < $rows; $i++){
+                $ads[$i]["image"] =base64_encode($ads[$i]["image"] );
+            }
+
 
         return $ads;
 

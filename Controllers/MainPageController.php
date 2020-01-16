@@ -40,6 +40,8 @@ class MainPageController extends AppController {
 
 
 
+
+
        echo $searchedAd ? json_encode($searchedAd) : '';
 
 

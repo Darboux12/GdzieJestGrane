@@ -92,18 +92,70 @@ $(document).ready(function () {
             .done((res) => {
 
 
-               console.log(res);
+          //     console.log(res);
 
-             //  $maincontent.empty()
+              $maincontent.empty()
 
-           /*     res.forEach(el => {
+                console.log(res);
+
+                res.forEach(el => {
                     $maincontent.append(`
 
-                                <p>${el.title}</p>
+
+                                
+                                
+                             <div class="Publication">
+
+            <i class="fas fa-volleyball-ball"></i>
+
+            <div class="EventInformation">
+
+                <h id="EventTitle">${el.title}</h>
+                <h id="EventSport">${el.discipline}</h>
+                <h id="EventDate">${el.date}</h>
+                <h id="EventAddress">
+                ${el.street}
+                ${el.number}
+                ${el.postal_code}
+                ${el.city}
+                </h>
+                <h id="Age"><?='Wiek: ' . ' '
+                    . $ad->getMinAge() . ' - '
+                    . $ad->getMaxAge()
+                    ?>
+                </h>
+
+                <div id="EventPeopleNumberElement">
+                    <i class="fas fa-users"></i>
+                    <h><?=$ad->getInvolvedPeople()  . ' z ' . $ad->getNumPeople()?></h>
+                </div>
+
+                <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+
+            </div>
+
+            <div class="ImageAndDescription">
+
+                <img src="data:image/png;base64, ${el.image}" alt="Red dot" />
+
+                <textarea class="ShortDescription" readonly rows="20"><?= $ad->getDescription()?></textarea>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
 `
                     );
-                }) */
-
+                })
 
 
 
