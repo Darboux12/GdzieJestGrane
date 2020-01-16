@@ -13,7 +13,7 @@ body {
 }
 
 input::placeholder{
-    color: #2699fb;
+    color: #707070;
     opacity: 0.5;
 }
 

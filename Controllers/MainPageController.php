@@ -23,17 +23,22 @@ class MainPageController extends AppController {
         http_response_code(200);
 
       $searchedAd = $adRepository->searchAd(
-           $_POST['eventLocalization'],
-           $_POST['eventDiscipline'],
+          (string)$_POST['eventLocalization'],
+          (string)$_POST['eventDiscipline'],
           (int)$_POST['eventPriceFrom'],
           (int)$_POST['eventPriceTo'],
           (int)$_POST['eventAgeFrom'],
           (int)$_POST['eventAgeTo'],
           (int)$_POST['eventPeopleNumber'],
-           $_POST['eventGender'],
-           $_POST['eventDate'],
-           $_POST['eventTitle']
+          (string)$_POST['eventGender'],
+          (string)$_POST['eventDate'],
+          (string)$_POST['eventTitle']
             );
+
+
+
+
+
 
        echo $searchedAd ? json_encode($searchedAd) : '';
 

@@ -160,29 +160,63 @@ class AdRepository extends Repository{
 
     public function searchAd(string $localization, string $discipline, int $min_price, int $max_price, int $min_age,
                              int $max_age, int $num_people, string $gender,
-                             string $date, string $title) : array {
+                             string $date, string $title) : array{
 
-/*
+        $argNames = ['city', 'discipline', 'min_price', 'max_price', 'min_age','max_age', 'num_people', 'gender', "date", "title"];
+        $arguments = func_get_args();
 
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM ad_view ORDER BY id_ad DESC 
-        ');
-        $stmt->execute();
-        $result= $stmt->fetchAll(PDO::FETCH_ASSOC); */
+        $query = "SELECT id_ad FROM ad_view WHERE";
 
+        $bindsValues = [];
+        $bindsNames = [];
 
-        $allAds = self::getAllAds();
-
-        $matchingAdsId = [];
-
-        foreach ($allAds as $ad) {
-
-            if($ad->getTitle() == $title){
-                array_push($matchingAdsId,$ad->getId);
+        $notNullArgs = 0;
+        foreach ($arguments as $argument){
+            if ($argument != null){
+                $notNullArgs++;
             }
         }
 
-       return ["Hej"];
+        $notNullIndex = 0;
+        $allArgIndex = 0;
+
+        foreach ($arguments as $argument) {
+
+
+            if ($argument != null) {
+
+                if ( $notNullIndex  == $notNullArgs - 1 ){
+                    $query .= " $argNames[$allArgIndex] = :$argNames[$allArgIndex];";
+                    array_push($bindsNames, $argNames[$allArgIndex]);
+                    array_push($bindsValues, $argument);
+                    break;
+                }
+
+                $query .= " $argNames[$allArgIndex] = :$argNames[$allArgIndex] AND";
+                array_push($bindsNames, $argNames[$allArgIndex]);
+                array_push($bindsValues, $argument);
+                $notNullIndex++;
+            }
+
+
+            $allArgIndex ++;
+        }
+
+        $stmt = $this->database->connect()->prepare($query);
+
+        $i = 0;
+        foreach ($bindsValues as $value) {
+
+            $stmt->bindParam($bindsNames[$i], $value);
+            $i++;
+
+
+        }
+
+        $stmt->execute();
+        $ads = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $ads;
 
     }
 

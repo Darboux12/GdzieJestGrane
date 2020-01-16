@@ -36,31 +36,31 @@
     <form id="SearchForm" class="SearchNav">
 
         <div class="SearchBar-Searchbox">
-                <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Wybierz tytuł wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz tytuł wydarzenia...'" class="search-box-input">
+                <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Search title..." onfocus="this.placeholder=''" onblur="this.placeholder='Search title...'" class="search-box-input">
         </div>
 
         <div class="SearchBar-Searchbox">
-                <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Wybierz lokalizację..." onfocus="this.placeholder=''" onblur="this.placeholder='Wybierz lokalizację...'" class="search-box-input">
+                <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Search localization..." onfocus="this.placeholder=''" onblur="this.placeholder='Search localization...'" class="search-box-input">
             </div>
 
         <div id="SelectSport" class="SearchNavSelect">
             <select id="eventDiscipline" name="eventDiscipline" class="SearchNavSelect">
-                <option value="0">Wybierz dyscyplinę</option>
-                <option value="Piłka Nożna">Piłka Nożna</option>
-                <option value="Siatkówka">Siatkówka</option>
-                <option value="Koszykówka">Koszykówka</option>
-                <option value="Pływanie">Pływanie</option>
-                <option value="Kajakarstwo">Kajakarstwo</option>
+                <option value= "">Choose discipline</option>
+                <option value="Football">Football</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Swimming">Swimming</option>
+                <option value="Canoeing">Canoeing</option>
                 <option value="Golf">Golf</option>
-                <option value="Bieganie">Bieganie</option>
-                <option value="Inne">Inne</option>
+                <option value="Running">Running</option>
+                <option value="Other">Other</option>
             </select>
             <i class="fas fa-caret-down"></i>
         </div>
 
         <div class="SearchBar-SelectNumber">
 
-            <h>Podaj datę wydarzenia:</h>
+            <h>Search event date:</h>
 
             <div class="SelectInputs">
                 <input name="eventDate" id="eventDate" type="date"/>
@@ -70,26 +70,26 @@
 
         <div class="SearchBar-SelectNumber">
 
-            <h>Podaj liczbę osób:</h>
+            <h>People number:</h>
 
             <div class="SelectInputs">
-                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'" min="0" step="any" />
+                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="Search people number..." onfocus="this.placeholder=''" onblur="this.placeholder='Search people number...'" min="0" step="any" />
         </div>
 
         </div>
 
         <div class="CheckBox">
 
-            <h>Szukam:</h>
+            <h>Search gender</h>
 
             <div class="Checkbox-options">
 
                 <div class="Checkbox-option-container">
 
                     <label class="Checkbox-option">
-                        <input id="gender-male" class="gender" form="SearchForm" name="gender" type="checkbox" value="male">
+                        <input id="gender-male" class="gender" form="SearchForm" name="gender" type="checkbox" value="Male">
                         <span class="checkmark"></span>
-                        <h>Mężczyzn</h>
+                        <h>Men</h>
                     </label>
 
                 </div>
@@ -97,9 +97,9 @@
                 <div class="Checkbox-option-container">
 
                     <label class="Checkbox-option">
-                        <input id="gender-female" class="gender" form="SearchForm" name="gender" type="checkbox" value="female">
+                        <input id="gender-female" class="gender" form="SearchForm" name="gender" type="checkbox" value="Female">
                         <span class="checkmark"></span>
-                        <h>Kobiet</h>
+                        <h>Women</h>
                     </label>
 
                 </div>
@@ -108,9 +108,9 @@
                 <div class="Checkbox-option-container">
 
                     <label id="last-box" class="Checkbox-option">
-                        <input id="gender-all" class="gender" form="SearchForm" name="gender" type="checkbox" value="all">
+                        <input id="gender-all" class="gender" form="SearchForm" name="gender" type="checkbox" value="All">
                         <span class="checkmark"></span>
-                        <h>Dowolnie</h>
+                        <h>Both</h>
                     </label>
 
                 </div>
@@ -121,33 +121,33 @@
 
         <div class="SearchBar-SelectNumber">
 
-            <h>Podaj wiek:</h>
+            <h>Age:</h>
 
             <div class="SelectInputs">
-                <input name="eventAgeFrom" id="AgeFrom" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
-                <input name="eventAgeTo" id="AgeTo"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
+                <input name="eventAgeFrom" id="AgeFrom" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
+                <input name="eventAgeTo" id="AgeTo"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
             </div>
 
         </div>
 
         <div class="SearchBar-SelectNumber">
 
-            <h>Podaj cenę:</h>
+            <h>Price:</h>
 
             <div class="SelectInputs">
-                <input name="eventPriceFrom" id="PriceFrom" type="number" placeholder="od..." onfocus="this.placeholder=''" onblur="this.placeholder='od...'" min="0" step="any" />
-                <input name="eventPriceTo" id="PriceTo"  type="number" placeholder="do..." onfocus="this.placeholder=''" onblur="this.placeholder='do...'" min="0" step="any" />
+                <input name="eventPriceFrom" id="PriceFrom" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
+                <input name="eventPriceTo" id="PriceTo"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
             </div>
 
         </div>
 
-        <button id="SubmitButton" type="submit" form="SearchForm">Wyszukaj</button>
+        <button id="SubmitButton" type="submit" form="SearchForm">Search ads</button>
 
     </form>
 
     <div class="RightNav">
 
-        <h id="NavTitle">Najpopularniejsze wydarzenia w twojej okolicy</h>
+        <h id="NavTitle">Most popular ads</h>
 
         <div class="PopularEvent">
 

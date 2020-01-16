@@ -26,7 +26,7 @@
 
     <div id="FormAndButtons">
 
-        <p>Zaloguj się i nie przegap żadnego meczu!</p>
+        <p>Sign in and do not miss any game!</p>
 
         <div class="messages">
             <?php
@@ -55,9 +55,9 @@
             </div>
         </form>
 
-        <input id="LogInButton" type="submit" form="LogInForm" value="Zarejestruj się!">
+        <input id="LogInButton" type="submit" form="LogInForm" value="Sign in!">
 
-        <a href="?page=login" id="SignInButton">Wiesz gdzie jest grane? Zaloguj się!</a>
+        <a href="?page=login" id="SignInButton">Know what's playing on? Log in!</a>
 
     </div>
 

@@ -91,7 +91,18 @@ $(document).ready(function () {
 
             .done((res) => {
 
+
+               console.log(res);
+
              //  $maincontent.empty()
+
+           /*     res.forEach(el => {
+                    $maincontent.append(`
+
+                                <p>${el.title}</p>
+`
+                    );
+                }) */
 
 
 

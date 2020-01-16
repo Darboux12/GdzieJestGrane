@@ -42,49 +42,49 @@
 
         <form id="EventForm" action="?page=createAd" method="POST" enctype="multipart/form-data">
 
-            <h>Nazwa wydarzenia</h>
-            <input  name="title" type="text" placeholder="Nazwa wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa wydarzenia...'">
+            <h>Event Title</h>
+            <input  name="title" type="text" placeholder="Event title..." onfocus="this.placeholder=''" onblur="this.placeholder='Event title...'">
 
-            <h>Data wydarzenia</h>
+            <h>Event Date</h>
             <input  name="date" type="date">
 
-            <h>Lokalizacja</h>
-            <input  name="city" type="text"  placeholder="Miasto..." onfocus="this.placeholder=''" onblur="this.placeholder='Miasto...'">
-            <input  name="postal" type="text" placeholder="Kod pocztowy..." onfocus="this.placeholder=''" onblur="this.placeholder='Kod pocztowy...'">
-            <input  name="street" type="text"  placeholder="Ulica..." onfocus="this.placeholder=''" onblur="this.placeholder='Ulica...'">
-            <input  name="number" type="number" placeholder="Numer..." onfocus="this.placeholder=''" onblur="this.placeholder='Numer...'">
+            <h>Localization</h>
+            <input  name="city" type="text"  placeholder="City..." onfocus="this.placeholder=''" onblur="this.placeholder='City...'">
+            <input  name="postal" type="text" placeholder="Postal code..." onfocus="this.placeholder=''" onblur="this.placeholder='Postal code...'">
+            <input  name="street" type="text"  placeholder="Street..." onfocus="this.placeholder=''" onblur="this.placeholder='Street...'">
+            <input  name="number" type="number" placeholder="Number..." onfocus="this.placeholder=''" onblur="this.placeholder='Number...'">
 
-            <h>Dyscyplina</h>
+            <h>Discipline</h>
             <div id="SelectSport" class="SearchNavSelect">
                 <select name="discipline">
-                    <option value="0">Wybierz dyscyplinę</option>
-                    <option value="Piłka Nożna">Piłka Nożna</option>
-                    <option value="Siatkówka">Siatkówka</option>
-                    <option value="Basketball">Koszykówka</option>
-                    <option value="Koszykówka">Pływanie</option>
-                    <option value="Kajakarstwo ">Kajakarstwo</option>
-                    <option value="Kajakarstwo">Golf</option>
-                    <option value="Bieganie">Bieganie</option>
-                    <option value="Inne">Inne</option>
+                    <option value="0">Choose discipline</option>
+                    <option value="Football">Football</option>
+                    <option value="Volleyball">Volleyball</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="Canoeing">Canoeing</option>
+                    <option value="Golf">Golf</option>
+                    <option value="Running">Running</option>
+                    <option value="Other">Other</option>
                 </select>
                 <i class="fas fa-caret-down"></i>
             </div>
 
-            <h>Szukana liczba osób</h>
-            <input name="pplnumber" type="number" placeholder="Liczba osób..." onfocus="this.placeholder=''" onblur="this.placeholder='Liczba osób...'">
+            <h>Required people number</h>
+            <input name="pplnumber" type="number" placeholder="People number..." onfocus="this.placeholder=''" onblur="this.placeholder='People number...'">
 
             <div class="CheckBox">
 
-                <h>Szukam:</h>
+                <h>Searching for:</h>
 
                 <div class="Checkbox-options">
 
                     <div class="Checkbox-option-container">
 
                         <label class="Checkbox-option">
-                            <input form="EventForm" name="gender" type="checkbox" value="male">
+                            <input form="EventForm" name="gender" type="checkbox" value="Male">
                             <span class="checkmark"></span>
-                            <h>Mężczyzn</h>
+                            <h>Men</h>
                         </label>
 
                     </div>
@@ -92,9 +92,9 @@
                     <div class="Checkbox-option-container">
 
                         <label class="Checkbox-option">
-                            <input name="gender" type="checkbox" value="female">
+                            <input name="gender" type="checkbox" value="Female">
                             <span class="checkmark"></span>
-                            <h>Kobiet</h>
+                            <h>Women</h>
                         </label>
 
                     </div>
@@ -103,9 +103,9 @@
                     <div class="Checkbox-option-container">
 
                         <label id="last-box" class="Checkbox-option">
-                            <input name="gender" type="checkbox" value="all">
+                            <input name="gender" type="checkbox" value="All">
                             <span class="checkmark"></span>
-                            <h>Dowolnie</h>
+                            <h>Both</h>
                         </label>
 
                     </div>
@@ -114,17 +114,17 @@
 
             </div>
 
-            <h>Szukam osób w wieku:</h>
+            <h>Required age range:</h>
             <div class="EventDataInput">
-                <input name="min_age" type="number" placeholder='od x lat' onfocus="this.placeholder=''" onblur="this.placeholder='od x lat'">
-                <input name="max_age" type="number" placeholder='do y lat' onfocus="this.placeholder=''" onblur="this.placeholder='do y lat'">
+                <input name="min_age" type="number" placeholder='From .... years' onfocus="this.placeholder=''" onblur="this.placeholder='From .... years'">
+                <input name="max_age" type="number" placeholder='To .... years' onfocus="this.placeholder=''" onblur="this.placeholder='To .... years'">
             </div>
 
-            <h>Koszt:</h>
+            <h>Costs:</h>
             <div class="EventDataInput">
-                <input  name="min_price" type="number" placeholder='zł. od osoby' onfocus="this.placeholder=''" onblur="this.placeholder='zł. od osoby'">
-                <h>za</h>
-                <input  name="max_price" type="number" placeholder='godz. gry' onfocus="this.placeholder=''" onblur="this.placeholder='godz. gry'">
+                <input  name="min_price" type="number" placeholder='... pln per person' onfocus="this.placeholder=''" onblur="this.placeholder='... pln per person'">
+                <h>for</h>
+                <input  name="max_price" type="number" placeholder='... hour game' onfocus="this.placeholder=''" onblur="this.placeholder='... hour game'">
             </div>
 
         </form>
@@ -135,7 +135,7 @@
 
         <div id="upload" class="image-upload">
 
-            <h>Dodaj zdjęcie...</h>
+            <h>Upload photo...</h>
 
             <label for="image">
                 <img src="http://goo.gl/pB9rpQ"/>
@@ -149,11 +149,11 @@
 
     <div class="CreateEventDescription">
 
-        <textarea id="description" name="description" rows="5" cols="50"  form="EventForm" placeholder="Dodaj krótki opis wydarzenia..." onfocus="this.placeholder=''" onblur="this.placeholder='Dodaj krótki opis wydarzenia...'"></textarea>
+        <textarea id="description" name="description" rows="5" cols="50"  form="EventForm" placeholder="Add some event description..." onfocus="this.placeholder=''" onblur="this.placeholder='Add some event description...'"></textarea>
 
     </div>
 
-    <input id="FormSubmit" type="submit" form="EventForm" value="Stwórz wydarzenie">
+    <input id="FormSubmit" type="submit" form="EventForm" value="Create Event">
 
 
 

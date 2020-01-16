@@ -26,7 +26,7 @@
 
     <div id="FormAndButtons">
 
-        <p>Zaloguj się i nie przegap żadnego meczu!</p>
+        <p>Log in and do not miss any game!</p>
 
         <div class="messages">
             <?php
@@ -39,12 +39,12 @@
         </div>
 
         <form id="LogInForm" action="?page=login" method="POST" >
-            <input name="email" type="text" placeholder="Podaj email..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj email...'">
-            <input name="password" type="password" placeholder="Podaj hasło..." onfocus="this.placeholder=''" onblur="this.placeholder='Podaj hasło...'">
+            <input name="email" type="text" placeholder="Enter your email..." onfocus="this.placeholder=''" onblur="this.placeholder='Enter your email...'">
+            <input name="password" type="password" placeholder="Enter your password..." onfocus="this.placeholder=''" onblur="this.placeholder='Enter your password...'">
             <input id="LogInButton" type="submit"  value="Zaloguj się!">
         </form>
 
-        <a href="?page=signin" id="SignInButton">Nie wiesz gdzie jest grane? Zarejestruj się!</a>
+        <a href="?page=signin" id="SignInButton">Don't know where's playing on? Sign in!</a>
 
     </div>
 

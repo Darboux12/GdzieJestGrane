@@ -49,7 +49,7 @@
 
     <div class="RightNav">
 
-        <h id="NavTitle">Ostatnio dodane aktualności</h>
+        <h id="NavTitle">Recently added newses</h>
 
         <?php foreach($latestNewses as $news): ?>
 
