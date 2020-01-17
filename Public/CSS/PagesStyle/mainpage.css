@@ -215,7 +215,7 @@
     box-sizing: border-box;
 }
 
-#SeeDetails{
+.SeeDetails{
     text-decoration: none ;
     border: solid 3px rgba(63, 37, 37, 0.82);
     background-color: rgba(167, 18, 212, 0.92);

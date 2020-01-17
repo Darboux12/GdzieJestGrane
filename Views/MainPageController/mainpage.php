@@ -152,7 +152,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -170,7 +170,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -188,7 +188,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -206,7 +206,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -224,7 +224,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -241,25 +241,7 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -277,7 +259,25 @@
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../EventDetailsPageController/EventDetailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
+                <h>Dołącz<br>teraz!</h>
+            </div>
+
+
+            <div class="PopularEventInfo">
+                <a href="#page">Siatkówka dla pań</a>
+                <h id="discipline">Siatkówka</h>
+                <h id="city">Kraków</h>
+                <h id="date">20.11 19:00</h>
+                <h id="views">Wyświetlenia: 3700</h>
+            </div>
+
+        </div>
+
+        <div class="PopularEvent">
+
+            <div class="JoinNow">
+                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
@@ -298,7 +298,7 @@
 
         <?php foreach($allAds as $ad): ?>
 
-        <div class="Publication">
+        <div id=<?= $ad->getId()?> class="Publication">
 
             <i class="fas fa-volleyball-ball"></i>
 
@@ -325,7 +325,17 @@
                     <h><?=$ad->getInvolvedPeople()  . ' z ' . $ad->getNumPeople()?></h>
                 </div>
 
-                <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+                <form action="?page=seeDetails"method="post">
+
+                    <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
+                    <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
+
+
+
+
+                </form>
+
+
 
             </div>
 

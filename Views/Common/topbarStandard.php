@@ -3,10 +3,10 @@
     <a class="Ball-link" href="?page=mainpage"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
     <div class="TopBarLinks">
-        <a href="?page=newspage"><i class="fas fa-globe"></i> Aktualności</a>
-        <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i>Oznacz miejsce</a>
-        <a href="?page=createAd"><i class="far fa-calendar-plus"></i>Utwórz wydarzenie</a>
-        <a href="?page=adminpanel"><i class="fas fa-users-cog"></i>Panel admina</a>
+        <a href="?page=newspage"><i class="fas fa-globe"></i>News</a>
+        <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i>Tag place</a>
+        <a href="?page=createAd"><i class="far fa-calendar-plus"></i>Create Event</a>
+        <a href="?page=adminpanel"><i class="fas fa-users-cog"></i>Admin Panel</a>
     </div>
 
     <div class="TopBarIcons">
@@ -24,7 +24,7 @@
 
                         <div class="NameSeeProfile">
                             <h id="Name">Janek126p</h>
-                            <h id="SeeProfile">Zobacz profil</h>
+                            <h id="SeeProfile">See profile</h>
                         </div>
 
                         <i class="fas fa-chevron-circle-right"></i>
@@ -33,17 +33,15 @@
 
                     <div class="ProfileLinks">
 
-                        <a href="#page">Moje wydarzenia<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">My Events<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Oznaczone miejsca<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">Tagged Places<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Znajomi<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">Friends<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Znajomi<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">Setings<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Ustawienia<i class="fas fa-chevron-right"></i></a>
-
-                        <a href="#page">Wyloguj<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">Log Out<i class="fas fa-chevron-right"></i></a>
 
                     </div>
 

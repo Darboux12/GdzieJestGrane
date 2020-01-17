@@ -10,7 +10,7 @@ class AdRepository extends Repository{
     {
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM ad_view WHERE id_ad = :id
+            SELECT * FROM ad_view WHERE id_ad = :id;
         ');
         $stmt->bindParam(':id', $id_ad, PDO::PARAM_INT);
         $stmt->execute();
@@ -21,13 +21,13 @@ class AdRepository extends Repository{
 
         return new Ad(
             $ad['id_ad'],
-            $ad['id_user'],
-            $ad['title	'],
+            $ad['id_user_author'],
+            $ad['title'],
             $ad['description'],
             $ad['image'],
             $ad['discipline'],
-            $ad['min_price'],
-            $ad['max_price'],
+            $ad['price'],
+            $ad['time'],
             $ad['min_age'],
             $ad['max_age'],
             $ad['num_people'],
@@ -55,13 +55,13 @@ class AdRepository extends Repository{
         foreach ($ads as $ad) {
             $result[] = new Ad(
                 $ad['id_ad'],
-                $ad['id_user'],
+                $ad['id_user_author'],
                 $ad['title'],
                 $ad['description'],
                 $ad['image'],
                 $ad['discipline'],
-                $ad['min_price'],
-                $ad['max_price'],
+                $ad['price'],
+                $ad['time'],
                 $ad['min_age'],
                 $ad['max_age'],
                 $ad['num_people'],
@@ -81,40 +81,27 @@ class AdRepository extends Repository{
     }
 
     public function createAd(string $city, string $postal_code, string $street, int $number,
-                             string $discipline, int $min_price, int $max_price, int $min_age,
+                             string $discipline, int $price, int $time, int $min_age,
                              int $max_age, int $num_people, string $gender,
                              string $date, string $email,string $title, string $description, string $image){
 
           $stmt = $this->database->connect()->prepare('
-               INSERT INTO localization(city,postal_code,street,number) VALUES (:city,:postal,:street,:number)
-           ');
-
-           $stmt->bindParam(':city', $city, PDO::PARAM_STR);
-           $stmt->bindParam(':postal', $postal_code, PDO::PARAM_STR);
-           $stmt->bindParam(':street', $street, PDO::PARAM_STR);
-           $stmt->bindParam(':number', $number, PDO::PARAM_INT);
-           $stmt->execute();
-
-           $stmt = $this->database->connect()->prepare('
-            INSERT INTO ad_details(discipline,min_age,max_age,num_people,involved_people,
-                                   gender,date,min_price,max_price,views) 
+          
+        
+          START TRANSACTION;
+          
+          INSERT INTO localization(city,postal_code,street,number) 
+          
+          VALUES (:city,:postal,:street,:number);
+          
+          
+          INSERT INTO ad_details(discipline,min_age,max_age,num_people,involved_people,
+                                   gender,date,price,time,views) 
                                    
-                                   VALUES (:discipline,:min_age,:max_age,:num_people,
-                                                     0,:gender,:date,:min_price,:max_price,0)
-        ');
-
-           $stmt->bindParam(':discipline', $discipline, PDO::PARAM_STR);
-           $stmt->bindParam(':min_age', $min_age, PDO::PARAM_INT);
-           $stmt->bindParam(':max_age', $max_age, PDO::PARAM_INT);
-           $stmt->bindParam(':num_people', $num_people, PDO::PARAM_INT);
-           $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
-           $stmt->bindParam(':date', $date, PDO::PARAM_STR);
-           $stmt->bindParam(':min_price', $min_price, PDO::PARAM_INT);
-           $stmt->bindParam(':max_price', $max_price, PDO::PARAM_INT);
-           $stmt->execute();
-
-        $stmt = $this->database->connect()->prepare('
-            INSERT INTO ad(id_user_author,id_localization,
+          VALUES (:discipline,:min_age,:max_age,:num_people, 0,:gender,:date,:price,:time,0);
+          
+          
+          INSERT INTO ad(id_user_author,id_localization,
                         id_ad_details,title,description,image) 
                                    
             VALUES (
@@ -129,40 +116,40 @@ class AdRepository extends Repository{
                                                   gender =  :gender AND 
                                                   min_age = :min_age AND 
                                                   date = :date AND 
-                                                  min_price = :min_price AND 
-                                                  max_price = :max_price),  
+                                                  price = :price AND 
+                                                  time = :time),  
                     
-                    :title,:description,:image)                     
-                                  
-        ;');
+                    :title,:description,:image);  
+                  
+          COMMIT;
+        
+           ');
 
-        $stmt->bindParam(':discipline', $discipline, PDO::PARAM_STR);
-        $stmt->bindParam(':min_age', $min_age, PDO::PARAM_INT);
-        $stmt->bindParam(':max_age', $max_age, PDO::PARAM_INT);
-        $stmt->bindParam(':num_people', $num_people, PDO::PARAM_INT);
-        $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
-        $stmt->bindParam(':date', $date, PDO::PARAM_STR);
-        $stmt->bindParam(':min_price', $min_price, PDO::PARAM_INT);
-        $stmt->bindParam(':max_price', $max_price, PDO::PARAM_INT);
-
-        $stmt->bindParam(':city', $city, PDO::PARAM_STR);
-        $stmt->bindParam(':postal', $postal_code, PDO::PARAM_STR);
-        $stmt->bindParam(':street', $street, PDO::PARAM_STR);
-        $stmt->bindParam(':number', $number, PDO::PARAM_INT);
-
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
-        $stmt->bindParam(':description', $description, PDO::PARAM_STR);
-        $stmt->bindParam(':image', $image, PDO::PARAM_STR);
-        $stmt->execute();
+           $stmt->bindParam(':city', $city, PDO::PARAM_STR);
+           $stmt->bindParam(':postal', $postal_code, PDO::PARAM_STR);
+           $stmt->bindParam(':street', $street, PDO::PARAM_STR);
+           $stmt->bindParam(':number', $number, PDO::PARAM_INT);
+           $stmt->bindParam(':discipline', $discipline, PDO::PARAM_STR);
+           $stmt->bindParam(':min_age', $min_age, PDO::PARAM_INT);
+           $stmt->bindParam(':max_age', $max_age, PDO::PARAM_INT);
+           $stmt->bindParam(':num_people', $num_people, PDO::PARAM_INT);
+           $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
+           $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+           $stmt->bindParam(':price', $price, PDO::PARAM_INT);
+           $stmt->bindParam(':time', $time, PDO::PARAM_INT);
+           $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+           $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+           $stmt->bindParam(':description', $description, PDO::PARAM_STR);
+           $stmt->bindParam(':image', $image, PDO::PARAM_STR);
+           $stmt->execute();
 
     }
 
-    public function searchAd(string $localization, string $discipline, int $min_price, int $max_price, int $min_age,
+    public function searchAd(string $localization, string $discipline, int $price, int $time, int $min_age,
                              int $max_age, int $num_people, string $gender,
                              string $date, string $title) : array{
 
-        $argNames = ['city', 'discipline', 'min_price', 'max_price', 'min_age','max_age', 'num_people', 'gender', "date", "title"];
+        $argNames = ['city', 'discipline', 'price', 'time', 'min_age','max_age', 'num_people', 'gender', "date", "title"];
         $arguments = func_get_args();
 
         $query = "SELECT * FROM ad_view WHERE";
@@ -225,6 +212,46 @@ class AdRepository extends Repository{
 
 
         return $ads;
+    }
+
+    public function joinEvent(int $id_user, int $id_ad){
+
+        $stmt = $this->database->connect()->prepare('
+        
+                START TRANSACTION;
+                
+                INSERT INTO user_ad(id_user,id_ad) VALUES (:id_user, :id_ad);
+                
+                UPDATE ad_details SET involved_people = involved_people  + 1 
+                WHERE id_ad_details IN (SELECT id_ad_details FROM ad WHERE id_ad = :id_ad);
+                
+                COMMIT;
+        
+        ');
+
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->bindParam(':id_ad', $id_ad, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+
+    public function incrementViews($id_ad){
+
+
+        $stmt = $this->database->connect()->prepare('
+        
+                START TRANSACTION;
+                
+                UPDATE ad_details SET views = views + 1 WHERE id_ad_details IN
+                (SELECT id_ad_details FROM ad WHERE id_ad = :id_ad);
+  
+                COMMIT;
+      
+        ');
+
+        $stmt->bindParam(':id_ad', $id_ad, PDO::PARAM_INT);
+        $stmt->execute();
+
     }
 
 }

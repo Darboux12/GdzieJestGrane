@@ -122,9 +122,9 @@
 
             <h>Costs:</h>
             <div class="EventDataInput">
-                <input  name="min_price" type="number" placeholder='... pln per person' onfocus="this.placeholder=''" onblur="this.placeholder='... pln per person'">
+                <input  name="price" type="number" placeholder='... pln per person' onfocus="this.placeholder=''" onblur="this.placeholder='... pln per person'">
                 <h>for</h>
-                <input  name="max_price" type="number" placeholder='... hour game' onfocus="this.placeholder=''" onblur="this.placeholder='... hour game'">
+                <input  name="time" type="number" placeholder='... hour game' onfocus="this.placeholder=''" onblur="this.placeholder='... hour game'">
             </div>
 
         </form>

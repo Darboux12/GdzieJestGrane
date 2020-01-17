@@ -102,8 +102,15 @@ WHERE login = :login;');
 
             try {
                 $stmt = $this->database->connect()->prepare('
-                                        DELETE FROM user_address WHERE
-                                        province = :province AND street = :street AND number = :number');
+
+                        START TRANSACTION;
+                        
+                        DELETE FROM user_address WHERE
+                                    province = :province AND street = :street AND number = :number
+                                    
+                        COMMIT;
+
+');
                 $stmt->bindParam(':province', $province );
                 $stmt->bindParam(':street', $street);
                 $stmt->bindParam(':number', $number);
@@ -200,7 +207,10 @@ WHERE (login = :data OR role = :data OR email = :data OR creation_date = :data) 
             try {
 
                 $stmt = $this->database->connect()->prepare('
+
+                START TRANSACTION;
                INSERT INTO user_address(province,street,number) VALUES (:province,:street,:number)
+               COMMIT;
            ');
 
                 $stmt->bindParam(':province', $province, PDO::PARAM_STR);
@@ -265,8 +275,13 @@ WHERE (login = :data OR role = :data OR email = :data OR creation_date = :data) 
     public function powerUser(int $id){
 
         try {
-            $stmt = $this->database->connect()->prepare('UPDATE user
-            SET id_role = 2 WHERE id_user = :id;');
+            $stmt = $this->database->connect()->prepare('
+            START TRANSACTION;
+            UPDATE user
+            SET id_role = 2 WHERE id_user = :id;
+            COMMIT;
+            ');
+
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 
@@ -280,8 +295,12 @@ WHERE (login = :data OR role = :data OR email = :data OR creation_date = :data) 
     public function degradeUser(int $id){
 
         try {
-            $stmt = $this->database->connect()->prepare('UPDATE user
-            SET id_role = 1 WHERE id_user = :id;');
+            $stmt = $this->database->connect()->prepare('
+
+            START TRANSACTION;
+            UPDATE user SET id_role = 1 WHERE id_user = :id;
+            COMMIT;
+            ');
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 

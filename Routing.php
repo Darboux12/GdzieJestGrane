@@ -5,6 +5,7 @@ require_once "Controllers/SecurityController.php";
 require_once "Controllers/NewsPageController.php";
 require_once "Controllers/AdminController.php";
 require_once "Controllers/AdController.php";
+require_once "Controllers/DetailsPageController.php";
 
 
 
@@ -79,6 +80,16 @@ class Routing {
             'createAd' => [
                 'controller' => 'AdController',
                 'action' => 'createAd'
+            ],
+
+            'seeDetails' => [
+                'controller' => 'DetailsPageController',
+                'action' => 'showDetails'
+            ],
+
+            'joinEvent' => [
+                'controller' => 'DetailsPageController',
+                'action' => 'joinEvent'
             ]
 
 

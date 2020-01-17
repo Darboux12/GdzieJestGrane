@@ -39,7 +39,7 @@ class AdController extends AppController{
             }
 
             $adRepository->createAd($_POST['city'],$_POST['postal'],$_POST['street'],$_POST['number'],
-                $_POST['discipline'],$_POST['min_price'],$_POST['max_price'], $_POST['min_age'],$_POST['max_age'],
+                $_POST['discipline'],$_POST['price'],$_POST['time'], $_POST['min_age'],$_POST['max_age'],
                 $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
                 $_POST['title'],$_POST['description'],$imageData);
 
