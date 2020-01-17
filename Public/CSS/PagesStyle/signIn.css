@@ -1,3 +1,9 @@
+body{
+    font-size: 15px;
+}
+
+
+
 .MainContainer{
     position: fixed;
     height: 100%;
@@ -21,6 +27,7 @@ form{
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -121,17 +128,42 @@ a{
     text-decoration: none;
 }
 
-@media only screen and (max-width : 1000px){  body{font-size: 14px;}}
-@media only screen and (max-width : 900px){  body{font-size: 13px;}}
+@media only screen and (max-width : 1050px){  body{font-size: 14px;}}
+@media only screen and (max-width : 1000px){  body{font-size: 13px;}}
+@media only screen and (max-width : 950px){  body{font-size: 12px;}}
+@media only screen and (max-width : 900px){  body{font-size: 11px;}}
+@media only screen and (max-width : 850px){ dy{font-size: 10px;}}
 @media only screen and (max-width : 800px) {
-    body {font-size: 12px}
+    body {font-size: 11px}
     .MainContainer {flex-direction: column;}
     .Logo{margin-right: 0}
 }
-@media only screen and (max-width : 450px){  body{font-size: 12px;}}
-@media only screen and (max-width : 400px){  body{font-size: 10px;}}
-@media only screen and (max-width : 350px){  body{font-size: 9px;}}
-@media only screen and (max-width : 300px){  body{font-size: 8px;}}
+@media only screen and (max-width : 450px){  body{font-size: 9px;}}
+@media only screen and (max-width : 400px){
+    body{font-size: 9px;}
+
+    form{
+        flex-direction: column;
+    }
+
+    #RightColumn{
+        padding-left: 0;
+
+    }
+
+    .Column{
+        width: 100%;
+    }
+
+    .Logo > img{
+        width: 4em;
+
+    }
+
+
+}
+@media only screen and (max-width : 350px){  body{font-size: 8px;}}
+
 @media only screen and (max-width : 250px){  body{font-size: 7px;}}
 
 
