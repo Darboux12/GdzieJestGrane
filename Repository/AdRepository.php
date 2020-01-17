@@ -114,7 +114,7 @@ class AdRepository extends Repository{
            $stmt->execute();
 
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO ad(id_user,id_localization,
+            INSERT INTO ad(id_user_author,id_localization,
                         id_ad_details,title,description,image) 
                                    
             VALUES (
@@ -204,14 +204,12 @@ class AdRepository extends Repository{
 
         $stmt = $this->database->connect()->prepare($query);
 
-        $i = 0;
-        foreach ($bindsValues as $value) {
 
-            $stmt->bindParam($bindsNames[$i], $value);
-            $i++;
-
+        for($i =0; $i < $notNullArgs; $i++){
+            $stmt->bindParam($bindsNames[$i],$bindsValues[$i]);
 
         }
+
 
         $stmt->execute();
         $ads = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -227,7 +225,6 @@ class AdRepository extends Repository{
 
 
         return $ads;
-
     }
 
 }

@@ -91,12 +91,7 @@ $(document).ready(function () {
 
             .done((res) => {
 
-
-          //     console.log(res);
-
               $maincontent.empty()
-
-                console.log(res);
 
                 res.forEach(el => {
                     $maincontent.append(`
@@ -119,15 +114,13 @@ $(document).ready(function () {
                 ${el.postal_code}
                 ${el.city}
                 </h>
-                <h id="Age"><?='Wiek: ' . ' '
-                    . $ad->getMinAge() . ' - '
-                    . $ad->getMaxAge()
-                    ?>
+                <h id="Age">
+                Wiek: ${el.min_age} - ${el.max_age} lat
                 </h>
 
                 <div id="EventPeopleNumberElement">
                     <i class="fas fa-users"></i>
-                    <h><?=$ad->getInvolvedPeople()  . ' z ' . $ad->getNumPeople()?></h>
+                    <h>${el.involved_people} z ${el.num_people}</h>
                 </div>
 
                 <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
@@ -138,7 +131,7 @@ $(document).ready(function () {
 
                 <img src="data:image/png;base64, ${el.image}" alt="Red dot" />
 
-                <textarea class="ShortDescription" readonly rows="20"><?= $ad->getDescription()?></textarea>
+                <textarea class="ShortDescription" readonly rows="20">${el.description}</textarea>
 
 
 
