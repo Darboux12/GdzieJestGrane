@@ -34,7 +34,10 @@ function ToggleMobileMenuUser() {
 
 function ToggleMobileMenuSearch() {
 
-    var bubble = document.getElementById('Mobile-Drop-Menu-Search');
+    var bubble = document.getElementById('SearchFormMobile');
+
+
 
     bubble.classList.toggle("show");
 }
+

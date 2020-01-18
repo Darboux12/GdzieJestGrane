@@ -77,6 +77,16 @@ class Routing {
                 'action' => 'findUser'
             ],
 
+            'admin_make_stat' => [
+                'controller' => 'AdminController',
+                'action' => 'makeStat'
+            ],
+
+            'admin_show_stat' => [
+                'controller' => 'AdminController',
+                'action' => 'showStat'
+            ],
+
             'createAd' => [
                 'controller' => 'AdController',
                 'action' => 'createAd'

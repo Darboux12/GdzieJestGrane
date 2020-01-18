@@ -86,7 +86,7 @@ $(document).ready(function () {
                 eventPriceFrom : $eventPriceFrom.val(),
                 eventPriceTo : $eventPriceTo.val()
 
-            }, success: function() {alert("Success"); }
+            }
         })
 
             .done((res) => {
@@ -122,9 +122,15 @@ $(document).ready(function () {
                     <i class="fas fa-users"></i>
                     <h>${el.involved_people} z ${el.num_people}</h>
                 </div>
+                
+                 <form action="?page=seeDetails"method="post">
 
-                <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
+                 <input type="hidden" name="publicationId" value=${el.id_ad}>
+                <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
+                
+                </form>
 
+              
             </div>
 
             <div class="ImageAndDescription">

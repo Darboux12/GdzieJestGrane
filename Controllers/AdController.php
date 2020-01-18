@@ -23,6 +23,24 @@ class AdController extends AppController{
                 }
             }
 
+
+            if($_POST['min_age'] > $_POST['max_age']){
+                $this->render('createAd', ['messages' => ["Minimal age cannot be bigger than maximal age!"]]);
+                return;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
             $image = $_FILES['image']['name'];
             $imageData= file_get_contents($_FILES['image']['tmp_name']);
             $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
@@ -42,6 +60,7 @@ class AdController extends AppController{
                 $_POST['discipline'],$_POST['price'],$_POST['time'], $_POST['min_age'],$_POST['max_age'],
                 $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
                 $_POST['title'],$_POST['description'],$imageData);
+
 
             $this->render('createAd',['messages' => ['Ad was successfully created!']]);
 

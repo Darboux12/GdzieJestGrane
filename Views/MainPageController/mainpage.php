@@ -36,12 +36,12 @@
     <form id="SearchForm" class="SearchNav">
 
         <div class="SearchBar-Searchbox">
-                <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Search title..." onfocus="this.placeholder=''" onblur="this.placeholder='Search title...'" class="search-box-input">
+            <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Search title..." onfocus="this.placeholder=''" onblur="this.placeholder='Search title...'" class="search-box-input">
         </div>
 
         <div class="SearchBar-Searchbox">
-                <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Search localization..." onfocus="this.placeholder=''" onblur="this.placeholder='Search localization...'" class="search-box-input">
-            </div>
+            <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Search localization..." onfocus="this.placeholder=''" onblur="this.placeholder='Search localization...'" class="search-box-input">
+        </div>
 
         <div id="SelectSport" class="SearchNavSelect">
             <select id="eventDiscipline" name="eventDiscipline" class="SearchNavSelect">
@@ -70,11 +70,11 @@
 
         <div class="SearchBar-SelectNumber">
 
-            <h>People number:</h>
+            <h>Search people number:</h>
 
             <div class="SelectInputs">
-                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="Search people number..." onfocus="this.placeholder=''" onblur="this.placeholder='Search people number...'" min="0" step="any" />
-        </div>
+                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="People number..." onfocus="this.placeholder=''" onblur="this.placeholder='People number...'" min="0" step="any" />
+            </div>
 
         </div>
 
@@ -298,64 +298,60 @@
 
         <?php foreach($allAds as $ad): ?>
 
-        <div id=<?= $ad->getId()?> class="Publication">
+            <div id=<?= $ad->getId()?> class="Publication">
 
-            <i class="fas fa-volleyball-ball"></i>
+                <i class="fas fa-volleyball-ball"></i>
 
-            <div class="EventInformation">
+                <div class="EventInformation">
 
-                <h id="EventTitle"><?= $ad->getTitle()?></h>
-                <h id="EventSport"><?= $ad->getDiscipline()?></h>
-                <h id="EventDate"><?= $ad->getDate()?></h>
-                <h id="EventAddress">
-                    <?= $ad->getStreet() . " "
-                    . $ad->getNumber() . ", "
-                    . $ad->getPostalCode() . " "
-                    . $ad->getCity()
-                    ?>
-                </h>
-                <h id="Age"><?='Wiek: ' . ' '
-                    . $ad->getMinAge() . ' - '
-                    . $ad->getMaxAge()
-                    ?>
-                </h>
+                    <h id="EventTitle"><?= $ad->getTitle()?></h>
+                    <h id="EventSport"><?= $ad->getDiscipline()?></h>
+                    <h id="EventDate"><?= $ad->getDate()?></h>
+                    <h id="EventAddress">
+                        <?= $ad->getStreet() . " "
+                        . $ad->getNumber() . ", "
+                        . $ad->getPostalCode() . " "
+                        . $ad->getCity()
+                        ?>
+                    </h>
+                    <h id="Age"><?=
+                        $ad->getMinAge() . ' - '
+                        . $ad->getMaxAge() . " years old"
+                        ?>
+                    </h>
 
-                <div id="EventPeopleNumberElement">
-                    <i class="fas fa-users"></i>
-                    <h><?=$ad->getInvolvedPeople()  . ' z ' . $ad->getNumPeople()?></h>
+                    <div id="EventPeopleNumberElement">
+                        <i class="fas fa-users"></i>
+                        <h><?=$ad->getInvolvedPeople()  . ' out of ' . $ad->getNumPeople()?></h>
+                    </div>
+
+                    <form action="?page=seeDetails"method="post">
+
+                        <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
+                        <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
+                    </form>
+
+
+
                 </div>
 
-                <form action="?page=seeDetails"method="post">
+                <div class="ImageAndDescription">
 
-                    <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
-                    <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
+                    <?= '<img src="data:image/jpeg;base64,'.base64_encode($ad->getImage()) .'" />' ?>
+
+                    <textarea class="ShortDescription" readonly rows="20"><?= $ad->getDescription()?></textarea>
+
+
+
+                </div>
 
 
 
 
-                </form>
 
 
 
             </div>
-
-            <div class="ImageAndDescription">
-
-                <?= '<img src="data:image/jpeg;base64,'.base64_encode($ad->getImage()) .'" />' ?>
-
-                <textarea class="ShortDescription" readonly rows="20"><?= $ad->getDescription()?></textarea>
-
-
-
-            </div>
-
-
-
-
-
-
-
-        </div>
 
 
         <?php endforeach ?>
@@ -385,52 +381,67 @@
 
     <div class="MainContent">
 
-        <div class="Publication">
+        <?php foreach($allAds as $ad): ?>
 
-            <div class="EventSportLabel">
-                <h id="EventSport">Siatkówka</h>
-            </div>
+            <div id=<?= $ad->getId()?> class="Publication">
 
-            <div class="EventInformation">
+                <i class="fas fa-volleyball-ball"></i>
 
-                <div id='InfoLeft' class="Information">
+                <div class="EventInformation">
 
-                    <h id="EventTitle">Siatkówka dla pań</h>
-
-                    <h id="EventDate">Piątek, 20 lis, 19:00</h>
-                    <h id="EventAddress">Kamienna 17, 31-403 Kraków</h>
-
-
-                </div>
-
-                <div class="Information">
-
-                    <h id="Age">Wiek: 18 - 30 lat</h>
+                    <h id="EventTitle"><?= $ad->getTitle()?></h>
+                    <h id="EventSport"><?= $ad->getDiscipline()?></h>
+                    <h id="EventDate"><?= $ad->getDate()?></h>
+                    <h id="EventAddress">
+                        <?= $ad->getStreet() . " "
+                        . $ad->getNumber() . ", "
+                        . $ad->getPostalCode() . " "
+                        . $ad->getCity()
+                        ?>
+                    </h>
+                    <h id="Age"><?=
+                        $ad->getMinAge() . ' - '
+                        . $ad->getMaxAge() . " years old"
+                        ?>
+                    </h>
 
                     <div id="EventPeopleNumberElement">
                         <i class="fas fa-users"></i>
-                        <h>4 z 12</h>
+                        <h><?=$ad->getInvolvedPeople()  . ' out of ' . $ad->getNumPeople()?></h>
                     </div>
+
+
+
+
 
                 </div>
 
+                <div class="ImageAndDescription">
+
+                    <?= '<img src="data:image/jpeg;base64,'.base64_encode($ad->getImage()) .'" />' ?>
+
+                    <textarea class="ShortDescription" readonly rows="10"><?= $ad->getDescription()?></textarea>
+
+                    <form action="?page=seeDetails"method="post">
+
+                        <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
+                        <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
+                    </form>
+
+
+
+                </div>
+
+
+
+
+
+
+
             </div>
 
-            <a href="#page"> <img src="../../Public/Images/Kamienna.png"> </a>
 
-            <textarea class="ShortDescription" readonly rows="8">Zapraszam wszystkie panie, które mają ochotę się trochę poruszać wieczorem.
-                Poziom umiejętności nie ma znaczenia (gramy czysto dla rozrywki :D)</textarea>
-
-            <a id="SeeDetails" href="#page">Zobacz szczegóły</a>
-
-
-
-
-
-        </div>
-
-
-
+        <?php endforeach ?>
 
 
 

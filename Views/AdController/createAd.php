@@ -116,15 +116,15 @@
 
             <h>Required age range:</h>
             <div class="EventDataInput">
-                <input name="min_age" type="number" placeholder='From .... years' onfocus="this.placeholder=''" onblur="this.placeholder='From .... years'">
-                <input name="max_age" type="number" placeholder='To .... years' onfocus="this.placeholder=''" onblur="this.placeholder='To .... years'">
+                <input name="min_age" type="number" min="0" placeholder='From .... years' onfocus="this.placeholder=''" onblur="this.placeholder='From .... years'">
+                <input name="max_age" type="number" min="0" placeholder='To .... years' onfocus="this.placeholder=''" onblur="this.placeholder='To .... years'">
             </div>
 
             <h>Costs:</h>
             <div class="EventDataInput">
-                <input  name="price" type="number" placeholder='... pln per person' onfocus="this.placeholder=''" onblur="this.placeholder='... pln per person'">
+                <input  name="price" type="number" min="0" placeholder='... pln per person' onfocus="this.placeholder=''" onblur="this.placeholder='... pln per person'">
                 <h>for</h>
-                <input  name="time" type="number" placeholder='... hour game' onfocus="this.placeholder=''" onblur="this.placeholder='... hour game'">
+                <input  name="time" type="number" min="0" placeholder='... hour game' onfocus="this.placeholder=''" onblur="this.placeholder='... hour(s) game'">
             </div>
 
         </form>

@@ -3,6 +3,8 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../Models/User.php';
 require_once __DIR__.'/../Repository/UserRepository.php';
+require_once __DIR__.'/../Repository/StatisticRepository.php';
+
 
 
 class AdminController extends AppController {
@@ -84,6 +86,41 @@ class AdminController extends AppController {
         $user->degradeUser((int)$_POST['id']);
         http_response_code(200);
         return;
+
+    }
+
+    public function makeStat(){
+
+        $statRepository = new StatisticRepository();
+        $userRepository = new UserRepository();
+
+        $login = $userRepository->getUser($_SESSION['id'])->getLogin();
+        $today = getdate();
+        $date = $today['year'] . '-' . $today['mon'] . '-' . $today['mday'];
+
+        header('Content-type: application/json');
+
+
+        $statRepository->addStatistic($date,$login);
+
+
+        http_response_code(200);
+
+
+        echo  json_encode(["Hej"]);
+
+
+}
+
+    public function showStat(){
+
+        $stat = new StatisticRepository();
+
+        header('Content-type: application/json');
+
+        http_response_code(200);
+
+        echo $stat->getAllStatistics() ? json_encode($stat->getAllStatistics()) : '';
 
     }
 

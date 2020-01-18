@@ -52,6 +52,22 @@
             </tbody>
         </table>
 
+        <table id="mySecondTable">
+            <thead>
+            <tr>
+                <th>Statistic Date</th>
+                <th>Statistic Author</th>
+                <th>Most Popular Sport</th>
+                <th>Month Added Users</th>
+                <th>Ads on page</th>
+            </tr>
+            </thead>
+
+            <tbody class="statistic-list">
+
+            </tbody>
+        </table>
+
     </div>
 
     <div class="ActionNav">
@@ -62,7 +78,10 @@
         </form>
 
         <button id="GetAllButton" type="button" onclick="getUsers()"><i class="fas fa-users"></i>Get All Users</button>
+        <button id="HideButton" type="button" onclick="hideUsers()"><i class="fas fa-eye-slash"></i>Hide Users</button>
         <button id="SortUser" type="button" onclick="sortTable()"><i class="fas fa-sort-alpha-up"></i>Sort Users</button>
+        <button id="MakeStat" type="button" onclick="makeStatistic()"><i class="fab fa-creative-commons-share"></i>Make Statistic</button>
+        <button id="ShowStat" type="button" onclick="showStatistic()"><i class="fas fa-eye"></i>Show Statistic</button>
 
 
     </div>

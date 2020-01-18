@@ -34,6 +34,69 @@ function getUsers() {
         });
 }
 
+function makeStatistic() {
+
+
+    if (!confirm('Do you want to make statistic?')) {
+        return;
+    }
+
+    const apiUrl = "http://localhost";
+
+
+    $.ajax({
+        url : apiUrl + '/?page=admin_make_stat',
+        dataType : 'json'
+    })
+
+
+        .done((res) => {
+
+            alert("Statistic successfully created!");
+
+        });
+
+
+
+
+}
+
+function showStatistic() {
+
+    const apiUrl = "http://localhost";
+
+    const $list = $('.statistic-list');
+
+    $.ajax({
+        url : apiUrl + '/?page=admin_show_stat',
+        dataType : 'json'
+    })
+
+
+        .done((res) => {
+
+
+
+            $list.empty();
+
+            res.forEach(el => {
+                $list.append(`
+                                 <tr>
+                                 <td>${el.date}</td>
+                                 <td>${el.author}</td>
+                                 <td>${el.discipline}</td>
+                                 <td>${el.num_users}</td>
+                                 <td>${el.num_ads}</td>
+                                 </tr>`
+                );
+            })
+        });
+
+
+
+
+}
+
 function deleteUser(id) {
 
     const apiUrl = "http://localhost";
@@ -54,6 +117,14 @@ function deleteUser(id) {
             getUsers();
         }
     });
+}
+
+function hideUsers() {
+
+    const $list = $('.users-list');
+
+    $list.empty();
+
 }
 
 function givePower(id){
