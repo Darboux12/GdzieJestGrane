@@ -16,6 +16,8 @@ class DetailsPageController extends AppController {
 
     public function joinEvent(){
 
+        http_response_code(200);
+
         $userRepository = new UserRepository();
 
         $adRepository = new AdRepository();
@@ -32,6 +34,8 @@ class DetailsPageController extends AppController {
 
 
         $this->render('detailsPage',["ad" => $ads]);
+
+        return "Hej";
 
 
 

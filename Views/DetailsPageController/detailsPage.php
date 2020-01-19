@@ -13,6 +13,8 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/chatbox.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/popularEventsNav.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../../Public/JS/EventDetails.js"></script>
@@ -102,8 +104,8 @@
 
             </div>
 
-            <form id="JoinForm" action="?page=joinEvent" method="post" onsubmit="joinEvent()">
-                <input name="EventId" type="hidden" value=<?= $ad->getId()?>>
+            <form id="JoinForm">
+                <input id="EventId" name="EventId" type="hidden" value=<?= $ad->getId()?>>
                 <button id="JoinButton" type="submit">Join The Event</button>
             </form>
 

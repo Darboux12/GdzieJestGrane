@@ -3,9 +3,12 @@
 class AppController {
     private $request;
 
-    public function __construct()
-    {
-        session_start();
+    public function __construct(){
+
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+
         $this->request = $_SERVER['REQUEST_METHOD'];
     }
 
