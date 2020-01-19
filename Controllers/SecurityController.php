@@ -35,6 +35,19 @@ class SecurityController extends AppController {
             $_SESSION["id"] = $user->getEmail();
             $_SESSION["role"] = $user->getRole();
 
+
+            $browser = $userRepository->getBrowser();
+
+            $browserLog = $browser['name'] . " " . $browser['version'];
+
+            $platformLog = $browser['platform'];
+
+
+            $userLog = $user->getLogin();
+
+
+            $userRepository->createUserLog($userLog,$browserLog,$platformLog);
+
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=mainpage");
             return;
@@ -57,45 +70,12 @@ class SecurityController extends AppController {
 
         if ($this->isPost()) {
 
+            foreach( $_POST as $key => $value ) {
 
-            if(empty($_POST['login'])){
-                $this->render('signin', ['messages' => ['Login field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['email'])){
-                $this->render('signin', ['messages' => ['Email field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['password'])){
-                $this->render('signin', ['messages' => ['Password field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['repeatpassword'])){
-                $this->render('signin', ['messages' => ['Repeat Password field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['age'])){
-                $this->render('signin', ['messages' => ['Age field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['province'])){
-                $this->render('signin', ['messages' => ['Province field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['street'])){
-                $this->render('signin', ['messages' => ['Street field cannot be empty']]);
-                return;
-            }
-
-            if(empty($_POST['number'])){
-                $this->render('signin', ['messages' => ['Number field cannot be empty']]);
-                return;
+                if(empty($value)){
+                    $this->render('createAd', ['messages' => ["You must choose " . $key . '!']]);
+                    return;
+                }
             }
 
             $userRepository = new UserRepository();
@@ -140,14 +120,13 @@ class SecurityController extends AppController {
                 return;
             }
 
-
-            $today = getdate();
-            $date = $today['year'] . '-' . $today['mon'] . '-' . $today['mday'];
+            $province = ucfirst(strtolower($_POST['province']));
+            $street = ucfirst(strtolower($_POST['street']));
 
             $hash = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
             $userRepository->addUser($_POST['login'],$_POST['email'],$hash,$_POST['age'],
-                'subscriber',$_POST['province'],$_POST['province'],$_POST['number'],$date);
+                'subscriber',$province ,$street,$_POST['number']);
 
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Refresh:5; url={$url}?page=login");
@@ -155,8 +134,6 @@ class SecurityController extends AppController {
             return;
 
         }
-
-
 
         $this->render('signin');
 

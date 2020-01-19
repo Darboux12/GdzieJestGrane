@@ -23,23 +23,10 @@ class AdController extends AppController{
                 }
             }
 
-
             if($_POST['min_age'] > $_POST['max_age']){
                 $this->render('createAd', ['messages' => ["Minimal age cannot be bigger than maximal age!"]]);
                 return;
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
             $image = $_FILES['image']['name'];
             $imageData= file_get_contents($_FILES['image']['tmp_name']);
@@ -56,17 +43,20 @@ class AdController extends AppController{
                 return;
             }
 
-            $adRepository->createAd($_POST['city'],$_POST['postal'],$_POST['street'],$_POST['number'],
+            $city = ucfirst(strtolower($_POST['city']));
+            $street = ucfirst(strtolower($_POST['street']));
+            $title = ucfirst(strtolower($_POST['city']));
+
+
+            $adRepository->createAd($city,$_POST['postal'], $street,$_POST['number'],
                 $_POST['discipline'],$_POST['price'],$_POST['time'], $_POST['min_age'],$_POST['max_age'],
                 $_POST['pplnumber'],$_POST['gender'], $_POST['date'],$_SESSION['id'],
-                $_POST['title'],$_POST['description'],$imageData);
+                $title,$_POST['description'],$imageData);
 
 
             $this->render('createAd',['messages' => ['Ad was successfully created!']]);
 
-
         }
-
 
        $this->render('createAd');
     }

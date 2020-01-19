@@ -47,7 +47,7 @@
             <input  name="title" type="text" placeholder="Event title..." onfocus="this.placeholder=''" onblur="this.placeholder='Event title...'">
 
             <h>Event Date</h>
-            <input  name="date" type="date">
+            <input  name="date" type="datetime-local">
 
             <h>Localization</h>
             <input  name="city" type="text"  placeholder="City..." onfocus="this.placeholder=''" onblur="this.placeholder='City...'">
