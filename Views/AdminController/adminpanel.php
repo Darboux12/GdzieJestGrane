@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" href="../../Public/Images/website_icon.png">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/adminpanel.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/topbar.css">
@@ -82,6 +82,7 @@
         <button id="SortUser" type="button" onclick="sortTable()"><i class="fas fa-sort-alpha-up"></i>Sort Users</button>
         <button id="MakeStat" type="button" onclick="makeStatistic()"><i class="fab fa-creative-commons-share"></i>Make Statistic</button>
         <button id="ShowStat" type="button" onclick="showStatistic()"><i class="fas fa-eye"></i>Show Statistic</button>
+        <button id="HideStat" type="button" onclick="hideStatistic()"><i class="fas fa-eye-slash"></i>Hide Statistic</button>
 
 
     </div>

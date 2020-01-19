@@ -1,5 +1,7 @@
 <button class="chatbox-open-button" onclick="openChat()">Chat</button>
 
+<button class="chatbox-open-button-mobile" onclick="openChat()"><i class="fas fa-comment-dots"></i></button>
+
 <div id="chat" class="chat-container">
 
     <div class="search-container">

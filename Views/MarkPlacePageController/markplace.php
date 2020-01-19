@@ -10,6 +10,7 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/topbar.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/markplace.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css">
+    <link rel="icon" href="../../Public/Images/website_icon.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Mark Place</title>
 

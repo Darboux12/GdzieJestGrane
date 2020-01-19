@@ -127,6 +127,14 @@ function hideUsers() {
 
 }
 
+function hideStatistic() {
+
+    const $list = $('.statistic-list');
+
+    $list.empty();
+
+}
+
 function givePower(id){
 
     const apiUrl = "http://localhost";

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css" />
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/signIn.css" />
+    <link rel="icon" href="../../Public/Images/website_icon.png">
     <title>Sign in</title>
 </head>
 

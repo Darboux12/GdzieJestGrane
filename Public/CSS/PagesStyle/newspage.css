@@ -95,14 +95,56 @@
     font-weight: normal;
 }
 
+.PopularEventButton,
+.HideRightNavButton{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: #6dcb1b;
+    color: white;
+    display: none;
+}
+
+.PopularEventButton > i{
+    font-size: 2em;
+}
+
+.PopularEventButton:hover{
+    background: #4CAF50;
+}
+
+.HideRightNavButton{
+    position: absolute;
+    right: 102%;
+    top: 50%;
+    display: none;
+    outline: none;
+    border-right: none;
+
+
+}
+
+
+@media only screen and (max-width : 1050px){body{font-size: 15px; } #TopBarStandard{font-size: 14px;}}
+@media only screen and (max-width : 1000px){body{font-size: 14px} #TopBarStandard{font-size: 13px;}}
+@media only screen and (max-width : 950px){body{font-size: 13px} #TopBarStandard{font-size: 12px;}}
+@media only screen and (max-width : 900px){body{font-size: 12px} #TopBarStandard{font-size: 11px;}}
+@media only screen and (max-width : 850px){body{font-size: 11px} #TopBarStandard{font-size: 10px;}}
+@media only screen and (max-width : 800px){body{font-size: 10px} #TopBarStandard{font-size: 9px;}}
+@media only screen and (max-width : 750px){body{font-size: 9px} #TopBarStandard{font-size: 8px;}}
+@media only screen and (max-width : 700px){body{font-size: 8px} #TopBarStandard{font-size: 7px;}}
+
+
 
 
 @media only screen and (max-width : 450px) {
 
+
+
+
     .Wrapper {
         padding: 0;
     }
-
 
     #TopBarMobile {
         display: flex;
@@ -113,11 +155,32 @@
     }
 
     .RightNav{
+        position: sticky;
+        top: 50%;
+        right: 0;
         display: none;
+        font-size: 2em;
+        border-right: none;
     }
 
     .NewsNav{
         grid-area: 2 / 1 / span 1 / span 4;
     }
+
+    .News{
+        border-left: none;
+        border-right: none;
+    }
+
+    .PopularEventButton,
+    .HideRightNavButton{
+        display: flex;
+        font-size: 2.5em;
+    }
+
+
+
 }
+
+
 

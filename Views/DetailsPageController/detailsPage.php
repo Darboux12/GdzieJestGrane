@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" href="../../Public/Images/website_icon.png">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/general.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/eventDetails.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/topbar.css">

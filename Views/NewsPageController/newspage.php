@@ -10,9 +10,11 @@
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/popularEventsNav.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/ElementsStyle/chatbox.css">
     <link rel="Stylesheet" type="text/css" href="../../Public/CSS/PagesStyle/newspage.css">
-
+    <link rel="icon" href="../../Public/Images/website_icon.png">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../Public/JS/chatbox.js"></script>
     <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
+    <script type="text/javascript" src="../../Public/JS/newsPage.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <title>News Page</title>
@@ -47,7 +49,11 @@
 
     </div>
 
+    <button class="PopularEventButton" onclick="toggleRightNav()"><i class="far fa-caret-square-left"></i></button>
+
     <div class="RightNav">
+
+        <button class="HideRightNavButton" onclick="hideRightNav()"><i class="far fa-caret-square-right"></i></button>
 
         <h id="NavTitle">Recently added newses</h>
 
@@ -68,7 +74,13 @@
 
     </div>
 
+
+
 </div>
+
+
+
+
 
 <?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
 
