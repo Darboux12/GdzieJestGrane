@@ -30,6 +30,18 @@ function MobileChooseEvent() {
 
 }
 
+function RightNavToggle(){
+
+    $("#MainRightNav").toggle();
+
+}
+
+function RightNavHide() {
+
+    $("#MainRightNav").toggle();
+
+}
+
 $(document).ready(function () {
 
     const apiUrl = "http://localhost";
@@ -170,3 +182,5 @@ $(document).ready(function () {
     });
 
 })
+
+

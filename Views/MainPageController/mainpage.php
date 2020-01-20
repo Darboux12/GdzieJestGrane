@@ -33,6 +33,19 @@
 
     <?php include(dirname(__DIR__) . '/Common/topbarStandard.php'); ?>
 
+    <?php include(dirname(__DIR__) . '/Common/topbarMobile.php'); ?>
+
+    <div class="MobileShowEvents">
+
+        <h>Pokaż wydarzenia</h>
+
+        <div class="MobileShowEvents-input">
+            <input id="button1" type="button" value="Moje wydarzenia:" onclick="MobileChooseEvent()">
+            <input id="button2" type="button" value="Wszystkie wydarzenia" onclick="MobileChooseEvent()">
+        </div>
+
+    </div>
+
     <form id="SearchForm" class="SearchNav">
 
         <div class="SearchBar-Searchbox">
@@ -145,37 +158,7 @@
 
     </form>
 
-    <div class="RightNav">
-
-        <h id="NavTitle">Most popular ads</h>
-
-        <?php foreach($popularAds as $ad): ?>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php" ><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page"><?= $ad->getTitle()?></a>
-                <h id="discipline"><?= $ad->getDiscipline()?></h>
-                <h id="city"><?= $ad->getCity()?></h>
-                <h id="date"><?= $ad->getDate()?></h>
-                <h id="views">Wyświetlenia: <?= $ad->getViews()?></h>
-            </div>
-
-        </div>
-
-        <?php endforeach ?>
-
-
-
-
-
-    </div>
+    <button class="PopularEventButton" onclick="RightNavToggle()"><i class="far fa-caret-square-left"></i></button>
 
     <div class="MainContent">
 
@@ -244,84 +227,31 @@
 
     </div>
 
-</div>
+    <div id="MainRightNav" class="RightNav">
 
-<div class="Wrapper-Mobile">
+        <button class="HideRightNavButton" onclick="RightNavHide()"><i class="far fa-caret-square-right"></i></button>
 
-    <?php include(dirname(__DIR__) . '/Common/topbarMobile.php'); ?>
+        <h id="NavTitle">Most popular ads</h>
 
-    <div class="MobileShowEvents">
+        <?php foreach($popularAds as $ad): ?>
 
-        <h>Pokaż wydarzenia</h>
+            <div class="PopularEvent">
 
-        <div class="MobileShowEvents-input">
-            <input id="button1" type="button" value="Moje wydarzenia:" onclick="MobileChooseEvent()">
-            <input id="button2" type="button" value="Wszystkie wydarzenia" onclick="MobileChooseEvent()">
-        </div>
-
-    </div>
-
-    <div class="MainContent">
-
-        <?php foreach($allAds as $ad): ?>
-
-            <div id=<?= $ad->getId()?> class="Publication">
-
-                <i class="fas fa-volleyball-ball"></i>
-
-                <div class="EventInformation">
-
-                    <h id="EventTitle"><?= $ad->getTitle()?></h>
-                    <h id="EventSport"><?= $ad->getDiscipline()?></h>
-                    <h id="EventDate"><?= $ad->getDate()?></h>
-                    <h id="EventAddress">
-                        <?= $ad->getStreet() . " "
-                        . $ad->getNumber() . ", "
-                        . $ad->getPostalCode() . " "
-                        . $ad->getCity()
-                        ?>
-                    </h>
-                    <h id="Age"><?=
-                        $ad->getMinAge() . ' - '
-                        . $ad->getMaxAge() . " years old"
-                        ?>
-                    </h>
-
-                    <div id="EventPeopleNumberElement">
-                        <i class="fas fa-users"></i>
-                        <h><?=$ad->getInvolvedPeople()  . ' out of ' . $ad->getNumPeople()?></h>
-                    </div>
-
-
-
-
-
-                </div>
-
-                <div class="ImageAndDescription">
-
-                    <?= '<img src="data:image/jpeg;base64,'.base64_encode($ad->getImage()) .'" />' ?>
-
-                    <textarea class="ShortDescription" readonly rows="10"><?= $ad->getDescription()?></textarea>
-
-                    <form action="?page=seeDetails"method="post">
-
-                        <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
-                        <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
-                    </form>
-
-
-
+                <div class="JoinNow">
+                    <a href="../DetailsPageController/detailsPage.php" ><i class="fas fa-fire"></i></a>
+                    <h>Dołącz<br>teraz!</h>
                 </div>
 
 
-
-
-
-
+                <div class="PopularEventInfo">
+                    <a href="#page"><?= $ad->getTitle()?></a>
+                    <h id="discipline"><?= $ad->getDiscipline()?></h>
+                    <h id="city"><?= $ad->getCity()?></h>
+                    <h id="date"><?= $ad->getDate()?></h>
+                    <h id="views">Wyświetlenia: <?= $ad->getViews()?></h>
+                </div>
 
             </div>
-
 
         <?php endforeach ?>
 
@@ -333,32 +263,9 @@
 
 </div>
 
-<button class="chatbox-open-button" onclick="openChat()">Chat</button>
 
-<div id="chat" class="chat-container">
 
-    <div class="search-container">
-        <input type="text" placeholder="Szukaj" onfocus="this.placeholder = ''">
-    </div>
-
-    <div class="coversation-list"></div>
-
-    <div class="new-message-container">
-        <a href="#add"><i class="fas fa-plus-circle"></i></a>
-    </div>
-
-    <div class="chat-title">
-
-        <span>John Doe</span>
-        <button class="close-chat-button" onclick="closeChat()">X</button>
-
-    </div>
-
-    <div class="chat-message-list">chat-message-list</div>
-
-    <div class="chat-form">chat-form</div>
-
-</div>
+<?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
 
 </body>
 

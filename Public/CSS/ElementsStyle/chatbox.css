@@ -146,6 +146,10 @@
         display: flex;
     }
 
+    .chat-container{
+        width: 50%;
+    }
+
 
 
 

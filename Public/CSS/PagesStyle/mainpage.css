@@ -7,11 +7,8 @@
     padding: 5em;
 }
 
-.Wrapper-Mobile{
-    display: none;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 1em;
+.RightNav{
+    grid-area: 3 / 4 / span 1 / span 1;
 }
 
 .TopBar{
@@ -286,6 +283,43 @@
     background: transparent;
 }
 
+.MobileShowEvents{
+    display: none;
+}
+
+#TopBarMobile{
+    display: none;
+}
+
+
+.PopularEventButton,
+.HideRightNavButton{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: #6dcb1b;
+    color: white;
+    display: none;
+}
+
+.PopularEventButton > i{
+    font-size: 2em;
+}
+
+.PopularEventButton:hover{
+    background: #4CAF50;
+}
+
+.HideRightNavButton{
+    position: absolute;
+    right: 102%;
+    top: 50%;
+    display: none;
+    outline: none;
+    border-right: none;
+
+
+}
 
 
 
@@ -303,8 +337,27 @@
 @media only screen and (max-width : 500px){  body{font-size: 4px;}}
 @media only screen and (max-width : 450px){
 
-    .Wrapper{display: none}
-    .Wrapper-Mobile{display: grid;}
+
+    .MobileShowEvents{
+        display: flex;
+    }
+
+    #SearchForm{
+        display: none;
+    }
+
+    .Wrapper{
+        padding: 0;
+    }
+
+    #TopBarStandard{
+        display: none;
+    }
+
+    #TopBarMobile{
+        display: flex;
+    }
+
     .MainContent{grid-area: 3 / 1 / span 2 / span 4;}
 
 
@@ -352,6 +405,21 @@
 
     .SeeDetails{
        margin-bottom: 1em;
+    }
+
+    .PopularEventButton,
+    .HideRightNavButton{
+        display: flex;
+        font-size: 2.5em;
+    }
+
+    .RightNav{
+        position: sticky;
+        top: 10%;
+        right: 0;
+        display: none;
+        font-size: 1.1em;
+        border-right: none;
     }
 
 
