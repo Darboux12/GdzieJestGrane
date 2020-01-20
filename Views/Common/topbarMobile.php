@@ -10,17 +10,19 @@
 
         <div class="ProfileLinks">
 
-            <a href="#page"><i class="fas fa-calendar-alt"></i><h>Moje wydarzenia</h></a>
+            <a href="#page"><i class="fas fa-calendar-alt"></i><h>My Events</h></a>
 
-            <a href="#page"><i class="fas fa-map"></i><h>Oznaczone miejsca</h></a>
+            <a href="#page"><i class="fas fa-map"></i><h>Tagged Places</h></a>
 
-            <a id="CreateEvent" href="?page=createEvent"><i class="far fa-calendar-plus"></i><h>Utwórz wydarzenie</h></a>
+            <a id="CreateEvent" href="?page=createAd"><i class="far fa-calendar-plus"></i><h>Create Event</h></a>
 
-            <a href="?page=markplace"><i class="fas fa-map-marked-alt"></i><h>Oznacz miejsce</h></a>
+            <a  href="?page=mainpage"><i class="far fa-calendar-plus"></i><h>Main Page</h></a>
 
-            <a href="#page"><i class="fas fa-bell"></i><h>Powiadomienia</h></a>
+            <a href="?page=adminpanel"><i class="fas fa-map-marked-alt"></i><h>Admin Panel</h></a>
 
-            <a href="?page=newspage"><i class="fas fa-globe"></i><h>Aktualności</h></a>
+            <a href="?page=newspage"><i class="fas fa-globe"></i><h>News</h></a>
+
+            <a href="#page"><i class="fas fa-bell"></i><h>Notifiaction</h></a>
 
         </div>
 
@@ -40,17 +42,17 @@
                 <h id="Name">Janek126p</h>
             </div>
 
-            <a href="#page"><h>Zobacz profil</h><i class="fas fa-chevron-circle-right"></i></a>
+            <a href="#page"><h>See profile</h><i class="fas fa-chevron-circle-right"></i></a>
 
         </div>
 
         <div class="ProfileLinks">
 
-            <a href="#page"><i class="fas fa-user-friends"></i><h>Znajomi</h></a>
+            <a href="#page"><i class="fas fa-user-friends"></i><h>Friends</h></a>
 
-            <a href="#page"><i class="fas fa-cog"></i><h>Ustawienia</h></a>
+            <a href="#page"><i class="fas fa-cog"></i><h>Settings</h></a>
 
-            <a href="#page"><i class="fas fa-sign-out-alt"></i><h>Wyloguj</h></a>
+            <a href="?page=logout"><i class="fas fa-sign-out-alt"></i><h>Log Out</h></a>
 
 
 

@@ -11,7 +11,9 @@ class MainPageController extends AppController {
 
         $allAds = $adRepository->getAllAds();
 
-        $this->render('mainpage',["allAds" => $allAds]);
+        $popularAds = $adRepository->getMostPopularAds();
+
+        $this->render('mainpage',["allAds" => $allAds, "popularAds" => $popularAds]);
     }
 
     public function search(){

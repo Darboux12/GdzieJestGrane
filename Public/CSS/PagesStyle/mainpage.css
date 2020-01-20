@@ -226,6 +226,10 @@
     font-size: 1em;
 }
 
+.SeeDetails:hover{
+    background: darkmagenta;
+}
+
 #SubmitButton{
     background: #4CAF50;
     font-size: 1.2em;
@@ -281,6 +285,7 @@
 #button2{
     background: transparent;
 }
+
 
 
 

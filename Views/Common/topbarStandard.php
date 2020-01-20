@@ -39,9 +39,9 @@
 
                         <a href="#page">Friends<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Setings<i class="fas fa-chevron-right"></i></a>
+                        <a href="#page">Settings<i class="fas fa-chevron-right"></i></a>
 
-                        <a href="#page">Log Out<i class="fas fa-chevron-right"></i></a>
+                        <a href="?page=logout">Log Out<i class="fas fa-chevron-right"></i></a>
 
                     </div>
 

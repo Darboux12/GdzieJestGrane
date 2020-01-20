@@ -254,4 +254,51 @@ class AdRepository extends Repository{
 
     }
 
+    public function getMostPopularAds(){
+
+        $adsNumber = 5;
+
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM ad_view ORDER BY views DESC LIMIT :num
+        ');
+        $stmt->bindParam(':num', $adsNumber, PDO::PARAM_INT);
+        $stmt->execute();
+        $ads = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($ads as $ad) {
+
+            $result[] = new Ad(
+                $ad['id_ad'],
+                $ad['id_user_author'],
+                $ad['title'],
+                $ad['description'],
+                $ad['image'],
+                $ad['discipline'],
+                $ad['price'],
+                $ad['time'],
+                $ad['min_age'],
+                $ad['max_age'],
+                $ad['num_people'],
+                $ad['involved_people'],
+                $ad['gender'],
+                $ad['date'],
+                $ad['views'],
+                $ad['city'],
+                $ad['postal_code'],
+                $ad['street'],
+                $ad['number']
+            );
+        }
+
+        return $result;
+
+    }
+
+
+
+
+
+
+
 }

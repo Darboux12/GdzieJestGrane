@@ -149,148 +149,31 @@
 
         <h id="NavTitle">Most popular ads</h>
 
+        <?php foreach($popularAds as $ad): ?>
+
         <div class="PopularEvent">
 
             <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
+                <a href="../DetailsPageController/detailsPage.php" ><i class="fas fa-fire"></i></a>
                 <h>Dołącz<br>teraz!</h>
             </div>
 
 
             <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
+                <a href="#page"><?= $ad->getTitle()?></a>
+                <h id="discipline"><?= $ad->getDiscipline()?></h>
+                <h id="city"><?= $ad->getCity()?></h>
+                <h id="date"><?= $ad->getDate()?></h>
+                <h id="views">Wyświetlenia: <?= $ad->getViews()?></h>
             </div>
 
         </div>
 
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
+        <?php endforeach ?>
 
 
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
 
 
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
-
-        <div class="PopularEvent">
-
-            <div class="JoinNow">
-                <a href="../DetailsPageController/detailsPage.php"><i class="fas fa-fire"></i></a>
-                <h>Dołącz<br>teraz!</h>
-            </div>
-
-
-            <div class="PopularEventInfo">
-                <a href="#page">Siatkówka dla pań</a>
-                <h id="discipline">Siatkówka</h>
-                <h id="city">Kraków</h>
-                <h id="date">20.11 19:00</h>
-                <h id="views">Wyświetlenia: 3700</h>
-            </div>
-
-        </div>
 
     </div>
 
@@ -326,7 +209,6 @@
                     </div>
 
                     <form action="?page=seeDetails"method="post">
-
                         <input type="hidden" name="publicationId" value=<?= $ad->getId()?>>
                         <button class="SeeDetails" type="submit">Zobacz szczegóły</button>
                     </form>

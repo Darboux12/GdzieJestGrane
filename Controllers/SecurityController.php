@@ -35,6 +35,9 @@ class SecurityController extends AppController {
             $_SESSION["id"] = $user->getEmail();
             $_SESSION["role"] = $user->getRole();
 
+            setcookie("id", $user->getEmail() , time() + (86400 * 30), "/");
+            setcookie("role", $user->getRole(), time() + (86400 * 30), "/");
+
 
             $browser = $userRepository->getBrowser();
 
