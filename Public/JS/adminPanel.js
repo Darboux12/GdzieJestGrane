@@ -212,6 +212,22 @@ function sortTable(){
         }
 }
 
+function toggleActionNav(){
+
+    $(".ActionNav").toggle();
+
+    $(".PopularEventButton").toggle();
+
+    $('#CloseActionNav').toggle();
+
+}
+
+function hideActionNav(){
+    $(".ActionNav").toggle();
+    $(".PopularEventButton").toggle();
+    $('#CloseActionNav').toggle();
+}
+
 $(document).ready(function () {
 
     const apiUrl = "http://localhost";

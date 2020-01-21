@@ -33,7 +33,7 @@
 
 .UserTable > table tr:nth-child(even){background-color: #f2f2f2;}
 
-.UserTable > table tr:nth-child(odd){background-color: #f2f2f2;}
+.UserTable > table tr:nth-child(odd){background-color: white;}
 
 .UserTable > table tr:hover {background-color: #ddd;}
 
@@ -81,6 +81,59 @@ i{
 
 }
 
+.users-list > button > i{
+    font-size: 1em;
+}
+
+.PopularEventButton,
+.HideRightNavButton{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: #6dcb1b;
+    color: white;
+    display: none;
+}
+
+.PopularEventButton > i{
+    font-size: 3em;
+}
+
+.PopularEventButton:hover{
+    background: #4CAF50;
+}
+
+.HideRightNavButton{
+    position: absolute;
+    right: 102%;
+    top: 50%;
+    display: none;
+    outline: none;
+    border-right: none;
+
+
+}
+
+#CloseActionNav{
+    margin-bottom: 1em;
+    background: #B90808;
+    display: none;
+    padding: 1em;
+}
+
+
+@media only screen and (max-width : 1050px){  body{font-size: 14px;}}
+@media only screen and (max-width : 1000px){  body{font-size: 13px;}}
+@media only screen and (max-width : 950px){  body{font-size: 12px;}}
+@media only screen and (max-width : 900px){  body{font-size: 11px;}}
+@media only screen and (max-width : 850px){  body{font-size: 10px;}}
+
+@media only screen and (max-width : 750px){  body{font-size: 9px;}}
+@media only screen and (max-width : 700px){  body{font-size: 8px;}}
+@media only screen and (max-width : 650px){  body{font-size: 7px;}}
+
+@media only screen and (max-width : 550px){  body{font-size: 6px;}}
+@media only screen and (max-width : 500px){  body{font-size: 5px;}}
 
 
 @media only screen and (max-width : 450px) {
@@ -89,7 +142,6 @@ i{
         padding: 0;
     }
 
-
     #TopBarMobile {
         display: flex;
     }
@@ -97,6 +149,33 @@ i{
     #TopBarStandard {
         display: none;
     }
+
+    .UserTable{
+        grid-area: 2 / 1 / span 2 / span 4;
+    }
+
+    .ActionNav{
+        display: none;
+    }
+
+    body{
+        font-size: 9px;
+    }
+
+    .PopularEventButton{
+        display: flex;
+    }
+
+    .ActionNav{
+        position: fixed;
+        top: 50%;
+        right: 0;
+        display: none;
+        font-size: 1em;
+        border-right: none;
+
+    }
+
 
 
 }

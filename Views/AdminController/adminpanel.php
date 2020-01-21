@@ -34,6 +34,8 @@
 
     <?php include(dirname(__DIR__) . '/Common/topbarMobile.php'); ?>
 
+    <button class="PopularEventButton" onclick="toggleActionNav()"><i class="far fa-caret-square-left"></i></button>
+
     <div class="UserTable">
 
         <table id="myTable">
@@ -71,6 +73,8 @@
     </div>
 
     <div class="ActionNav">
+
+        <button id="CloseActionNav" type="button" onclick="hideActionNav()"><i class="fas fa-users"></i>Close Action Nav</button>
 
         <form id="findForm" class="SearchBar-Searchbox">
             <input id="DataInput" type="text" placeholder="Search for user..." onfocus="this.placeholder=''" onblur="this.placeholder='Search for user...'" class="search-box-input">
