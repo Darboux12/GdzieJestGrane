@@ -400,6 +400,7 @@
     .ShortDescription{
         border-right: none;
         border-left: none;
+        border-bottom: none;
         font-size: 1.5em;
     }
 

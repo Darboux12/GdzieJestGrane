@@ -158,8 +158,6 @@
 
     </form>
 
-    <button class="PopularEventButton" onclick="RightNavToggle()"><i class="far fa-caret-square-left"></i></button>
-
     <div class="MainContent">
 
         <?php foreach($allAds as $ad): ?>
@@ -226,6 +224,8 @@
 
 
     </div>
+
+    <button class="PopularEventButton" onclick="RightNavToggle()"><i class="far fa-caret-square-left"></i></button>
 
     <div id="MainRightNav" class="RightNav">
 

@@ -4,7 +4,7 @@
 
     <i class="fas fa-heart"></i>
 
-    <a class="Ball-link" href="#Page"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
+    <a class="Ball-link" href="?page=mainpage"><img id="Ball-Image" src="../../Public/Images/logo-no-writing.png"></a>
 
     <div id="Mobile-Drop-Menu-Bar" class="Mobile-Drop-Menu-Bar">
 
@@ -62,18 +62,18 @@
 
     </div>
 
-    <form id="SearchFormMobile" class="Mobile-Drop-Menu-Search">
+    <form id="SearchForm-Mobile" class="Mobile-Drop-Menu-Search">
 
         <div class="SearchBar-Searchbox">
-            <input  id="eventTitle" form="SearchForm" name="eventTitle" type="text" placeholder="Search title..." onfocus="this.placeholder=''" onblur="this.placeholder='Search title...'" class="search-box-input">
+            <input  id="eventTitle-Mobile" form="SearchForm-Mobile" name="eventTitle-Mobile" type="text" placeholder="Search title..." onfocus="this.placeholder=''" onblur="this.placeholder='Search title...'" class="search-box-input">
         </div>
 
         <div class="SearchBar-Searchbox">
-            <input id="eventLocalization" name="eventLocalization" type="text" placeholder="Search localization..." onfocus="this.placeholder=''" onblur="this.placeholder='Search localization...'" class="search-box-input">
+            <input id="eventLocalization-Mobile" name="eventLocalization-Mobile" type="text" placeholder="Search localization..." onfocus="this.placeholder=''" onblur="this.placeholder='Search localization...'" class="search-box-input">
         </div>
 
-        <div id="SelectSport" class="SearchNavSelect">
-            <select id="eventDiscipline" name="eventDiscipline" class="SearchNavSelect">
+        <div id="SelectSport-Mobile" class="SearchNavSelect">
+            <select id="eventDiscipline-Mobile" name="eventDiscipline-Mobile" class="SearchNavSelect">
                 <option value= "">Choose discipline</option>
                 <option value="Football">Football</option>
                 <option value="Volleyball">Volleyball</option>
@@ -92,7 +92,7 @@
             <h>Search event date:</h>
 
             <div class="SelectInputs">
-                <input name="eventDate" id="eventDate" type="date"/>
+                <input name="eventDate-Mobile" id="eventDate-Mobile" type="date"/>
             </div>
 
         </div>
@@ -102,7 +102,7 @@
             <h>Search people number:</h>
 
             <div class="SelectInputs">
-                <input name="eventPeopleNumber" id="eventPeopleNumber" type="number" placeholder="People number..." onfocus="this.placeholder=''" onblur="this.placeholder='People number...'" min="0" step="any" />
+                <input name="eventPeopleNumber-Mobile" id="eventPeopleNumber-Mobile" type="number" placeholder="People number..." onfocus="this.placeholder=''" onblur="this.placeholder='People number...'" min="0" step="any" />
             </div>
 
         </div>
@@ -116,7 +116,7 @@
                 <div class="Checkbox-option-container">
 
                     <label class="Checkbox-option">
-                        <input id="gender-male" class="gender" form="SearchForm" name="gender" type="checkbox" value="Male">
+                        <input id="gender-male-Mobile" class="gender" form="SearchForm-Mobile" name="gender-Mobile" type="checkbox" value="Male">
                         <span class="checkmark"></span>
                         <h>Men</h>
                     </label>
@@ -153,8 +153,8 @@
             <h>Age:</h>
 
             <div class="SelectInputs">
-                <input name="eventAgeFrom" id="AgeFrom" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
-                <input name="eventAgeTo" id="AgeTo"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
+                <input name="eventAgeFrom-Mobile" id="AgeFrom-Mobile" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
+                <input name="eventAgeTo-Mobile" id="AgeTo-Mobile"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
             </div>
 
         </div>
@@ -164,13 +164,13 @@
             <h>Price:</h>
 
             <div class="SelectInputs">
-                <input name="eventPriceFrom" id="PriceFrom" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
-                <input name="eventPriceTo" id="PriceTo"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
+                <input name="eventPriceFrom-Mobile" id="PriceFrom-Mobile" type="number" placeholder="From..." onfocus="this.placeholder=''" onblur="this.placeholder='From...'" min="0" step="any" />
+                <input name="eventPriceTo-Mobile" id="PriceTo-Mobile"  type="number" placeholder="To..." onfocus="this.placeholder=''" onblur="this.placeholder='To...'" min="0" step="any" />
             </div>
 
         </div>
 
-        <button id="SubmitButton" type="submit" form="SearchForm">Search ads</button>
+        <button id="SubmitButton" type="submit" form="SearchForm-Mobile">Search ads</button>
 
 
 

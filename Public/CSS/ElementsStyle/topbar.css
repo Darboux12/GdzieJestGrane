@@ -193,6 +193,8 @@
 
 
 
+
+
 @media only screen and (max-width : 450px){
 
     .TopBar{top: 0;}
@@ -283,6 +285,10 @@
     }
     .show{
         display: flex}
+
+    #SubmitButton{
+        width: 100%;
+    }
 
 }
 
