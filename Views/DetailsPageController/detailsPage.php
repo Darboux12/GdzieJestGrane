@@ -18,6 +18,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../../Public/JS/EventDetails.js"></script>
+    <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
+    <script type="text/javascript" src="../../Public/JS/mainpage.js"></script>
 
     <title>Event Details</title>
 
@@ -33,8 +35,6 @@
     <?php include(dirname(__DIR__) . '/Common/topbarMobile.php'); ?>
 
 
-
-
     <div class="EventInformation">
 
         <div class="EventInformationFieldContainer">
@@ -44,8 +44,6 @@
 
                 <h id="FieldName">Event Title</h>
                 <h id="FieldInfo"><?= $ad->getTitle()?></h>
-
-
 
             </div>
 
@@ -120,8 +118,6 @@
         </div>
 
     </div>
-
-
 
     <div class="RightNav">
 
@@ -274,42 +270,6 @@
 
 </div>
 
-<button class="chatbox-open-button" onclick="openChat()">Chat</button>
-
-<div id="chat" class="chat-container">
-
-    <div class="search-container">
-        <input type="text" placeholder="Szukaj" onfocus="this.placeholder = ''">
-    </div>
-
-    <div class="coversation-list"></div>
-
-    <div class="new-message-container">
-        <a href="#add"><i class="fas fa-plus-circle"></i></a>
-    </div>
-
-    <div class="chat-title">
-        <span>John Doe</span>
-        <button class="close-chat-button" onclick="closeChat()">X</button>
-    </div>
-
-    <div class="chat-message-list">chat-message-list</div>
-
-    <div class="chat-form">chat-form</div>
-
-</div>
-
-
-
-
-
-
-
-<script>
-    function openChat() {document.getElementById("chat").style.display = "grid";}
-    function closeChat() {document.getElementById("chat").style.display = "none";}
-</script>
-
-
+<?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
 </body>
 </html>

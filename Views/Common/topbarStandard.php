@@ -20,11 +20,11 @@
 
                     <div class="UserProfile">
 
-                        <img src="../Public/Images/Person1.jpg">
+                        <img src="../../Public/Images/person.jpg">
 
                         <div class="NameSeeProfile">
                             <h id="Name">Janek126p</h>
-                            <h id="SeeProfile">See profile</h>
+                            <a><h id="SeeProfile">See profile</h></a>
                         </div>
 
                         <i class="fas fa-chevron-circle-right"></i>

@@ -152,6 +152,7 @@
 
 .NameSeeProfile > #SeeProfile{
     font-size: 1em;
+    margin-top: 1em;
 }
 
 .fa-chevron-circle-right{
@@ -212,7 +213,7 @@
     .fa-globe, .fa-map-marked-alt, .fa-calendar-plus,
     .fa-user, .fa-heart, .fa-bell, .fa-bars,.fa-map,
     .fa-user-friends,.fa-user-friends,.fa-cog,
-    .fa-sign-out-alt,.fa-calendar-alt,.fa-search{
+    .fa-sign-out-alt,.fa-calendar-alt,.fa-search,.fa-users-cog{
         color: green;
         font-size: 2.2em;
         cursor: pointer;
@@ -248,7 +249,7 @@
     }
     .ProfileLinks > a > h{
         position: absolute;
-        left: 25%;
+        left: 40%;
     }
     .Mobile-Drop-Menu-Bar{
 
@@ -287,6 +288,20 @@
         display: flex}
 
     #SubmitButton{
+        width: 100%;
+    }
+
+    .ProfileLinks{
+        font-size: 1.5em;
+    }
+
+
+
+    #eventDate-Mobile{
+        width: 100%;
+    }
+
+    #eventPeopleNumber-Mobile{
         width: 100%;
     }
 

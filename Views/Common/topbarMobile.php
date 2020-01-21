@@ -16,9 +16,7 @@
 
             <a id="CreateEvent" href="?page=createAd"><i class="far fa-calendar-plus"></i><h>Create Event</h></a>
 
-            <a  href="?page=mainpage"><i class="far fa-calendar-plus"></i><h>Main Page</h></a>
-
-            <a href="?page=adminpanel"><i class="fas fa-map-marked-alt"></i><h>Admin Panel</h></a>
+            <a href="?page=adminpanel"><i class="fas fa-users-cog"></i><h>Admin Panel</h></a>
 
             <a href="?page=newspage"><i class="fas fa-globe"></i><h>News</h></a>
 
@@ -36,13 +34,13 @@
 
         <div class="UserProfile">
 
-            <img src="../../Public/Images/Person1.jpg">
+            <img src="../../Public/Images/person.jpg">
 
             <div class="NameSeeProfile">
                 <h id="Name">Janek126p</h>
             </div>
 
-            <a href="#page"><h>See profile</h><i class="fas fa-chevron-circle-right"></i></a>
+            <a href="#page"><i class="fas fa-chevron-circle-right"></i></a>
 
         </div>
 
@@ -92,7 +90,7 @@
             <h>Search event date:</h>
 
             <div class="SelectInputs">
-                <input name="eventDate-Mobile" id="eventDate-Mobile" type="date"/>
+                <input name="eventDate-Mobile" id="eventDate-Mobile" type="datetime-local"/>
             </div>
 
         </div>

@@ -20,8 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="text/javascript" src="../../Public/JS/chatbox.js"></script>
-    <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
     <script type="text/javascript" src="../../Public/JS/mainpage.js"></script>
+    <script type="text/javascript" src="../../Public/JS/topbar.js"></script>
 
     <title>Main Page</title>
 
@@ -76,7 +76,7 @@
             <h>Search event date:</h>
 
             <div class="SelectInputs">
-                <input name="eventDate" id="eventDate" type="date"/>
+                <input name="eventDate" id="eventDate" type="datetime-local"/>
             </div>
 
         </div>

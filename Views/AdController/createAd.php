@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="../../Public/JS/createAd.js"></script>
+    <script type="text/javascript" src="../../Public/JS/chatbox.js"></script>
 
     <title>Create Event</title>
 
@@ -160,39 +161,7 @@
 
 </div>
 
-<button class="chatbox-open-button" onclick="openChat()">Chat</button>
-
-<div id="chat" class="chat-container">
-
-    <div class="search-container">
-        <input type="text" placeholder="Szukaj" onfocus="this.placeholder = ''">
-    </div>
-
-    <div class="coversation-list"></div>
-
-    <div class="new-message-container">
-        <a href="#add"><i class="fas fa-plus-circle"></i></a>
-    </div>
-
-    <div class="chat-title">
-        <span>John Doe</span>
-        <button class="close-chat-button" onclick="closeChat()">X</button>
-    </div>
-
-    <div class="chat-message-list">chat-message-list</div>
-
-    <div class="chat-form">chat-form</div>
-
-</div>
-
-
-
-
-
-
-
-
-
+<?php include(dirname(__DIR__) . '/Common/chatbox.php'); ?>
 
 
 
