@@ -26,8 +26,6 @@
 
 <body>
 
-
-
 <div class="Wrapper">
 
     <?php include(dirname(__DIR__) . '/Common/topbarStandard.php'); ?>
@@ -104,9 +102,11 @@
 
             </div>
 
+
+
             <form id="JoinForm">
                 <input id="EventId" name="EventId" type="hidden" value=<?= $ad->getId()?>>
-                <button id="JoinButton" type="submit">Join The Event</button>
+                <input id="JoinButton" type="submit" value="Join The Event">
             </form>
 
 

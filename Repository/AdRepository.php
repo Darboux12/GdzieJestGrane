@@ -295,10 +295,23 @@ class AdRepository extends Repository{
 
     }
 
+    public function isUserJoinedEvent($id_ad, $id_user): bool {
 
+        $stmt = $this->database->connect()->prepare('
+        
+               SELECT * FROM user_ad WHERE id_ad = :id_ad AND id_user = :id_user;
+                
+        ');
 
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->bindParam(':id_ad', $id_ad, PDO::PARAM_INT);
+        $stmt->execute();
 
+        $count = $stmt->rowCount();
 
+        return $count;
+
+    }
 
 
 }

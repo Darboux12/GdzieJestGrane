@@ -98,6 +98,27 @@
     background: gray;
 }
 
+#JoinButton{
+
+    border-radius: 0;
+    background-color: blueviolet;
+    line-height: 2.5em;
+    font-size: 1em;
+    text-align: center;
+    outline: none;
+    text-decoration: none ;
+    border: solid 3px rgba(63, 37, 37, 0.82);
+    background-color: rgba(167, 18, 212, 0.92);
+    padding: 1em 2em;
+    color: white;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+#JoinButton:hover{
+    background: darkmagenta;
+}
+
 @media only screen and (max-width : 450px){
 
     .Wrapper{

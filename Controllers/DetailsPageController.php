@@ -26,6 +26,14 @@ class DetailsPageController extends AppController {
 
         $eventId = $_POST['EventId'];
 
+
+        if($adRepository->isUserJoinedEvent($eventId,$userId)){
+
+            echo "You already joined!";
+            return;
+
+        }
+
         $adRepository->joinEvent($userId,$eventId);
 
         $adRepository->incrementViews($eventId);
@@ -33,9 +41,8 @@ class DetailsPageController extends AppController {
         $ads = $adRepository->getAd($eventId);
 
 
-        $this->render('detailsPage',["ad" => $ads]);
-
-        return "Hej";
+        echo "Joined!";
+        return;
 
 
 

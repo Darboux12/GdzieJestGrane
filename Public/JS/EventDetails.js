@@ -3,14 +3,12 @@
 $(document).ready(function () {
 
 
-
     const apiUrl = "http://localhost";
     const $form = $('#JoinForm');
     const $submitBtn = $form.find(":submit");
     const $input = $('#EventId');
 
     $form.on("submit", function(e) {
-
 
         e.preventDefault();
         $submitBtn.addClass('loading');
@@ -26,11 +24,12 @@ $(document).ready(function () {
 
             .done((res) => {
 
-                alert(res);
+                    $submitBtn.prop('value', res); //versions newer than 1.6
 
-                $submitBtn.hide();
 
-                $form.append('<button id="JoinButton" type="submit">Joined</button>')
+
+
+
 
 
             })
